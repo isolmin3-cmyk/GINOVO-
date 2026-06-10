@@ -1,0 +1,451 @@
+<!DOCTYPE html><html class="dark" lang="ko" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>JINOVER | PRECISION ENGINEERED PERFORMANCE</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;700;800&amp;family=Geist:wght@400;500;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "outline": "#8f909d",
+                    "on-primary-container": "#00164e",
+                    "industrial-gray": "#94A3B8",
+                    "surface-variant": "#34343a",
+                    "on-tertiary": "#2f3131",
+                    "on-surface-variant": "#c5c5d3",
+                    "on-secondary-fixed": "#131b2e",
+                    "inverse-primary": "#4059aa",
+                    "background": "#121318",
+                    "error": "#ffb4ab",
+                    "tertiary-fixed": "#e2e2e2",
+                    "surface-container-lowest": "#0d0e13",
+                    "primary-container": "#97d302",
+                    "on-secondary-fixed-variant": "#3f465c",
+                    "inverse-surface": "#e3e1e9",
+                    "inverse-on-surface": "#2f3036",
+                    "surface-tint": "#97d302",
+                    "on-surface": "#e3e1e9",
+                    "surface-container-highest": "#34343a",
+                    "surface-container": "#1e1f25",
+                    "on-error-container": "#ffdad6",
+                    "outline-variant": "#444651",
+                    "tertiary": "#c6c6c7",
+                    "surface-container-high": "#292a2f",
+                    "on-tertiary-fixed": "#1a1c1c",
+                    "primary": "#97d302",
+                    "success-cyan": "#0EA5E9",
+                    "on-background": "#e3e1e9",
+                    "on-primary-fixed-variant": "#364e00",
+                    "primary-fixed-dim": "#9cd911",
+                    "error-container": "#93000a",
+                    "on-secondary-container": "#adb4ce",
+                    "secondary-fixed": "#dae2fd",
+                    "secondary": "#bec6e0",
+                    "on-primary": "#131f00",
+                    "surface-bright": "#38393f",
+                    "secondary-fixed-dim": "#bec6e0",
+                    "on-error": "#690005",
+                    "on-tertiary-fixed-variant": "#454747",
+                    "on-secondary": "#283044",
+                    "tertiary-fixed-dim": "#c6c6c7",
+                    "tertiary-container": "#3e4041",
+                    "surface-container-low": "#1a1b21",
+                    "surface-dim": "#121318",
+                    "surface": "#121318",
+                    "on-primary-fixed": "#131f00",
+                    "pitch-black": "#000000",
+                    "primary-fixed": "#b7f638",
+                    "on-tertiary-container": "#abacac",
+                    "secondary-container": "#3f465c",
+                    "charcoal": "#1a1a1a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "container-max": "1280px",
+                    "section-gap": "160px",
+                    "margin-lg": "64px",
+                    "stack-sm": "8px",
+                    "stack-md": "24px",
+                    "gutter": "32px"
+            },
+            "fontFamily": {
+                    "display-xl": ["Hanken Grotesk"],
+                    "headline-lg-mobile": ["Hanken Grotesk"],
+                    "body-md": ["Hanken Grotesk"],
+                    "label-mono": ["Geist"],
+                    "headline-lg": ["Hanken Grotesk"],
+                    "body-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                    "display-xl": ["80px", {"lineHeight": "90px", "letterSpacing": "-0.04em", "fontWeight": "800"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-md": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "label-mono": ["14px", {"lineHeight": "20px", "letterSpacing": "0.1em", "fontWeight": "500"}],
+                    "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #121318;
+            color: #e3e1e9;
+            font-family: 'Hanken Grotesk', sans-serif;
+        }
+        .glass-card {
+            background: rgba(30, 31, 37, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
+        }
+        .glass-card:hover {
+            border: 1px solid rgba(151, 211, 2, 0.3);
+            box-shadow: 0 0 25px rgba(151, 211, 2, 0.15);
+        }
+        .primary-glow {
+            box-shadow: 0 0 15px rgba(151, 211, 2, 0.3);
+            transition: all 0.5s ease;
+        }
+        .primary-glow:hover {
+            box-shadow: 0 0 30px rgba(151, 211, 2, 0.5);
+            transform: scale(1.02);
+        }
+        @keyframes pulse-tech {
+            0% { opacity: 0.6; transform: scale(0.95); }
+            50% { opacity: 1; transform: scale(1.05); }
+            100% { opacity: 0.6; transform: scale(0.95); }
+        }
+        .animate-pulse-tech {
+            animation: pulse-tech 2s infinite ease-in-out;
+        }
+
+        /* New Animations */
+        @keyframes fade-up {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-up {
+            animation: fade-up 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            opacity: 0;
+        }
+        
+        .reveal-on-scroll {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal-on-scroll.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-8px); }
+            100% { transform: translateY(0px); }
+        }
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes ken-burns {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.05); }
+        }
+        .animate-ken-burns {
+            animation: ken-burns 20s ease-out alternate infinite;
+        }
+
+        /* Tech Card Glow */
+        .tech-card {
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid transparent;
+        }
+        .tech-card:hover {
+            border-color: rgba(151, 211, 2, 0.4);
+            box-shadow: 0 0 30px rgba(151, 211, 2, 0.15);
+            transform: translateY(-4px);
+        }
+
+        /* Award Card Animation */
+        .award-card {
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.4s ease, box-shadow 0.4s ease;
+        }
+        .award-card:hover {
+            transform: scale(1.03);
+            border-color: rgba(151, 211, 2, 0.8);
+            box-shadow: 0 0 20px rgba(151, 211, 2, 0.2);
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .animate-fade-up, .reveal-on-scroll, .animate-float, .animate-ken-burns, .tech-card, .award-card, .glass-card {
+                animation: none !important;
+                transition: none !important;
+                opacity: 1 !important;
+                transform: none !important;
+            }
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background selection:bg-primary/30 selection:text-white font-body-lg">
+<header class="bg-surface-container/90 backdrop-blur-xl border-b border-white/5 top-0 z-50 transition-all duration-300 fixed left-0 w-full z-[100]" id="main-header">
+<nav class="flex justify-between items-center px-8 lg:px-16 py-4 w-full max-w-[1280px] mx-auto">
+<div class="font-display-xl tracking-tighter text-on-surface shrink-0">
+<a class="block" href="#">
+<img alt="JINOVER" class="h-10 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_8dvdV5Do28bjU5Z8fMefSlP_i9xggGhP8bAULJOuGPq7AI-D7tTtdVIFnGjcUbKIqZCnHBLJiesN-vM4iaHEpja_3OBjruQI_yHrsksQhsSc47vmE9v1vRdUEFfNuFEKJT0Jas5MyD-4AtPOddrA0pxN0JLcEaNz93PqJpF-1E8sTx9f4Xj2TPF5Q1vVksUVdyeve8HHo60n2UTdauCABWZdB4OWPYh8wAD4ODgMfgTHSlz3KimAdgAKK29-H7HWhk4QSSMFv40">
+</a>
+</div>
+<div class="hidden lg:flex items-center gap-6 h-full">
+<div class="group relative h-full flex items-center">
+<a class="font-body-md hover:text-primary transition-all duration-300 py-2 border-b-2 text-on-surface-variant border-transparent group-hover:border-primary" href="#">회사&nbsp;</a>
+<div class="absolute top-full left-0 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-[100] transform translate-y-2 group-hover:translate-y-0">
+<div class="glass-card w-64 p-6 flex flex-col gap-3 bg-surface/80 backdrop-blur-md"><a class="text-sm text-on-surface-variant hover:text-primary transition-colors" href="#">회사소개</a><a class="text-sm text-on-surface-variant hover:text-primary transition-colors" href="#">창업 가치</a><a class="text-sm text-on-surface-variant hover:text-primary transition-colors" href="#">특허 및 인증</a><a class="text-sm text-on-surface-variant hover:text-primary transition-colors" href="#">디자인 어워드</a></div>
+</div>
+</div>
+<div class="group relative h-full flex items-center">
+<a class="text-on-surface-variant font-body-md hover:text-primary transition-all duration-300 py-2 border-b-2 border-transparent group-hover:border-primary" href="#">스마트 골프공</a>
+<div class="absolute top-full left-0 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-[100] transform translate-y-2 group-hover:translate-y-0">
+<div class="glass-card w-64 p-6 flex flex-col gap-3 bg-surface/80 backdrop-blur-md">
+<a class="text-sm text-on-surface-variant hover:text-primary transition-colors" href="#">소개 영상</a>
+<a class="text-sm text-on-surface-variant hover:text-primary transition-colors" href="#">제품 소개</a>
+<a class="text-sm text-on-surface-variant hover:text-primary transition-colors" href="#">주요 기능 소개</a>
+</div>
+</div>
+</div>
+<div class="group relative h-full flex items-center">
+<a class="text-on-surface-variant font-body-md hover:text-primary transition-all duration-300 py-2 border-b-2 border-transparent group-hover:border-primary" href="#">경사 퍼팅매트</a>
+<div class="absolute top-full left-0 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-[100] transform translate-y-2 group-hover:translate-y-0">
+<div class="glass-card w-64 p-6 flex flex-col gap-3 bg-surface/80 backdrop-blur-md">
+<a class="text-sm text-on-surface-variant hover:text-primary transition-colors" href="#">고정형 경사 퍼팅 매트&nbsp;&nbsp;</a>
+<a class="text-sm text-on-surface-variant hover:text-primary transition-colors" href="#">슬로핑 퍼팅매트&nbsp;</a>
+<a class="text-sm text-on-surface-variant hover:text-primary transition-colors" href="#"><br></a>
+</div>
+</div>
+</div>
+<div class="group relative h-full flex items-center">
+<a class="text-on-surface-variant font-body-md hover:text-primary transition-all duration-300 py-2 border-b-2 border-transparent group-hover:border-primary" href="#">Team &amp; Infra</a>
+<div class="absolute top-full left-0 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-[100] transform translate-y-2 group-hover:translate-y-0">
+<div class="glass-card w-64 p-6 flex flex-col gap-3 bg-surface/80 backdrop-blur-md">
+<a class="text-sm text-on-surface-variant hover:text-primary transition-colors" href="#">회사 소개 영상&nbsp;</a>
+<a class="text-sm text-on-surface-variant hover:text-primary transition-colors" href="#">조직 구성</a>
+<a class="text-sm text-on-surface-variant hover:text-primary transition-colors" href="#">공장 인프라</a>
+<a class="text-sm text-on-surface-variant hover:text-primary transition-colors" href="#">MOU</a>
+</div>
+</div>
+</div>
+<div class="h-full flex items-center">
+<a class="text-on-surface-variant font-body-md hover:text-primary transition-all duration-300 py-2 border-b-2 border-transparent" href="https://smartstore.naver.com/ginovo" target="_blank">Shop</a>
+</div>
+<div class="group relative h-full flex items-center">
+<a class="text-on-surface-variant font-body-md hover:text-primary transition-all duration-300 py-2 border-b-2 border-transparent group-hover:border-primary" href="#">News</a>
+<div class="absolute top-full right-0 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-[100] transform translate-y-2 group-hover:translate-y-0">
+
+</div>
+</div>
+<div class="group relative h-full flex items-center">
+<a class="text-on-surface-variant font-body-md hover:text-primary transition-all duration-300 py-2 border-b-2 border-transparent group-hover:border-primary" href="#">Contact</a>
+<div class="absolute top-full right-0 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-[100] transform translate-y-2 group-hover:translate-y-0">
+<div class="glass-card w-64 p-6 flex flex-col gap-3 bg-surface/80 backdrop-blur-md">
+<a class="text-sm text-on-surface-variant hover:text-primary transition-colors" href="#">공지사항</a>
+<a class="text-sm text-on-surface-variant hover:text-primary transition-colors" href="#">1:1 문의하기</a>
+<a class="text-sm text-on-surface-variant hover:text-primary transition-colors" href="#">FAQ</a>
+</div>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="hidden lg:flex gap-4">
+<div class="group relative flex flex-col items-center">
+<span class="material-symbols-outlined text-on-surface-variant hover:text-primary cursor-pointer transition-colors" data-icon="language">language</span><span class="font-label-mono text-[10px] uppercase tracking-tighter opacity-70 mt-1">언어설정</span>
+<div class="absolute top-full right-0 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-[100] transform translate-y-2 group-hover:translate-y-0">
+<div class="glass-card w-32 p-4 flex flex-col gap-2 bg-surface/80 backdrop-blur-md">
+<a class="text-sm text-on-surface-variant hover:text-primary transition-colors py-1" href="#">한국어</a>
+<a class="text-sm text-on-surface-variant hover:text-primary transition-colors py-1" href="#">English</a>
+</div>
+</div>
+</div>
+<a class="flex items-center flex-col" href="/login">
+<span class="material-symbols-outlined text-on-surface-variant hover:text-primary cursor-pointer transition-colors" data-icon="account_circle">account_circle</span><span class="font-label-mono text-[10px] uppercase tracking-tighter opacity-70 mt-1">로그인</span>
+</a>
+</div>
+</div>
+</nav>
+</header>
+<main class="pt-[80px]">
+<!-- Hero Section -->
+<section class="relative h-[60vh] min-h-[500px] flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 bg-black/70 z-0"></div>
+<img alt="Precision Engineering" class="absolute inset-0 w-full h-full object-cover mix-blend-overlay z-0 opacity-50" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTEX2-SqQBP_CNu9C2-bPPufIxgXV_GBu_YIJzhFsso-0f_5lHMhkk2ZuXXK-9yg2yfDH2qZFBOHouFKHyvsM0iyE5DIRFGMoF5K4BngWu9_vlDEbtishVWFrgDTikFe42fq3Ithkdo8GzIjLTxZeDWR1xVCzMOlQMeIa5geRDtp7ruDK8Svw6tnEVZmxr9kVExGJFJ7uXV6CddQKVk4yRh9oYoSkTAoK9ofTfzIZZhnUsJBlhYINO9So5-xbBNhKFcMAzkStKJGA">
+<div class="relative z-10 text-center px-8">
+<h1 class="text-[48px] md:text-[64px] font-black text-[#FFFFFF] tracking-[-0.04em] leading-tight mb-4 animate-fade-up" style="animation-delay: 0.1s;">회사 소개</h1>
+<p class="text-[18px] text-[#A9A7B1] max-w-2xl mx-auto font-medium tracking-wide animate-fade-up" style="animation-delay: 0.3s;">
+        경계를 넘어선 완벽함, 프리미엄 골프 테크놀로지의 새로운 기준
+      </p>
+</div>
+</section>
+<!-- About Section -->
+<section class="py-32 bg-[#121318] border-b border-white/5 reveal-on-scroll is-visible">
+<div class="px-8 lg:px-16 max-w-[1280px] mx-auto text-center">
+<span class="text-[#97D302] font-['Geist'] tracking-[0.1em] text-[14px] font-medium uppercase mb-6 block">green tallk brand story</span>
+<h2 class="text-[40px] md:text-[56px] font-extrabold text-[#FFFFFF] tracking-[-0.02em] leading-tight mb-8">환경을 생각하는 그린토크 Green + Talk</h2>
+<p class="text-[#A9A7B1] text-[18px] md:text-[20px] mx-auto leading-relaxed">경영활동과 사업장 운영이 환경에 미치는 부정적 영향을 Zero화, 미래세대를 위한 제품 서비스를 위해 최선을 다하겠습니다.</p>
+</div>
+</section><section class="relative h-[70vh] min-h-[500px] w-full overflow-hidden border-b border-white/5 reveal-on-scroll is-visible">
+<div class="absolute inset-0 bg-black/40 z-10"></div>
+<img alt="JINOVER Precision Manufacturing Facility" class="absolute inset-0 w-full h-full object-cover z-0 animate-ken-burns" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOsx3_QQZU7-8xizTfWdkaTX3agu9lriObPHqNswVkVhjSoZIrMOBOm5fBcUTQyQrlTFyq-JJAbTollLYNCE3dXVxTsEGTJzVSjoJogxhMf3lK6-25chKpQeZp6s77b1M4li0_gBxfsbWLAvxkWE5DTaLOS4CbJplif5eljsjmVGgHOedNWQU_rIQz-m0tsgSVfRssjVBOpoP4yF41Wk1wzjMav_2wTYfOd2X65EMGNqL1nVH0KJ3KKdHBpOvFGCfj_lbAzp0f8fY">
+<div class="absolute inset-0 bg-gradient-to-b from-[#121318] via-transparent to-[#1a1b21] z-20 opacity-60"></div>
+</section><section class="py-32 bg-[#121318] relative">
+<div class="w-full max-w-[1280px] mx-auto px-8 lg:px-16">
+<div class="mb-24 flex flex-col md:flex-row gap-8 border-b border-white/10 pb-8 items-center text-center justify-center reveal-on-scroll is-visible">
+<div class="text-center">
+<span class="text-[#97D302] font-['Geist'] tracking-[0.1em] font-medium uppercase mb-4 block text-[11px]">Core Technologies</span>
+<h2 class="font-bold text-white tracking-[-0.02em] text-[48px] leading-tight text-center">핵심기술<br></h2>
+</div>
+</div>
+<div class="space-y-40">
+<!-- Feature 1: Green Speed -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center reveal-on-scroll tech-card rounded-xl p-4 -m-4 bg-black is-visible">
+<div class="lg:col-span-7 relative group rounded-xl overflow-hidden">
+<div class="relative w-full aspect-[16/10] overflow-hidden bg-surface-container">
+<img alt="그린스피드 조절" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out" src="https://lh3.googleusercontent.com/aida/AP1WRLvq1EfpPfgZQiHYCcWpmZxtRj7aNO99ZUYV4xQhrfHBHAg1oM2d5hvsrnzMB42kpq5yJxpza01WXRFUmpIweIx7JCS_74XPRzn8PWMJ9n4eKqessJobFzvrgCVSwnv8clKnihwDJAWmH1rtg5gsqaQPJRdUZLrzzaAjqyfXnCh2pktlD9s18EpwNfZm2n96k7fzdrNsgiiyzzPUgGDyBiNV2Y9IB2Qohmh_P09aAXcQq4LYyyVPjZ-XSBs">
+<div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500"></div>
+</div>
+</div>
+<div class="lg:col-span-5 space-y-6">
+<div class="text-[#97D302] font-['Geist'] tracking-[0.2em] text-sm font-bold">01</div>
+<h3 class="text-white text-3xl lg:text-4xl font-bold tracking-tight">Smart Putting Mat</h3>
+<p class="text-white/60 text-lg leading-relaxed font-light">필드 그린과 유사한 환경을 제공해 주는 GINOVO Path 31</p>
+</div>
+</div>
+<!-- Feature 2: Concede Hole -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center bg-[#0d0e13] reveal-on-scroll tech-card rounded-xl p-4 -m-4 is-visible">
+<div class="lg:col-span-5 space-y-6 order-2 lg:order-1 lg:pl-12">
+<div class="text-[#97D302] font-['Geist'] tracking-[0.2em] text-sm font-bold">02</div>
+<h3 class="text-3xl lg:text-4xl font-bold tracking-tight text-white">Smart Golf Ball</h3>
+<p class="text-white/60 text-lg leading-relaxed font-light">세계최초 완벽한 퍼팅 솔루션</p><div class="">GINOVO 스마트 골프공</div><p></p>
+</div>
+<div class="lg:col-span-7 relative group order-1 lg:order-2 rounded-xl overflow-hidden">
+<div class="relative w-full aspect-[16/10] overflow-hidden bg-surface-container">
+<img alt="컨시드 거리 홀컵 설계" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out" src="https://lh3.googleusercontent.com/aida/AP1WRLvOssd3e1sKx9G9E0gmrHk1bSdRPZaEaEUQoqvIndu4wMKhg7pOv6qyhF5UXgPht6g-FWM_B3OJUJq97kfKO-1x2sIbZqYnMdmIjz_EbK8XST5ZrTT86YChxXyRBgQAt5IWwL_P5Dkt18c8jwM6ituvTXJiHGV-4syZwPP8Eb56n3QgH9QZJwNLNGAx1RwNsck_WxTTys1X2RUfO9hE5FsgfAHUm8o7j7dN_X7k2vOQYLMMfo-mkn-l1Q">
+<div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500"></div>
+</div>
+</div>
+</div>
+<!-- Feature 3: Ball Return -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center reveal-on-scroll tech-card rounded-xl p-4 -m-4 bg-black is-visible">
+<div class="lg:col-span-7 relative group rounded-xl overflow-hidden">
+<div class="relative w-full aspect-[16/10] overflow-hidden bg-surface-container">
+<img alt="볼 리턴이 필요 없는 간편함" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out" src="https://lh3.googleusercontent.com/aida/AP1WRLuZlSqOz5F75e8vRH5k5JgOPsIgsKZaVeSzFs5xeJRkOTyh0_F-rwjOtorzqWmLoTVcJr90ol_qcXRagGhHpby7UCMwCtrZTaYE6URu8mIhCNJ5WjjfXZCeYBTLxSgYIz5uihDsLN54PCJDlFNoM2YB-4MfBAYou5F4pKtaLqNTZoC6IDO7f8nn-wLr8s8u5FVWiH3vyIGDGIE2VANMSgpJJX-_4jAuTvtvu3nybe1sPrTDrzhmPtRFP2w">
+<div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500"></div>
+</div>
+</div>
+<div class="lg:col-span-5 space-y-6">
+<div class="text-[#97D302] font-['Geist'] tracking-[0.2em] text-sm font-bold">03</div>
+<h3 class="text-white text-3xl lg:text-4xl font-bold tracking-tight">Assembling appliances</h3>
+<p class="text-white/60 text-lg leading-relaxed font-light">섬세한 기술력과 완벽한 모델링 가전제품 부품조립</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Founder's Vision Section -->
+<!-- Core Values Section -->
+<!-- Certifications & Awards Section -->
+<section class="py-32 bg-[#121318] reveal-on-scroll is-visible">
+<div class="px-8 lg:px-16 max-w-[1280px] mx-auto">
+<div class="text-center mb-20">
+<span class="text-[#97D302] font-['Geist'] tracking-[0.1em] text-[14px] font-medium uppercase mb-4 block">certification</span>
+<h2 class="text-[48px] font-extrabold text-[#FFFFFF] tracking-[-0.02em]">특허 및 출원현황</h2>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+<!-- Certificate 1 -->
+<div class="flex flex-col gap-4 reveal-on-scroll is-visible">
+<div class="aspect-[3/4] bg-[#1a1b21] border border-white/5 rounded-[4px] p-6 flex flex-col items-center justify-center text-center award-card group animate-float" style="animation-delay: 0s;">
+<div class="w-16 h-16 rounded-full border border-white/10 flex items-center justify-center mb-4 group-hover:border-[#97D302] group-hover:bg-[#97D302]/10 transition-colors duration-500">
+<span class="material-symbols-outlined text-white/50 group-hover:text-[#97D302] transition-colors duration-500">verified</span>
+</div>
+</div>
+<div class="px-1">
+<label class="font-['Geist'] text-[14px] font-medium text-on-surface-variant uppercase tracking-wider block mb-2">Name</label>
+<input class="w-full bg-surface-container border border-white/10 rounded-[4px] px-3 py-2 text-sm text-white focus:outline-none focus:border-primary/50 transition-colors" placeholder="Enter name..." type="text">
+</div>
+</div>
+<!-- Certificate 2 -->
+<div class="flex flex-col gap-4 reveal-on-scroll is-visible" style="transition-delay: 100ms;">
+<div class="aspect-[3/4] bg-[#1a1b21] border border-white/5 rounded-[4px] p-6 flex flex-col items-center justify-center text-center award-card group animate-float" style="animation-delay: 0.2s;">
+<div class="w-16 h-16 rounded-full border border-white/10 flex items-center justify-center mb-4 group-hover:border-[#97D302] group-hover:bg-[#97D302]/10 transition-colors duration-500">
+<span class="material-symbols-outlined text-white/50 group-hover:text-[#97D302] transition-colors duration-500">workspace_premium</span>
+</div>
+</div>
+<div class="px-1">
+<label class="font-['Geist'] text-[14px] font-medium text-on-surface-variant uppercase tracking-wider block mb-2">Name</label>
+<input class="w-full bg-surface-container border border-white/10 rounded-[4px] px-3 py-2 text-sm text-white focus:outline-none focus:border-primary/50 transition-colors" placeholder="Enter name..." type="text">
+</div>
+</div>
+<!-- Certificate 3 -->
+<div class="flex flex-col gap-4 reveal-on-scroll is-visible" style="transition-delay: 200ms;">
+<div class="aspect-[3/4] bg-[#1a1b21] border border-white/5 rounded-[4px] p-6 flex flex-col items-center justify-center text-center award-card group animate-float" style="animation-delay: 0.4s;">
+<div class="w-16 h-16 rounded-full border border-white/10 flex items-center justify-center mb-4 group-hover:border-[#97D302] group-hover:bg-[#97D302]/10 transition-colors duration-500">
+<span class="material-symbols-outlined text-white/50 group-hover:text-[#97D302] transition-colors duration-500">emoji_events</span>
+</div>
+</div>
+<div class="px-1">
+<label class="font-['Geist'] text-[14px] font-medium text-on-surface-variant uppercase tracking-wider block mb-2">Name</label>
+<input class="w-full bg-surface-container border border-white/10 rounded-[4px] px-3 py-2 text-sm text-white focus:outline-none focus:border-primary/50 transition-colors" placeholder="Enter name..." type="text">
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-surface-container-lowest border-t border-white/5 py-12"><div class="max-w-[1280px] mx-auto px-4 md:px-8 lg:px-16"><div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 md:gap-12 mb-8 md:mb-12"><div class="space-y-3 md:space-y-4"><h4 class="font-label text-on-surface uppercase tracking-widest text-xs md:text-sm mb-4">고객센터</h4><div class="space-y-2"><div class="text-2xl md:text-3xl font-bold text-on-surface">062-716-0995</div><div class="font-body text-on-surface-variant text-[10px] md:text-xs leading-relaxed">오전 9:00 - 오후 5:00 | 점심시간 12:00-13:00<br>주말 및 공휴일 휴무</div></div></div><div class="space-y-3 md:space-y-4"><h4 class="font-label text-on-surface uppercase tracking-widest text-xs md:text-sm mb-4">은행 정보</h4><p class="font-body text-on-surface-variant text-[10px] md:text-xs">기업은행 65904714504019 (주)그린토크</p></div><div class="space-y-3 md:space-y-4"><h4 class="font-label text-on-surface uppercase tracking-widest text-xs md:text-sm mb-4">에 대한</h4><nav class="flex flex-col gap-2 text-[10px] md:text-xs space-y-2"><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">회사소개</a><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">이용약관</a><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">개인정보처리방침</a></nav></div></div><div class="border-t border-white/5 mt-8"><div class="flex items-center gap-4 mb-4"><a class="text-on-surface-variant hover:text-white transition-all duration-300 transform hover:scale-110" href="https://www.youtube.com/@ginovo31" target="_blank"><svg class="lucide lucide-youtube opacity-80 hover:opacity-100" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 2-2h15a2 2 0 0 1 2 2 24.12 24.12 0 0 1 0 10 2 2 0 0 1-2 2h-15a2 2 0 0 1-2-2z"></path><path d="m10 15 5-3-5-3z"></path></svg></a><a class="text-on-surface-variant hover:text-white transition-all duration-300 transform hover:scale-110" href="https://www.instagram.com/ginovo31" target="_blank"><svg class="lucide lucide-instagram opacity-80 hover:opacity-100" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><rect height="20" rx="5" ry="5" width="20" x="2" y="2"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg></a></div><div class="flex flex-wrap gap-x-3 md:gap-x-4 gap-y-1 text-[9px] md:text-[10px] font-body text-on-surface-variant opacity-70 mt-3"><span class="">블록명 : 블록명</span><span class="">대표 : 손영국</span><span class="">주소 : 광주광역시 신호구 손재로 236 그린토크</span><span class="">사업자등록번호 : 603-87-02720</span></div><div class="text-[9px] md:text-[10px] font-body text-on-surface-variant mt-3 md:mt-4 opacity-50">(c) 그린토크. 주최: 엔에이치엔커머스(주)</div></div></div></footer>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    // Respect prefers-reduced-motion
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    
+    if (!prefersReducedMotion) {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    // Optional: Unobserve after reveal to run once
+                    // observer.unobserve(entry.target); 
+                }
+            });
+        }, {
+            threshold: 0.15,
+            rootMargin: '0px 0px -50px 0px'
+        });
+
+        document.querySelectorAll('.reveal-on-scroll').forEach((el) => {
+            observer.observe(el);
+        });
+    } else {
+        // If reduced motion is preferred, make everything visible immediately
+        document.querySelectorAll('.reveal-on-scroll').forEach((el) => {
+            el.classList.add('is-visible');
+        });
+    }
+});
+</script>
+
+
+
+
+
+
+
+
+</body></html>
