@@ -1,0 +1,392 @@
+<!DOCTYPE html><html class="dark" lang="ko" style="width: 1280px; height: 5320px; overflow: hidden; position: relative;"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>JINOVER | PRECISION ENGINEERED PERFORMANCE</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;700;800&amp;family=Geist:wght@400;500;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script defer="" src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "outline": "#8f909d",
+                    "on-primary-container": "#00164e",
+                    "industrial-gray": "#94A3B8",
+                    "surface-variant": "#34343a",
+                    "on-tertiary": "#2f3131",
+                    "on-surface-variant": "#c5c5d3",
+                    "on-secondary-fixed": "#131b2e",
+                    "inverse-primary": "#4059aa",
+                    "background": "#121318",
+                    "error": "#ffb4ab",
+                    "tertiary-fixed": "#e2e2e2",
+                    "surface-container-lowest": "#0d0e13",
+                    "primary-container": "#97d302",
+                    "on-secondary-fixed-variant": "#3f465c",
+                    "inverse-surface": "#e3e1e9",
+                    "inverse-on-surface": "#2f3036",
+                    "surface-tint": "#97d302",
+                    "on-surface": "#e3e1e9",
+                    "surface-container-highest": "#34343a",
+                    "surface-container": "#1e1f25",
+                    "on-error-container": "#ffdad6",
+                    "outline-variant": "#444651",
+                    "tertiary": "#c6c6c7",
+                    "surface-container-high": "#292a2f",
+                    "on-tertiary-fixed": "#1a1c1c",
+                    "primary": "#97d302",
+                    "success-cyan": "#0EA5E9",
+                    "on-background": "#e3e1e9",
+                    "on-primary-fixed-variant": "#364e00",
+                    "primary-fixed-dim": "#9cd911",
+                    "error-container": "#93000a",
+                    "on-secondary-container": "#adb4ce",
+                    "secondary-fixed": "#dae2fd",
+                    "secondary": "#bec6e0",
+                    "on-primary": "#131f00",
+                    "surface-bright": "#38393f",
+                    "secondary-fixed-dim": "#bec6e0",
+                    "on-error": "#690005",
+                    "on-tertiary-fixed-variant": "#454747",
+                    "on-secondary": "#283044",
+                    "tertiary-fixed-dim": "#c6c6c7",
+                    "tertiary-container": "#3e4041",
+                    "surface-container-low": "#1a1b21",
+                    "surface-dim": "#121318",
+                    "surface": "#121318",
+                    "on-primary-fixed": "#131f00",
+                    "pitch-black": "#000000",
+                    "primary-fixed": "#b7f638",
+                    "on-tertiary-container": "#abacac",
+                    "secondary-container": "#3f465c",
+                    "charcoal": "#1a1a1a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "container-max": "1280px",
+                    "section-gap": "160px",
+                    "margin-lg": "64px",
+                    "stack-sm": "8px",
+                    "stack-md": "24px",
+                    "gutter": "32px"
+            },
+            "fontFamily": {
+                    "display-xl": ["Hanken Grotesk"],
+                    "headline-lg-mobile": ["Hanken Grotesk"],
+                    "body-md": ["Hanken Grotesk"],
+                    "label-mono": ["Geist"],
+                    "headline-lg": ["Hanken Grotesk"],
+                    "body-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                    "display-xl": ["80px", {"lineHeight": "90px", "letterSpacing": "-0.04em", "fontWeight": "800"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-md": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "label-mono": ["14px", {"lineHeight": "20px", "letterSpacing": "0.1em", "fontWeight": "500"}],
+                    "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #121318;
+            color: #e3e1e9;
+            font-family: 'Hanken Grotesk', sans-serif;
+        }
+        .glass-card {
+            background: rgba(30, 31, 37, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
+        }
+        .glass-card:hover {
+            border: 1px solid rgba(151, 211, 2, 0.3);
+            box-shadow: 0 0 25px rgba(151, 211, 2, 0.15);
+        }
+        .primary-glow {
+            box-shadow: 0 0 15px rgba(151, 211, 2, 0.3);
+            transition: all 0.5s ease;
+        }
+        .primary-glow:hover {
+            box-shadow: 0 0 30px rgba(151, 211, 2, 0.5);
+            transform: scale(1.02);
+        }
+        @keyframes pulse-tech {
+            0% { opacity: 0.6; transform: scale(0.95); }
+            50% { opacity: 1; transform: scale(1.05); }
+            100% { opacity: 0.6; transform: scale(0.95); }
+        }
+        .animate-pulse-tech {
+            animation: pulse-tech 2s infinite ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background selection:bg-primary/30 selection:text-white font-body-lg">
+<header class="bg-surface-container/90 backdrop-blur-xl border-b border-white/5 top-0 z-50 transition-all duration-300 fixed left-0 w-full z-[100]" id="main-header">
+<nav class="flex justify-between items-center px-8 lg:px-16 py-4 w-full max-w-[1280px] mx-auto">
+<div class="font-display-xl tracking-tighter text-on-surface shrink-0">
+<a class="block" href="#">
+<img alt="JINOVER" class="h-10 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_8dvdV5Do28bjU5Z8fMefSlP_i9xggGhP8bAULJOuGPq7AI-D7tTtdVIFnGjcUbKIqZCnHBLJiesN-vM4iaHEpja_3OBjruQI_yHrsksQhsSc47vmE9v1vRdUEFfNuFEKJT0Jas5MyD-4AtPOddrA0pxN0JLcEaNz93PqJpF-1E8sTx9f4Xj2TPF5Q1vVksUVdyeve8HHo60n2UTdauCABWZdB4OWPYh8wAD4ODgMfgTHSlz3KimAdgAKK29-H7HWhk4QSSMFv40">
+</a>
+</div>
+<div class="hidden lg:flex items-center gap-6 h-full">
+<div class="group relative h-full flex items-center">
+<a class="font-body-md hover:text-primary transition-all duration-300 py-2 border-b-2 text-on-surface-variant border-transparent group-hover:border-primary" href="#">회사&nbsp;</a>
+<div class="absolute top-full left-0 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-[100] transform translate-y-2 group-hover:translate-y-0">
+<div class="glass-card w-64 p-6 flex flex-col gap-3 bg-surface/80 backdrop-blur-md"><a class="text-sm text-on-surface-variant hover:text-primary transition-colors" href="#">회사소개</a><a class="text-sm text-on-surface-variant hover:text-primary transition-colors" href="#">창업 가치</a><a class="text-sm text-on-surface-variant hover:text-primary transition-colors" href="#">디자인 어워드&nbsp;</a><a class="text-sm text-on-surface-variant hover:text-primary transition-colors" href="#">오시는 길&nbsp;</a></div>
+</div>
+</div>
+<div class="group relative h-full flex items-center">
+<a class="text-on-surface-variant font-body-md hover:text-primary transition-all duration-300 py-2 border-b-2 border-transparent group-hover:border-primary" href="#">스마트 골프공</a>
+<div class="absolute top-full left-0 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-[100] transform translate-y-2 group-hover:translate-y-0"><div class="glass-card w-64 p-6 flex flex-col gap-3 bg-surface/80 backdrop-blur-md"><a class="text-sm font-bold text-on-surface-variant hover:text-primary transition-colors" href="#" style="font-family: 'Hanken Grotesk', sans-serif; font-size: 15px;">주요기능 소개</a><a class="text-sm font-bold text-on-surface-variant hover:text-primary transition-colors" href="#" style="font-family: 'Hanken Grotesk', sans-serif; font-size: 15px;">상품구성</a></div></div>
+</div>
+<div class="group relative h-full flex items-center">
+<a class="text-on-surface-variant font-body-md hover:text-primary transition-all duration-300 py-2 border-b-2 border-transparent group-hover:border-primary" href="#">퍼팅매트</a>
+<div class="absolute top-full left-0 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-[100] transform translate-y-2 group-hover:translate-y-0">
+<div class="glass-card w-64 p-6 flex flex-col gap-3 bg-surface/80 backdrop-blur-md">
+<a class="text-sm text-on-surface-variant hover:text-primary transition-colors" href="#">경사 퍼팅 매트&nbsp;&nbsp;</a>
+<a class="text-sm text-on-surface-variant hover:text-primary transition-colors" href="#">슬로핑 퍼팅매트&nbsp;</a>
+
+</div>
+</div>
+</div>
+<div class="group relative h-full flex items-center">
+<a class="text-on-surface-variant font-body-md hover:text-primary transition-all duration-300 py-2 border-b-2 border-transparent group-hover:border-primary" href="#">Team &amp; Infra</a>
+<div class="absolute top-full left-0 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-[100] transform translate-y-2 group-hover:translate-y-0">
+<div class="glass-card w-64 p-6 flex flex-col gap-3 bg-surface/80 backdrop-blur-md">
+<a class="text-sm text-on-surface-variant hover:text-primary transition-colors" href="#">회사 소개 영상</a>
+<a class="text-sm text-on-surface-variant hover:text-primary transition-colors" href="#">조직 구성</a>
+<a class="text-sm text-on-surface-variant hover:text-primary transition-colors" href="#">공장 인프라</a>
+</div>
+</div>
+</div>
+<div class="h-full flex items-center">
+<a class="text-on-surface-variant font-body-md hover:text-primary transition-all duration-300 py-2 border-b-2 border-transparent" href="https://smartstore.naver.com/ginovo" target="_blank">Shop</a>
+</div>
+<div class="group relative h-full flex items-center">
+<a class="text-on-surface-variant font-body-md hover:text-primary transition-all duration-300 py-2 border-b-2 border-transparent group-hover:border-primary" href="#">News</a>
+<div class="absolute top-full right-0 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-[100] transform translate-y-2 group-hover:translate-y-0">
+
+</div>
+</div>
+<div class="group relative h-full flex items-center">
+<a class="text-on-surface-variant font-body-md hover:text-primary transition-all duration-300 py-2 border-b-2 border-transparent group-hover:border-primary" href="#">Contact</a>
+<div class="absolute top-full right-0 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-[100] transform translate-y-2 group-hover:translate-y-0">
+<div class="glass-card w-64 p-6 flex flex-col gap-3 bg-surface/80 backdrop-blur-md">
+<a class="text-sm text-on-surface-variant hover:text-primary transition-colors" href="#">공지사항</a>
+<a class="text-sm text-on-surface-variant hover:text-primary transition-colors" href="#">1:1 문의하기</a>
+<a class="text-sm text-on-surface-variant hover:text-primary transition-colors" href="#">FAQ</a>
+</div>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="hidden lg:flex gap-4">
+<div class="group relative flex flex-col items-center">
+<span class="material-symbols-outlined text-on-surface-variant hover:text-primary cursor-pointer transition-colors" data-icon="language">language</span><span class="font-label-mono text-[10px] uppercase tracking-tighter opacity-70 mt-1">언어설정</span>
+<div class="absolute top-full right-0 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-[100] transform translate-y-2 group-hover:translate-y-0">
+<div class="glass-card w-32 p-4 flex flex-col gap-2 bg-surface/80 backdrop-blur-md">
+<a class="text-sm text-on-surface-variant hover:text-primary transition-colors py-1" href="#">한국어</a>
+<a class="text-sm text-on-surface-variant hover:text-primary transition-colors py-1" href="#">English</a>
+</div>
+</div>
+</div>
+<a class="flex items-center flex-col" href="/login">
+<span class="material-symbols-outlined text-on-surface-variant hover:text-primary cursor-pointer transition-colors" data-icon="account_circle">account_circle</span><span class="font-label-mono text-[10px] uppercase tracking-tighter opacity-70 mt-1">로그인</span>
+</a>
+</div>
+</div>
+</nav>
+</header>
+<main class="pt-[80px]"><!-- Hero Section -->
+<section class="relative h-screen flex items-center overflow-hidden">
+<img alt="Smart Golf Ball Cinematic" class="absolute inset-0 w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLtVlv5HZZ6pknUvCyulQzYR79r5N6EO90edOyKOu-MTL4aJYSzm0ZwcT8Vt4LYhwx49U-V4MJAX3IXEl6egrPxozYx--y3ERp8vWCackZlKzbkPs5cd9j6WZQgoOZU_NlVk6gJQr5HdyqGOHCrKKUdRU_evvDbGx1dzTS_STZS8yRDf67U18qWqqf9KBAr5zr0P5wHWivxXxBHW5A4xx6cHbaqI00jYzVzHIQmPfbREJFkA-HrZZGl8Fdk">
+<div class="absolute inset-0 bg-black/60"></div>
+<div class="relative z-10 px-8 lg:px-16 max-w-[1280px] w-full mx-auto">
+<div class="max-w-3xl space-y-6 fade-up" style="animation-play-state: running;">
+
+<h1 class="font-extrabold text-[#FFFFFF] tracking-[-0.05em] leading-tight text-[69px]">GINOVO 디자인 어워드</h1>
+<p class="text-[#e3e1e9] max-w-xl leading-relaxed text-[17px] text-[13px]">당신의 퍼팅을 데이터로 완성하다</p><p></p>
+<div class="pt-8 flex flex-col sm:flex-row gap-4">
+
+
+</div>
+</div>
+</div>
+</section>
+<!-- Product Insight Section (New) -->
+<section class="py-32 bg-[#121318] border-b border-white/5">
+<div class="px-8 lg:px-16 max-w-[1280px] mx-auto">
+<div class="text-center max-w-3xl mx-auto mb-16 fade-up" style="animation-play-state: running;">
+<span class="text-[#97D302] font-['Geist'] tracking-[0.1em] font-medium uppercase mb-4 block text-[11px]">Product Insight</span>
+<h2 class="font-bold text-[#FFFFFF] tracking-[-0.02em] mb-6 text-[45px]">경사 퍼팅매트의 모든 것</h2>
+<p class="text-[#A9A7B1] text-[13px]">혁신적인 기술이 어떻게 당신의 퍼포먼스를 향상시키는지 영상으로 확인하세요.</p>
+</div>
+<div class="relative w-full aspect-video bg-[#1e1f25] rounded-2xl overflow-hidden shadow-2xl border border-white/5 fade-up delay-100 group cursor-pointer" style="animation-play-state: running;">
+<div class="absolute inset-0 bg-black/40 flex items-center justify-center group-hover:bg-black/20 transition-all duration-500 z-10">
+<div class="w-20 h-20 bg-[#97D302]/90 rounded-full flex items-center justify-center text-black transform group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-[#97D302]/20">
+<span class="material-symbols-outlined text-4xl ml-2">play_arrow</span>
+</div>
+</div>
+<img alt="스마트 골프공 동영상" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDESlF6eiRnKrZpnQtFfp_Myv3zdI3Fe-P0qrLajnalgQmMXU-fVSImHQV1BJhMhAsRrUu8otFMR2ADCo-MqLBhdwqi5UPO8NzQamYdFMWOVov6pTaGQoRmvxw7gCe2Yy0Bivnqz_ClNSDkWRJY1sjAKHliTL2TnTukG_H_yUULwLBbflLL6CR9WhUElHd0caEPRLg1CtSSIxTH8W-31nXzH7iW985nKTRKwBY_ag29lGiWwhsIW72ryqw8910Ruv-ATjjHn8jICW8" title="스마트 골프공 동영상">
+</div>
+</div>
+</section>
+<!-- Product Intro Section -->
+<section class="py-32 bg-[#121318] border-b border-white/5 overflow-hidden">
+<div class="px-8 lg:px-16 max-w-[1280px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="fade-up delay-100" style="animation-play-state: running;">
+<img alt="Smart Golf Ball Tech Inside" class="w-full h-auto rounded-lg shadow-2xl border border-white/5" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAG_Hgw-vHN8l3w7aDgftyFaV2eh3RkJCAaZGxijjmMHNDOceaiJhW7psWAy9W48w2qH4-xkYh-vGopu0NHHyk6psuPTu2DsdBjrDJfa09gRpyrs_-VSFL4vTvr0EQJiGXS4x7NfKkJkPLlNJlqj3m8HeklhZ-mpKeMnJ190Ikd0w1POsPDkN5rdMfZUEB0_YP_qno77sfaGxS-mSvMbIS9FI-hGiN32oUT-JbeBtHlU4Eapk186_lJLfpz5WsOSsBfJIiIaXUWuy0">
+</div>
+<div class="space-y-10 fade-up delay-200" style="animation-play-state: running;">
+<div class="space-y-4">
+<span class="text-[#97D302] font-['Geist'] tracking-[0.1em] font-medium uppercase text-[11px]">스마트 센서가 만드는 퍼팅의 혁신</span>
+<h2 class="font-bold text-[#FFFFFF] tracking-[-0.02em] leading-tight text-[45px]">퍼팅 실력을 높여주는<div class="">효율적인 경사 퍼팅매트</div></h2>
+<p class="text-[#A9A7B1] leading-relaxed text-[13px]">&nbsp;USGA 그린 경사 구현과 PATH 31 경로 가이드를 적용한 혁신적인 기술력을 바탕으로 정교한 공정을 통해</p><div class="">실제 필드 그린과 가장 유사한 환경을 매트에 적용했습니다.</div><p></p><p></p><p></p><p></p>
+</div>
+</div>
+</div>
+</section>
+<!-- Feature Grid Section -->
+<section class="py-32 bg-[#121318] border-b border-white/5">
+<div class="px-8 lg:px-16 max-w-[1280px] mx-auto">
+<div class="text-center max-w-3xl mx-auto mb-20 fade-up" style="animation-play-state: running;">
+
+<h2 class="font-bold text-[#FFFFFF] tracking-[-0.02em] mb-6 text-[45px]">우수산업디자인상품 인증서</h2>
+<p class="text-[#A9A7B1] text-[13px]">직관적이고 정밀한 데이터 분석을 통해 당신의 퍼팅 약점을 완벽하게 보완합니다.</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8"><div class="p-0 bg-surface-container-lowest border border-white/5 rounded-2xl overflow-hidden hover:border-primary/50 transition-all duration-500 group relative aspect-[3/4]"><div x-data="{ activeSlide: 0, slides: ['https://lh3.googleusercontent.com/aida/AP1WRLskZQUocaE3SA1I1LJB8lhSXSH9q3GYufd57TDptnRHFxL5ybIsBz9E1uouvDBMawkuB6A77-txQyjEQsO3C4fKd9M-mpEmT80a5x_6oVUz4xYMcoLQyLo_vcuNOfMzxsp5IFP0Ug9VI0TOcqaRk7M937Q63Pg3jLRzeddljoH_bm336sF6Kihul0E9HUjfph0XGc7pljCyge7FK7-buZtTAhjDxXqsgpkYHT3XrsfwQlOw9GJDNGxBMQ', 'https://lh3.googleusercontent.com/aida/AP1WRLskZQUocaE3SA1I1LJB8lhSXSH9q3GYufd57TDptnRHFxL5ybIsBz9E1uouvDBMawkuB6A77-txQyjEQsO3C4fKd9M-mpEmT80a5x_6oVUz4xYMcoLQyLo_vcuNOfMzxsp5IFP0Ug9VI0TOcqaRk7M937Q63Pg3jLRzeddljoH_bm336sF6Kihul0E9HUjfph0XGc7pljCyge7FK7-buZtTAhjDxXqsgpkYHT3XrsfwQlOw9GJDNGxBMQ', 'https://lh3.googleusercontent.com/aida/AP1WRLtHrLN6k46VEtWJL-lYL9yCt0HkaJkJxFt-yC4LEc5McY70jO46GFUCNcpsmMx0p69XZZAfvelLSYAQ-prhDLm9nkv0Xxcy2pmvQ_7n_A82ETE2BY0HTgMF82-8lJAYu1zKFw_rq8s7zf96JrU2yz9G2XiNScRtTUv2J2RiGyU6A0IMR-MOZNN4_KDge7V1eGdcEbCREHFQ6r3wCgfckO5jyWEKvdjTzifaaUYqqN4c0g9x2bAf3-X_GMc'] }" class="h-full w-full relative"><div class="absolute inset-0 z-0"><template x-for="(slide, index) in slides" :key="index"><img :src="slide" x-show="activeSlide === index" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100"></template><img :src="slide" x-show="activeSlide === index" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" src="https://lh3.googleusercontent.com/aida/AP1WRLskZQUocaE3SA1I1LJB8lhSXSH9q3GYufd57TDptnRHFxL5ybIsBz9E1uouvDBMawkuB6A77-txQyjEQsO3C4fKd9M-mpEmT80a5x_6oVUz4xYMcoLQyLo_vcuNOfMzxsp5IFP0Ug9VI0TOcqaRk7M937Q63Pg3jLRzeddljoH_bm336sF6Kihul0E9HUjfph0XGc7pljCyge7FK7-buZtTAhjDxXqsgpkYHT3XrsfwQlOw9GJDNGxBMQ"><img :src="slide" x-show="activeSlide === index" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" src="https://lh3.googleusercontent.com/aida/AP1WRLskZQUocaE3SA1I1LJB8lhSXSH9q3GYufd57TDptnRHFxL5ybIsBz9E1uouvDBMawkuB6A77-txQyjEQsO3C4fKd9M-mpEmT80a5x_6oVUz4xYMcoLQyLo_vcuNOfMzxsp5IFP0Ug9VI0TOcqaRk7M937Q63Pg3jLRzeddljoH_bm336sF6Kihul0E9HUjfph0XGc7pljCyge7FK7-buZtTAhjDxXqsgpkYHT3XrsfwQlOw9GJDNGxBMQ" style="display: none;"><img :src="slide" x-show="activeSlide === index" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" src="https://lh3.googleusercontent.com/aida/AP1WRLtHrLN6k46VEtWJL-lYL9yCt0HkaJkJxFt-yC4LEc5McY70jO46GFUCNcpsmMx0p69XZZAfvelLSYAQ-prhDLm9nkv0Xxcy2pmvQ_7n_A82ETE2BY0HTgMF82-8lJAYu1zKFw_rq8s7zf96JrU2yz9G2XiNScRtTUv2J2RiGyU6A0IMR-MOZNN4_KDge7V1eGdcEbCREHFQ6r3wCgfckO5jyWEKvdjTzifaaUYqqN4c0g9x2bAf3-X_GMc" style="display: none;"><img :src="slide" x-show="activeSlide === index" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" style="display: none;"><img :src="slide" x-show="activeSlide === index" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" style="display: none;"><img :src="slide" x-show="activeSlide === index" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" style="display: none;"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBaZcnqOHjW40kwx07k4hySAh2fe6vaDeDc3fNXU8XNKrJSlSbGFjhyu84ks9PXJB4KgEENWk8b3a9j1Uo44nVtOjjxbjHeB2kLeJNX0VP-E0sY65cWAhoD1FAjNmx9yEsmtgjyxWNOLYGju8xQHXrHJxh7qIoKqJo9mMSzYJ_C14cGHv65W2DxP238RAuh7SLid2N9pichImfP3jMwPgX7RbTu1VD8cfKmqpkYFlKdDi-Yq-PVvoegzI8nrShlCTE4L6LNrYrAFRU" alt="우수산업디자인상품 선정증" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"></div><div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent z-10"></div><div class="absolute inset-0 z-30 flex items-center justify-between px-4"><button @click="activeSlide = activeSlide === 0 ? slides.length - 1 : activeSlide - 1" class="w-10 h-10 rounded-full bg-black/40 backdrop-blur-md flex items-center justify-center text-primary border border-white/10 hover:bg-primary hover:text-black transition-all"><span class="material-symbols-outlined">chevron_left</span></button><button @click="activeSlide = activeSlide === slides.length - 1 ? 0 : activeSlide + 1" class="w-10 h-10 rounded-full bg-black/40 backdrop-blur-md flex items-center justify-center text-primary border border-white/10 hover:bg-primary hover:text-black transition-all"><span class="material-symbols-outlined">chevron_right</span></button></div><div class="absolute inset-0 z-20 p-8 flex flex-col justify-end pointer-events-none"><h3 class="text-white text-2xl font-bold mb-2 tracking-tight font-display-xl">우수산업디자인상품 선정증</h3></div></div></div><div class="p-0 bg-surface-container-lowest border border-white/5 rounded-2xl overflow-hidden hover:border-primary/50 transition-all duration-500 group relative aspect-[3/4]"><div x-data="{ activeSlide: 0, slides: ['https://lh3.googleusercontent.com/aida/AP1WRLvq1EfpPfgZQiHYCcWpmZxtRj7aNO99ZUYV4xQhrfHBHAg1oM2d5hvsrnzMB42kpq5yJxpza01WXRFUmpIweIx7JCS_74XPRzn8PWMJ9n4eKqessJobFzvrgCVSwnv8clKnihwDJAWmH1rtg5gsqaQPJRdUZLrzzaAjqyfXnCh2pktlD9s18EpwNfZm2n96k7fzdrNsgiiyzzPUgGDyBiNV2Y9IB2Qohmh_P09aAXcQq4LYyyVPjZ-XSBs', 'https://lh3.googleusercontent.com/aida/AP1WRLvgMdbNQOg9Ztsaj0lXwqr41DOrVjiBSb8AFHX5pOKPGAZA4bPE1UK0aE8ni8ynTYFSdxBeLz2MiUo4I6WInzsdo7SeNSdigXj4k5jeJmAEMLWWg-qaCmp3_CfT9QCqbgiLLWTtsEC7HHy_pDOiMYPUZ0YHoazA7izUA1V4UZFITDhC6kSIP61tsc8sNPQE9v704KYu2FUcW5-NiOk-iZa3lLgdfQgOAoyfMruP-yclPJowS27BUfs7jW8', 'https://lh3.googleusercontent.com/aida/AP1WRLskZQUocaE3SA1I1LJB8lhSXSH9q3GYufd57TDptnRHFxL5ybIsBz9E1uouvDBMawkuB6A77-txQyjEQsO3C4fKd9M-mpEmT80a5x_6oVUz4xYMcoLQyLo_vcuNOfMzxsp5IFP0Ug9VI0TOcqaRk7M937Q63Pg3jLRzeddljoH_bm336sF6Kihul0E9HUjfph0XGc7pljCyge7FK7-buZtTAhjDxXqsgpkYHT3XrsfwQlOw9GJDNGxBMQ'] }" class="h-full w-full relative"><div class="absolute inset-0 z-0"><template x-for="(slide, index) in slides" :key="index"><img :src="slide" x-show="activeSlide === index" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100"></template><img :src="slide" x-show="activeSlide === index" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" src="https://lh3.googleusercontent.com/aida/AP1WRLvq1EfpPfgZQiHYCcWpmZxtRj7aNO99ZUYV4xQhrfHBHAg1oM2d5hvsrnzMB42kpq5yJxpza01WXRFUmpIweIx7JCS_74XPRzn8PWMJ9n4eKqessJobFzvrgCVSwnv8clKnihwDJAWmH1rtg5gsqaQPJRdUZLrzzaAjqyfXnCh2pktlD9s18EpwNfZm2n96k7fzdrNsgiiyzzPUgGDyBiNV2Y9IB2Qohmh_P09aAXcQq4LYyyVPjZ-XSBs"><img :src="slide" x-show="activeSlide === index" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" src="https://lh3.googleusercontent.com/aida/AP1WRLvgMdbNQOg9Ztsaj0lXwqr41DOrVjiBSb8AFHX5pOKPGAZA4bPE1UK0aE8ni8ynTYFSdxBeLz2MiUo4I6WInzsdo7SeNSdigXj4k5jeJmAEMLWWg-qaCmp3_CfT9QCqbgiLLWTtsEC7HHy_pDOiMYPUZ0YHoazA7izUA1V4UZFITDhC6kSIP61tsc8sNPQE9v704KYu2FUcW5-NiOk-iZa3lLgdfQgOAoyfMruP-yclPJowS27BUfs7jW8" style="display: none;"><img :src="slide" x-show="activeSlide === index" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" src="https://lh3.googleusercontent.com/aida/AP1WRLskZQUocaE3SA1I1LJB8lhSXSH9q3GYufd57TDptnRHFxL5ybIsBz9E1uouvDBMawkuB6A77-txQyjEQsO3C4fKd9M-mpEmT80a5x_6oVUz4xYMcoLQyLo_vcuNOfMzxsp5IFP0Ug9VI0TOcqaRk7M937Q63Pg3jLRzeddljoH_bm336sF6Kihul0E9HUjfph0XGc7pljCyge7FK7-buZtTAhjDxXqsgpkYHT3XrsfwQlOw9GJDNGxBMQ" style="display: none;"><img :src="slide" x-show="activeSlide === index" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" style="display: none;"><img :src="slide" x-show="activeSlide === index" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" style="display: none;"><img :src="slide" x-show="activeSlide === index" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" style="display: none;"><img :src="slide" x-show="activeSlide === index" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" style="display: none;"></div><div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent z-10"></div><div class="absolute inset-0 z-30 flex items-center justify-between px-4"><button @click="activeSlide = activeSlide === 0 ? slides.length - 1 : activeSlide - 1" class="w-10 h-10 rounded-full bg-black/40 backdrop-blur-md flex items-center justify-center text-primary border border-white/10 hover:bg-primary hover:text-black transition-all"><span class="material-symbols-outlined">chevron_left</span></button><button @click="activeSlide = activeSlide === slides.length - 1 ? 0 : activeSlide + 1" class="w-10 h-10 rounded-full bg-black/40 backdrop-blur-md flex items-center justify-center text-primary border border-white/10 hover:bg-primary hover:text-black transition-all"><span class="material-symbols-outlined">chevron_right</span></button></div><div class="absolute inset-0 z-20 p-8 flex flex-col justify-end pointer-events-none"><h3 class="text-white text-2xl font-bold mb-2 tracking-tight">우수산업디자인상품 선정확인서</h3></div></div></div><div class="p-0 bg-surface-container-lowest border border-white/5 rounded-2xl overflow-hidden hover:border-primary/50 transition-all duration-500 group relative aspect-[3/4]"><div x-data="{ activeSlide: 0, slides: ['https://lh3.googleusercontent.com/aida/AP1WRLuJGlVs2tPnRw324-4BhWMWQGpb_2AmpBbb89LsZ4KzBo-cqB9qNU60QPBr8lG-XZ8mN1sV9pTZoS4GZHll5vblTzDQmm2jpYHgdpplWp97DBEZo7FtQqrufqL8HD2lmA9hvzizuxxm4Eo9RT-P1F0KljUbI-I_ny-V_Va4E6XUjgGhyoOR_TK7PpBEUvs8JqFjFdj9APO5M9hLwv4d1z4UDIH6yi9fampqUSxBMAPHLUN-gQCU2ifXAu8', 'https://lh3.googleusercontent.com/aida/AP1WRLtHrLN6k46VEtWJL-lYL9yCt0HkaJkJxFt-yC4LEc5McY70jO46GFUCNcpsmMx0p69XZZAfvelLSYAQ-prhDLm9nkv0Xxcy2pmvQ_7n_A82ETE2BY0HTgMF82-8lJAYu1zKFw_rq8s7zf96JrU2yz9G2XiNScRtTUv2J2RiGyU6A0IMR-MOZNN4_KDge7V1eGdcEbCREHFQ6r3wCgfckO5jyWEKvdjTzifaaUYqqN4c0g9x2bAf3-X_GMc', 'https://lh3.googleusercontent.com/aida/AP1WRLvgMdbNQOg9Ztsaj0lXwqr41DOrVjiBSb8AFHX5pOKPGAZA4bPE1UK0aE8ni8ynTYFSdxBeLz2MiUo4I6WInzsdo7SeNSdigXj4k5jeJmAEMLWWg-qaCmp3_CfT9QCqbgiLLWTtsEC7HHy_pDOiMYPUZ0YHoazA7izUA1V4UZFITDhC6kSIP61tsc8sNPQE9v704KYu2FUcW5-NiOk-iZa3lLgdfQgOAoyfMruP-yclPJowS27BUfs7jW8'] }" class="h-full w-full relative"><div class="absolute inset-0 z-0"><template x-for="(slide, index) in slides" :key="index"><img :src="slide" x-show="activeSlide === index" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100"></template><img :src="slide" x-show="activeSlide === index" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" src="https://lh3.googleusercontent.com/aida/AP1WRLuJGlVs2tPnRw324-4BhWMWQGpb_2AmpBbb89LsZ4KzBo-cqB9qNU60QPBr8lG-XZ8mN1sV9pTZoS4GZHll5vblTzDQmm2jpYHgdpplWp97DBEZo7FtQqrufqL8HD2lmA9hvzizuxxm4Eo9RT-P1F0KljUbI-I_ny-V_Va4E6XUjgGhyoOR_TK7PpBEUvs8JqFjFdj9APO5M9hLwv4d1z4UDIH6yi9fampqUSxBMAPHLUN-gQCU2ifXAu8"><img :src="slide" x-show="activeSlide === index" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" src="https://lh3.googleusercontent.com/aida/AP1WRLtHrLN6k46VEtWJL-lYL9yCt0HkaJkJxFt-yC4LEc5McY70jO46GFUCNcpsmMx0p69XZZAfvelLSYAQ-prhDLm9nkv0Xxcy2pmvQ_7n_A82ETE2BY0HTgMF82-8lJAYu1zKFw_rq8s7zf96JrU2yz9G2XiNScRtTUv2J2RiGyU6A0IMR-MOZNN4_KDge7V1eGdcEbCREHFQ6r3wCgfckO5jyWEKvdjTzifaaUYqqN4c0g9x2bAf3-X_GMc" style="display: none;"><img :src="slide" x-show="activeSlide === index" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" src="https://lh3.googleusercontent.com/aida/AP1WRLvgMdbNQOg9Ztsaj0lXwqr41DOrVjiBSb8AFHX5pOKPGAZA4bPE1UK0aE8ni8ynTYFSdxBeLz2MiUo4I6WInzsdo7SeNSdigXj4k5jeJmAEMLWWg-qaCmp3_CfT9QCqbgiLLWTtsEC7HHy_pDOiMYPUZ0YHoazA7izUA1V4UZFITDhC6kSIP61tsc8sNPQE9v704KYu2FUcW5-NiOk-iZa3lLgdfQgOAoyfMruP-yclPJowS27BUfs7jW8" style="display: none;"><img :src="slide" x-show="activeSlide === index" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" style="display: none;"><img :src="slide" x-show="activeSlide === index" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" style="display: none;"><img :src="slide" x-show="activeSlide === index" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" style="display: none;"><img :src="slide" x-show="activeSlide === index" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" style="display: none;"></div><div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent z-10"></div><div class="absolute inset-0 z-30 flex items-center justify-between px-4"><button @click="activeSlide = activeSlide === 0 ? slides.length - 1 : activeSlide - 1" class="w-10 h-10 rounded-full bg-black/40 backdrop-blur-md flex items-center justify-center text-primary border border-white/10 hover:bg-primary hover:text-black transition-all"><span class="material-symbols-outlined">chevron_left</span></button><button @click="activeSlide = activeSlide === slides.length - 1 ? 0 : activeSlide + 1" class="w-10 h-10 rounded-full bg-black/40 backdrop-blur-md flex items-center justify-center text-primary border border-white/10 hover:bg-primary hover:text-black transition-all"><span class="material-symbols-outlined">chevron_right</span></button></div><div class="absolute inset-0 z-20 p-8 flex flex-col justify-end pointer-events-none"><h3 class="text-white text-2xl font-bold mb-2 tracking-tight">우수산업디자인상품 출품확인서</h3></div></div></div></div>
+</div>
+</section>
+<!-- Packaging Section -->
+</main>
+<section class="py-24 bg-[#121318]"><div class="px-8 lg:px-16 max-w-[1280px] mx-auto"></div></section><footer class="bg-surface-container-lowest border-t border-white/5 py-12">
+<div class="max-w-[1280px] mx-auto px-4 md:px-8 lg:px-16">
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 md:gap-12 mb-8 md:mb-12">
+<div class="space-y-3 md:space-y-4">
+<h4 class="font-label text-on-surface uppercase tracking-widest text-xs md:text-sm mb-4">고객센터</h4>
+<div class="space-y-2">
+<div class="text-2xl md:text-3xl font-bold text-on-surface">062-716-0995</div>
+<div class="font-body text-on-surface-variant text-[10px] md:text-xs leading-relaxed">
+            오전 9:00 - 오후 5:00 | 점심시간 12:00-13:00<br>
+            주말 및 공휴일 휴무
+          </div>
+</div>
+</div>
+<div class="space-y-3 md:space-y-4">
+<h4 class="font-label text-on-surface uppercase tracking-widest text-xs md:text-sm mb-4">은행 정보</h4>
+<p class="font-body text-on-surface-variant text-[10px] md:text-xs">기업은행 65904714504019 (주)그린토크</p>
+</div>
+<div class="space-y-3 md:space-y-4">
+<h4 class="font-label text-on-surface uppercase tracking-widest text-xs md:text-sm mb-4">에 대한</h4>
+<nav class="flex flex-col gap-2 text-[10px] md:text-xs space-y-2">
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">회사소개</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">이용약관</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">개인정보처리방침</a>
+</nav>
+</div>
+</div>
+<div class="border-t border-white/5 mt-8">
+<div class="flex items-center gap-4 mb-4">
+<a class="text-on-surface-variant hover:text-white transition-all duration-300 transform hover:scale-110" href="https://www.youtube.com/@ginovo31" target="_blank">
+<svg class="lucide lucide-youtube opacity-80 hover:opacity-100" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 2-2h15a2 2 0 0 1 2 2 24.12 24.12 0 0 1 0 10 2 2 0 0 1-2 2h-15a2 2 0 0 1-2-2z"></path><path d="m10 15 5-3-5-3z"></path></svg>
+</a>
+<a class="text-on-surface-variant hover:text-white transition-all duration-300 transform hover:scale-110" href="https://www.instagram.com/ginovo31" target="_blank">
+<svg class="lucide lucide-instagram opacity-80 hover:opacity-100" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><rect height="20" rx="5" ry="5" width="20" x="2" y="2"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg>
+</a>
+</div><div class="flex flex-wrap gap-x-3 md:gap-x-4 gap-y-1 text-[9px] md:text-[10px] font-body text-on-surface-variant opacity-70 mt-3">
+<span class="">블록명 : 블록명</span>
+<span class="">대표 : 손영국</span>
+<span class="">주소 : 광주광역시 신호구 손재로 236 그린토크</span>
+<span class="">사업자등록번호 : 603-87-02720</span>
+</div>
+<div class="text-[9px] md:text-[10px] font-body text-on-surface-variant mt-3 md:mt-4 opacity-50">
+        (c) 그린토크. 주최: 엔에이치엔커머스(주)
+      </div>
+</div>
+</div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>
