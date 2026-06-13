@@ -130,6 +130,18 @@
         .animate-pulse-tech {
             animation: pulse-tech 2s infinite ease-in-out;
         }
+
+
+        @keyframes fade-up {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-up, .fade-up {
+            opacity: 0;
+            animation: fade-up 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+        .delay-100 { animation-delay: 0.15s; }
+        .delay-200 { animation-delay: 0.3s; }
     </style>
 </head>
 <body class="bg-background text-on-background selection:bg-primary/30 selection:text-white font-body-lg">
@@ -209,19 +221,11 @@
 </nav>
 </header>
 <main class="pt-[80px]"><!-- Hero Section -->
-<section class="relative h-screen flex items-center overflow-hidden">
-
-<div class="absolute inset-0 bg-black/60"></div>
-<div class="relative z-10 px-8 lg:px-16 max-w-[1280px] w-full mx-auto">
-<div class="max-w-3xl space-y-6 fade-up" style="animation-play-state: running;">
-
-<h1 class="font-extrabold text-[#FFFFFF] tracking-[-0.05em] leading-tight text-[69px]">GINOVO 스마트 골프공<div class="">주요 기능 소개</div></h1>
-<p class="text-[#e3e1e9] max-w-xl leading-relaxed text-[17px] text-[13px]">당신의 퍼팅을 데이터로 완성하다</p><p></p>
-<div class="pt-8 flex flex-col sm:flex-row gap-4">
-
-
-</div>
-</div>
+<section class="relative min-h-[560px] flex items-center justify-center overflow-hidden bg-black">
+<div class="absolute inset-0 bg-black/70"></div>
+<div class="relative z-10 px-8 lg:px-16 max-w-[1280px] w-full mx-auto text-center">
+<h1 class="text-[48px] md:text-[64px] font-black text-[#FFFFFF] tracking-[-0.04em] leading-tight mb-4 animate-fade-up" style="animation-delay: 0.1s;">GINOVO 스마트 골프공<br>주요 기능 소개</h1>
+<p class="text-[18px] text-[#A9A7B1] max-w-2xl mx-auto font-medium tracking-wide animate-fade-up" style="animation-delay: 0.3s;">당신의 퍼팅을 데이터로 완성하다</p>
 </div>
 </section>
 <!-- Product Insight Section (New) -->
@@ -229,8 +233,8 @@
 <div class="px-8 lg:px-16 max-w-[1280px] mx-auto">
 <div class="text-center max-w-3xl mx-auto mb-16 fade-up" style="animation-play-state: running;">
 <span class="text-[#97D302] font-['Geist'] tracking-[0.1em] font-medium uppercase mb-4 block text-[11px]">Product Insight</span>
-<h2 class="font-bold text-[#FFFFFF] tracking-[-0.02em] mb-6 text-[45px]">스마트 골프공의 모든 것</h2>
-<p class="text-[#A9A7B1] text-[13px]">혁신적인 기술이 어떻게 당신의 퍼포먼스를 향상시키는지 영상으로 확인하세요.</p>
+<h2 class="text-[48px] font-extrabold text-[#FFFFFF] tracking-[-0.02em] leading-tight mb-6">스마트 골프공의 모든 것</h2>
+<p class="text-[#A9A7B1] text-[13px] md:text-[15px] leading-relaxed font-normal max-w-xl mx-auto">혁신적인 기술이 어떻게 당신의 퍼포먼스를 향상시키는지 영상으로 확인하세요.</p>
 </div>
 <div class="relative w-full aspect-video bg-[#1e1f25] rounded-2xl overflow-hidden shadow-2xl border border-white/5 fade-up delay-100 group cursor-pointer" style="animation-play-state: running;">
 <div class="absolute inset-0 bg-black/40 flex items-center justify-center group-hover:bg-black/20 transition-all duration-500 z-10">
@@ -251,8 +255,8 @@
 <div class="space-y-10 fade-up delay-200" style="animation-play-state: running;">
 <div class="space-y-4">
 <span class="text-[#97D302] font-['Geist'] tracking-[0.1em] font-medium uppercase text-[11px]">지노버 스마트 볼의 기술력</span>
-<h2 class="font-bold text-[#FFFFFF] tracking-[-0.02em] leading-tight text-[45px]">골프공의 똑똑한 변화</h2>
-<p class="text-[#A9A7B1] leading-relaxed text-[13px]">센서 모듈, 통신 모듈, 무선 충전모듈, 보호구, 탄성체, 외피로 구성된 스마트 골프공</p>
+<h2 class="text-[48px] font-extrabold text-[#FFFFFF] tracking-[-0.02em] leading-tight">골프공의 똑똑한 변화</h2>
+<p class="text-[#A9A7B1] text-[13px] md:text-[15px] leading-relaxed font-normal max-w-xl">센서 모듈, 통신 모듈, 무선 충전모듈, 보호구, 탄성체, 외피로 구성된 스마트 골프공</p>
 </div>
 </div>
 </div>
@@ -262,8 +266,8 @@
 <div class="px-8 lg:px-16 max-w-[1280px] mx-auto">
 <div class="text-center max-w-3xl mx-auto mb-20 fade-up" style="animation-play-state: running;">
 <span class="text-[#97D302] font-['Geist'] tracking-[0.1em] font-medium uppercase mb-4 block text-[11px]">Performance Metrics</span>
-<h2 class="font-bold text-[#FFFFFF] tracking-[-0.02em] mb-6 text-[45px]">지노버 스마트 골프공 중요 Point!</h2>
-<p class="text-[#A9A7B1] text-[13px]">직관적이고 정밀한 데이터 분석을 통해 당신의 퍼팅 약점을 완벽하게 보완합니다.</p>
+<h2 class="text-[48px] font-extrabold text-[#FFFFFF] tracking-[-0.02em] leading-tight mb-6">지노버 스마트 골프공 중요 Point!</h2>
+<p class="text-[#A9A7B1] text-[13px] md:text-[15px] leading-relaxed font-normal max-w-xl mx-auto">직관적이고 정밀한 데이터 분석을 통해 당신의 퍼팅 약점을 완벽하게 보완합니다.</p>
 </div>
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 md:gap-8"><div class="p-0 bg-surface-container-lowest border border-white/5 rounded-2xl overflow-hidden hover:border-primary/50 transition-all duration-500 group relative aspect-[3/4]"><div x-data="{ activeSlide: 0, slides: ['https://lh3.googleusercontent.com/aida/AP1WRLskZQUocaE3SA1I1LJB8lhSXSH9q3GYufd57TDptnRHFxL5ybIsBz9E1uouvDBMawkuB6A77-txQyjEQsO3C4fKd9M-mpEmT80a5x_6oVUz4xYMcoLQyLo_vcuNOfMzxsp5IFP0Ug9VI0TOcqaRk7M937Q63Pg3jLRzeddljoH_bm336sF6Kihul0E9HUjfph0XGc7pljCyge7FK7-buZtTAhjDxXqsgpkYHT3XrsfwQlOw9GJDNGxBMQ', 'https://lh3.googleusercontent.com/aida/AP1WRLskZQUocaE3SA1I1LJB8lhSXSH9q3GYufd57TDptnRHFxL5ybIsBz9E1uouvDBMawkuB6A77-txQyjEQsO3C4fKd9M-mpEmT80a5x_6oVUz4xYMcoLQyLo_vcuNOfMzxsp5IFP0Ug9VI0TOcqaRk7M937Q63Pg3jLRzeddljoH_bm336sF6Kihul0E9HUjfph0XGc7pljCyge7FK7-buZtTAhjDxXqsgpkYHT3XrsfwQlOw9GJDNGxBMQ', 'https://lh3.googleusercontent.com/aida/AP1WRLtHrLN6k46VEtWJL-lYL9yCt0HkaJkJxFt-yC4LEc5McY70jO46GFUCNcpsmMx0p69XZZAfvelLSYAQ-prhDLm9nkv0Xxcy2pmvQ_7n_A82ETE2BY0HTgMF82-8lJAYu1zKFw_rq8s7zf96JrU2yz9G2XiNScRtTUv2J2RiGyU6A0IMR-MOZNN4_KDge7V1eGdcEbCREHFQ6r3wCgfckO5jyWEKvdjTzifaaUYqqN4c0g9x2bAf3-X_GMc'] }" class="h-full w-full relative">
   <div class="absolute inset-0 z-0">
@@ -282,7 +286,7 @@
   </div>
   <div class="absolute inset-0 z-20 p-8 flex flex-col justify-end pointer-events-none">
     
-    <h3 class="text-white text-2xl font-bold mb-2 tracking-tight">목표거리 / 그린스피드 세밀하게 설정</h3>
+    <h3 class="text-white text-3xl lg:text-4xl font-bold tracking-tight mb-2">목표거리 / 그린스피드 세밀하게 설정</h3>
     <p class="text-white/70 text-sm leading-relaxed">실제 그린처럼 거실에서 튜닝가능</p>
   </div>
 </div></div><div class="p-0 bg-surface-container-lowest border border-white/5 rounded-2xl overflow-hidden hover:border-primary/50 transition-all duration-500 group relative aspect-[3/4]"><div x-data="{ activeSlide: 0, slides: ['https://lh3.googleusercontent.com/aida/AP1WRLvq1EfpPfgZQiHYCcWpmZxtRj7aNO99ZUYV4xQhrfHBHAg1oM2d5hvsrnzMB42kpq5yJxpza01WXRFUmpIweIx7JCS_74XPRzn8PWMJ9n4eKqessJobFzvrgCVSwnv8clKnihwDJAWmH1rtg5gsqaQPJRdUZLrzzaAjqyfXnCh2pktlD9s18EpwNfZm2n96k7fzdrNsgiiyzzPUgGDyBiNV2Y9IB2Qohmh_P09aAXcQq4LYyyVPjZ-XSBs', 'https://lh3.googleusercontent.com/aida/AP1WRLvgMdbNQOg9Ztsaj0lXwqr41DOrVjiBSb8AFHX5pOKPGAZA4bPE1UK0aE8ni8ynTYFSdxBeLz2MiUo4I6WInzsdo7SeNSdigXj4k5jeJmAEMLWWg-qaCmp3_CfT9QCqbgiLLWTtsEC7HHy_pDOiMYPUZ0YHoazA7izUA1V4UZFITDhC6kSIP61tsc8sNPQE9v704KYu2FUcW5-NiOk-iZa3lLgdfQgOAoyfMruP-yclPJowS27BUfs7jW8', 'https://lh3.googleusercontent.com/aida/AP1WRLskZQUocaE3SA1I1LJB8lhSXSH9q3GYufd57TDptnRHFxL5ybIsBz9E1uouvDBMawkuB6A77-txQyjEQsO3C4fKd9M-mpEmT80a5x_6oVUz4xYMcoLQyLo_vcuNOfMzxsp5IFP0Ug9VI0TOcqaRk7M937Q63Pg3jLRzeddljoH_bm336sF6Kihul0E9HUjfph0XGc7pljCyge7FK7-buZtTAhjDxXqsgpkYHT3XrsfwQlOw9GJDNGxBMQ'] }" class="h-full w-full relative">
@@ -302,7 +306,7 @@
   </div>
   <div class="absolute inset-0 z-20 p-8 flex flex-col justify-end pointer-events-none">
     
-    <h3 class="text-white text-2xl font-bold mb-2 tracking-tight">실시간 데이터 저장</h3>
+    <h3 class="text-white text-3xl lg:text-4xl font-bold tracking-tight mb-2">실시간 데이터 저장</h3>
     <p class="text-white/70 text-sm leading-relaxed">빅데이터 분석을 통한 통계데이터 피드백 제공</p>
   </div>
 </div></div><div class="p-0 bg-surface-container-lowest border border-white/5 rounded-2xl overflow-hidden hover:border-primary/50 transition-all duration-500 group relative aspect-[3/4]"><div x-data="{ activeSlide: 0, slides: ['https://lh3.googleusercontent.com/aida/AP1WRLuJGlVs2tPnRw324-4BhWMWQGpb_2AmpBbb89LsZ4KzBo-cqB9qNU60QPBr8lG-XZ8mN1sV9pTZoS4GZHll5vblTzDQmm2jpYHgdpplWp97DBEZo7FtQqrufqL8HD2lmA9hvzizuxxm4Eo9RT-P1F0KljUbI-I_ny-V_Va4E6XUjgGhyoOR_TK7PpBEUvs8JqFjFdj9APO5M9hLwv4d1z4UDIH6yi9fampqUSxBMAPHLUN-gQCU2ifXAu8', 'https://lh3.googleusercontent.com/aida/AP1WRLtHrLN6k46VEtWJL-lYL9yCt0HkaJkJxFt-yC4LEc5McY70jO46GFUCNcpsmMx0p69XZZAfvelLSYAQ-prhDLm9nkv0Xxcy2pmvQ_7n_A82ETE2BY0HTgMF82-8lJAYu1zKFw_rq8s7zf96JrU2yz9G2XiNScRtTUv2J2RiGyU6A0IMR-MOZNN4_KDge7V1eGdcEbCREHFQ6r3wCgfckO5jyWEKvdjTzifaaUYqqN4c0g9x2bAf3-X_GMc', 'https://lh3.googleusercontent.com/aida/AP1WRLvgMdbNQOg9Ztsaj0lXwqr41DOrVjiBSb8AFHX5pOKPGAZA4bPE1UK0aE8ni8ynTYFSdxBeLz2MiUo4I6WInzsdo7SeNSdigXj4k5jeJmAEMLWWg-qaCmp3_CfT9QCqbgiLLWTtsEC7HHy_pDOiMYPUZ0YHoazA7izUA1V4UZFITDhC6kSIP61tsc8sNPQE9v704KYu2FUcW5-NiOk-iZa3lLgdfQgOAoyfMruP-yclPJowS27BUfs7jW8'] }" class="h-full w-full relative">
@@ -322,7 +326,7 @@
   </div>
   <div class="absolute inset-0 z-20 p-8 flex flex-col justify-end pointer-events-none">
     
-    <h3 class="text-white text-2xl font-bold mb-2 tracking-tight">퍼팅대결을 통한 실전연습</h3>
+    <h3 class="text-white text-3xl lg:text-4xl font-bold tracking-tight mb-2">퍼팅대결을 통한 실전연습</h3>
     <p class="text-white/70 text-sm leading-relaxed">게임 모드의 랜덤 퍼팅거리 및 실제 필드형 실전훈련 제공</p>
   </div>
 </div></div><div class="p-0 bg-surface-container-lowest border border-white/5 rounded-2xl overflow-hidden hover:border-primary/50 transition-all duration-500 group relative aspect-[3/4]"><div x-data="{ activeSlide: 0, slides: ['https://lh3.googleusercontent.com/aida/AP1WRLvgMdbNQOg9Ztsaj0lXwqr41DOrVjiBSb8AFHX5pOKPGAZA4bPE1UK0aE8ni8ynTYFSdxBeLz2MiUo4I6WInzsdo7SeNSdigXj4k5jeJmAEMLWWg-qaCmp3_CfT9QCqbgiLLWTtsEC7HHy_pDOiMYPUZ0YHoazA7izUA1V4UZFITDhC6kSIP61tsc8sNPQE9v704KYu2FUcW5-NiOk-iZa3lLgdfQgOAoyfMruP-yclPJowS27BUfs7jW8', 'https://lh3.googleusercontent.com/aida/AP1WRLskZQUocaE3SA1I1LJB8lhSXSH9q3GYufd57TDptnRHFxL5ybIsBz9E1uouvDBMawkuB6A77-txQyjEQsO3C4fKd9M-mpEmT80a5x_6oVUz4xYMcoLQyLo_vcuNOfMzxsp5IFP0Ug9VI0TOcqaRk7M937Q63Pg3jLRzeddljoH_bm336sF6Kihul0E9HUjfph0XGc7pljCyge7FK7-buZtTAhjDxXqsgpkYHT3XrsfwQlOw9GJDNGxBMQ', 'https://lh3.googleusercontent.com/aida/AP1WRLtHrLN6k46VEtWJL-lYL9yCt0HkaJkJxFt-yC4LEc5McY70jO46GFUCNcpsmMx0p69XZZAfvelLSYAQ-prhDLm9nkv0Xxcy2pmvQ_7n_A82ETE2BY0HTgMF82-8lJAYu1zKFw_rq8s7zf96JrU2yz9G2XiNScRtTUv2J2RiGyU6A0IMR-MOZNN4_KDge7V1eGdcEbCREHFQ6r3wCgfckO5jyWEKvdjTzifaaUYqqN4c0g9x2bAf3-X_GMc'] }" class="h-full w-full relative">
@@ -342,7 +346,7 @@
   </div>
   <div class="absolute inset-0 z-20 p-8 flex flex-col justify-end pointer-events-none">
     
-    <h3 class="text-white text-2xl font-bold mb-2 tracking-tight">취약거리 반복연습</h3>
+    <h3 class="text-white text-3xl lg:text-4xl font-bold tracking-tight mb-2">취약거리 반복연습</h3>
     <p class="text-white/70 text-sm leading-relaxed">반복분석과 맞춤훈련으로 취약거리 데이터로 극복</p>
   </div>
 </div></div></div>
