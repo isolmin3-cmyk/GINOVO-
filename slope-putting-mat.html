@@ -1,7 +1,7 @@
 <!DOCTYPE html><html class="dark" lang="ko"><head>
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
-<title>JINOVER | PRECISION ENGINEERED PERFORMANCE</title>
+<title>GINOVO | 경사 퍼팅매트</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;700;800&amp;family=Geist:wght@400;500;700&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
@@ -130,61 +130,74 @@
         .animate-pulse-tech {
             animation: pulse-tech 2s infinite ease-in-out;
         }
+
+
+        @keyframes fade-up {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-up, .fade-up {
+            opacity: 0;
+            animation: fade-up 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+        .delay-100 { animation-delay: 0.15s; }
+        .delay-200 { animation-delay: 0.3s; }
     </style>
 </head>
 <body class="bg-background text-on-background selection:bg-primary/30 selection:text-white font-body-lg">
 <header class="bg-surface-container/90 backdrop-blur-xl border-b border-white/5 top-0 z-50 transition-all duration-300 fixed left-0 w-full z-[100]" id="main-header">
 <nav class="flex justify-between items-center px-8 lg:px-16 py-4 w-full max-w-[1280px] mx-auto">
 <div class="font-display-xl tracking-tighter text-on-surface shrink-0">
-<a class="block" href="#">
-<img alt="JINOVER" class="h-10 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_8dvdV5Do28bjU5Z8fMefSlP_i9xggGhP8bAULJOuGPq7AI-D7tTtdVIFnGjcUbKIqZCnHBLJiesN-vM4iaHEpja_3OBjruQI_yHrsksQhsSc47vmE9v1vRdUEFfNuFEKJT0Jas5MyD-4AtPOddrA0pxN0JLcEaNz93PqJpF-1E8sTx9f4Xj2TPF5Q1vVksUVdyeve8HHo60n2UTdauCABWZdB4OWPYh8wAD4ODgMfgTHSlz3KimAdgAKK29-H7HWhk4QSSMFv40">
+<a class="block" href="index.html">
+<img alt="JINOVER" class="h-10 w-auto object-contain" src="logo.png">
 </a>
 </div>
 <div class="hidden lg:flex items-center gap-6 h-full">
 <div class="group relative h-full flex items-center">
-<a class="font-body-md hover:text-primary transition-all duration-300 py-2 border-b-2 text-on-surface-variant border-transparent group-hover:border-primary" href="#">회사&nbsp;</a>
-<div class="absolute top-full left-0 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-[100] transform translate-y-2 group-hover:translate-y-0">
-<div class="glass-card w-64 p-6 flex flex-col gap-3 bg-surface/80 backdrop-blur-md"><a class="text-sm text-on-surface-variant hover:text-primary transition-colors" href="#">회사소개</a><a class="text-sm text-on-surface-variant hover:text-primary transition-colors" href="#">창업 가치</a><a class="text-sm text-on-surface-variant hover:text-primary transition-colors" href="#">디자인 어워드&nbsp;</a><a class="text-sm text-on-surface-variant hover:text-primary transition-colors" href="#">오시는 길&nbsp;</a></div>
-</div>
-</div>
-<div class="group relative h-full flex items-center">
-<a class="text-on-surface-variant font-body-md hover:text-primary transition-all duration-300 py-2 border-b-2 border-transparent group-hover:border-primary" href="#">스마트 골프공</a>
-<div class="absolute top-full left-0 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-[100] transform translate-y-2 group-hover:translate-y-0"><div class="glass-card w-64 p-6 flex flex-col gap-3 bg-surface/80 backdrop-blur-md"><a class="text-sm font-bold text-on-surface-variant hover:text-primary transition-colors" href="#" style="font-family: 'Hanken Grotesk', sans-serif; font-size: 15px;">주요기능 소개</a><a class="text-sm font-bold text-on-surface-variant hover:text-primary transition-colors" href="#" style="font-family: 'Hanken Grotesk', sans-serif; font-size: 15px;">상품구성</a></div></div>
-</div>
-<div class="group relative h-full flex items-center">
-<a class="text-on-surface-variant font-body-md hover:text-primary transition-all duration-300 py-2 border-b-2 border-transparent group-hover:border-primary" href="#">퍼팅매트</a>
+<a class="font-body-md hover:text-primary transition-all duration-300 py-2 border-b-2 text-on-surface-variant border-transparent group-hover:border-primary" href="about.html">회사</a>
 <div class="absolute top-full left-0 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-[100] transform translate-y-2 group-hover:translate-y-0">
 <div class="glass-card w-64 p-6 flex flex-col gap-3 bg-surface/80 backdrop-blur-md">
-<a class="text-sm text-on-surface-variant hover:text-primary transition-colors" href="#">경사 퍼팅 매트&nbsp;&nbsp;</a>
-<a class="text-sm text-on-surface-variant hover:text-primary transition-colors" href="#">슬로핑 퍼팅매트&nbsp;</a>
+<a class="text-sm text-on-surface-variant hover:text-primary transition-colors" href="about.html">회사소개</a>
+<a class="text-sm text-on-surface-variant hover:text-primary transition-colors" href="founding-values.html">창업 가치</a>
+<a class="text-sm text-on-surface-variant hover:text-primary transition-colors" href="design-awards.html">디자인 어워드</a>
+<a class="text-sm text-on-surface-variant hover:text-primary transition-colors" href="location.html">오시는 길</a>
 </div>
 </div>
 </div>
 <div class="group relative h-full flex items-center">
-<a class="text-on-surface-variant font-body-md hover:text-primary transition-all duration-300 py-2 border-b-2 border-transparent group-hover:border-primary" href="#">Team &amp; Infra</a>
+<a class="text-on-surface-variant font-body-md hover:text-primary transition-all duration-300 py-2 border-b-2 border-transparent group-hover:border-primary" href="smart-golf-ball.html">스마트 골프공</a>
 <div class="absolute top-full left-0 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-[100] transform translate-y-2 group-hover:translate-y-0">
 <div class="glass-card w-64 p-6 flex flex-col gap-3 bg-surface/80 backdrop-blur-md">
-<a class="text-sm text-on-surface-variant hover:text-primary transition-colors" href="#">회사 소개 영상</a>
-<a class="text-sm text-on-surface-variant hover:text-primary transition-colors" href="#">조직 구성</a>
-<a class="text-sm text-on-surface-variant hover:text-primary transition-colors" href="#">공장 인프라</a>
+<a class="text-sm text-on-surface-variant hover:text-primary transition-colors" href="smart-golf-ball-features.html">주요기능소개</a>
+<a class="text-sm text-on-surface-variant hover:text-primary transition-colors" href="smart-golf-ball-product.html">상품소개</a>
+</div>
+</div>
+</div>
+<div class="group relative h-full flex items-center">
+<a class="text-on-surface-variant font-body-md hover:text-primary transition-all duration-300 py-2 border-b-2 border-transparent group-hover:border-primary" href="putting-mat.html">퍼팅매트</a>
+<div class="absolute top-full left-0 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-[100] transform translate-y-2 group-hover:translate-y-0">
+<div class="glass-card w-64 p-6 flex flex-col gap-3 bg-surface/80 backdrop-blur-md">
+<a class="text-sm text-on-surface-variant hover:text-primary transition-colors" href="slope-putting-mat.html">경사 퍼팅매트</a>
+<a class="text-sm text-on-surface-variant hover:text-primary transition-colors" href="sloping-putting-mat.html">슬로핑 퍼팅매트</a>
 </div>
 </div>
 </div>
 <div class="h-full flex items-center">
+<a class="text-on-surface-variant font-body-md hover:text-primary transition-all duration-300 py-2 border-b-2 border-transparent" href="team-infra.html">Team &amp; Infra</a>
+</div>
+<div class="h-full flex items-center">
 <a class="text-on-surface-variant font-body-md hover:text-primary transition-all duration-300 py-2 border-b-2 border-transparent" href="https://smartstore.naver.com/ginovo" target="_blank">Shop</a>
 </div>
-<div class="group relative h-full flex items-center">
-<a class="text-on-surface-variant font-body-md hover:text-primary transition-all duration-300 py-2 border-b-2 border-transparent group-hover:border-primary" href="#">News</a>
-<div class="absolute top-full right-0 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-[100] transform translate-y-2 group-hover:translate-y-0">
-</div>
+<div class="h-full flex items-center">
+<a class="text-on-surface-variant font-body-md hover:text-primary transition-all duration-300 py-2 border-b-2 border-transparent" href="news.html">News</a>
 </div>
 <div class="group relative h-full flex items-center">
-<a class="text-on-surface-variant font-body-md hover:text-primary transition-all duration-300 py-2 border-b-2 border-transparent group-hover:border-primary" href="#">Contact</a>
+<a class="text-on-surface-variant font-body-md hover:text-primary transition-all duration-300 py-2 border-b-2 border-transparent group-hover:border-primary" href="contact.html">Contact</a>
 <div class="absolute top-full right-0 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-[100] transform translate-y-2 group-hover:translate-y-0">
 <div class="glass-card w-64 p-6 flex flex-col gap-3 bg-surface/80 backdrop-blur-md">
-<a class="text-sm text-on-surface-variant hover:text-primary transition-colors" href="#">공지사항</a>
-<a class="text-sm text-on-surface-variant hover:text-primary transition-colors" href="#">1:1 문의하기</a>
-<a class="text-sm text-on-surface-variant hover:text-primary transition-colors" href="#">FAQ</a>
+<a class="text-sm text-on-surface-variant hover:text-primary transition-colors" href="notice.html">공지사항</a>
+<a class="text-sm text-on-surface-variant hover:text-primary transition-colors" href="inquiry.html">1:1 문의하기</a>
+<a class="text-sm text-on-surface-variant hover:text-primary transition-colors" href="faq.html">FAQ</a>
 </div>
 </div>
 </div>
@@ -208,17 +221,11 @@
 </nav>
 </header>
 <main class="pt-[80px]"><!-- Hero Section -->
-<section class="relative h-screen flex items-center overflow-hidden">
-<div class="absolute inset-0 bg-black/60"></div>
-<div class="relative z-10 px-8 lg:px-16 max-w-[1280px] w-full mx-auto">
-<div class="max-w-3xl space-y-6 fade-up" style="animation-play-state: running;">
-<h1 class="font-extrabold text-[#FFFFFF] tracking-[-0.05em] leading-tight text-[69px]">GINOVO 경사 퍼팅매트</h1>
-<p class="text-[#e3e1e9] max-w-xl leading-relaxed text-[17px] text-[13px]">당신의 퍼팅을 데이터로 완성하다</p><p></p>
-<div class="pt-8 flex flex-col sm:flex-row gap-4">
-
-
-</div>
-</div>
+<section class="relative min-h-[560px] flex items-center justify-center overflow-hidden bg-black">
+<div class="absolute inset-0 bg-black/70"></div>
+<div class="relative z-10 px-8 lg:px-16 max-w-[1280px] w-full mx-auto text-center">
+<h1 class="text-[48px] md:text-[64px] font-black text-[#FFFFFF] tracking-[-0.04em] leading-tight mb-4 animate-fade-up" style="animation-delay: 0.1s;">GINOVO 경사 퍼팅매트</h1>
+<p class="text-[18px] text-[#A9A7B1] max-w-2xl mx-auto font-medium tracking-wide animate-fade-up" style="animation-delay: 0.3s;">당신의 퍼팅을 데이터로 완성하다</p>
 </div>
 </section>
 <!-- Product Insight Section (New) -->
@@ -226,8 +233,8 @@
 <div class="px-8 lg:px-16 max-w-[1280px] mx-auto">
 <div class="text-center max-w-3xl mx-auto mb-16 fade-up" style="animation-play-state: running;">
 <span class="text-[#97D302] font-['Geist'] tracking-[0.1em] font-medium uppercase mb-4 block text-[11px]">Product Insight</span>
-<h2 class="font-bold text-[#FFFFFF] tracking-[-0.02em] mb-6 text-[45px]">경사 퍼팅매트의 모든 것</h2>
-<p class="text-[#A9A7B1] text-[13px]">혁신적인 기술이 어떻게 당신의 퍼포먼스를 향상시키는지 영상으로 확인하세요.</p>
+<h2 class="text-[48px] font-extrabold text-[#FFFFFF] tracking-[-0.02em] leading-tight mb-6">경사 퍼팅매트의 모든 것</h2>
+<p class="text-[#A9A7B1] text-[13px] md:text-[15px] leading-relaxed font-normal max-w-xl mx-auto">혁신적인 기술이 어떻게 당신의 퍼포먼스를 향상시키는지 영상으로 확인하세요.</p>
 </div>
 <div class="relative w-full aspect-video bg-[#1e1f25] rounded-2xl overflow-hidden shadow-2xl border border-white/5 fade-up delay-100 group cursor-pointer" style="animation-play-state: running;">
 <div class="absolute inset-0 bg-black/40 flex items-center justify-center group-hover:bg-black/20 transition-all duration-500 z-10">
@@ -248,8 +255,8 @@
 <div class="space-y-10 fade-up delay-200" style="animation-play-state: running;">
 <div class="space-y-4">
 <span class="text-[#97D302] font-['Geist'] tracking-[0.1em] font-medium uppercase text-[11px]">스마트 센서가 만드는 퍼팅의 혁신</span>
-<h2 class="font-bold text-[#FFFFFF] tracking-[-0.02em] leading-tight text-[45px]">퍼팅 실력을 높여주는<div class="">효율적인 경사 퍼팅매트</div></h2>
-<p class="text-[#A9A7B1] leading-relaxed text-[13px]">&nbsp;USGA 그린 경사 구현과 PATH 31 경로 가이드를 적용한 혁신적인 기술력을 바탕으로 정교한 공정을 통해</p><div class="">실제 필드 그린과 가장 유사한 환경을 매트에 적용했습니다.</div><p></p><div class="">실제 필드 그린과 가장 유사한 환경을 매트에 적용했습니다.</div><p></p><p></p><p></p>
+<h2 class="text-[48px] font-extrabold text-[#FFFFFF] tracking-[-0.02em] leading-tight">퍼팅 실력을 높여주는<br>효율적인 경사 퍼팅매트</h2>
+<p class="text-[#A9A7B1] text-[13px] md:text-[15px] leading-relaxed font-normal max-w-xl">USGA 그린 경사 구현과 PATH 31 경로 가이드를 적용한 혁신적인 기술력을 바탕으로 정교한 공정을 통해 실제 필드 그린과 가장 유사한 환경을 매트에 적용했습니다.</p>
 </div>
 </div>
 </div>
@@ -259,8 +266,8 @@
 <div class="px-8 lg:px-16 max-w-[1280px] mx-auto">
 <div class="text-center max-w-3xl mx-auto mb-20 fade-up" style="animation-play-state: running;">
 <span class="text-[#97D302] font-['Geist'] tracking-[0.1em] font-medium uppercase mb-4 block text-[11px]">Performance Metrics</span>
-<h2 class="font-bold text-[#FFFFFF] tracking-[-0.02em] mb-6 text-[45px]">지노버 경사 퍼팅매트 중요 Point!</h2>
-<p class="text-[#A9A7B1] text-[13px]">직관적이고 정밀한 데이터 분석을 통해 당신의 퍼팅 약점을 완벽하게 보완합니다.</p>
+<h2 class="text-[48px] font-extrabold text-[#FFFFFF] tracking-[-0.02em] leading-tight mb-6">지노버 경사 퍼팅매트 중요 Point!</h2>
+<p class="text-[#A9A7B1] text-[13px] md:text-[15px] leading-relaxed font-normal max-w-xl mx-auto">직관적이고 정밀한 데이터 분석을 통해 당신의 퍼팅 약점을 완벽하게 보완합니다.</p>
 </div>
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 md:gap-8"><div class="p-0 bg-surface-container-lowest border border-white/5 rounded-2xl overflow-hidden hover:border-primary/50 transition-all duration-500 group relative aspect-[3/4]"><div class="h-full w-full relative" x-data="{ activeSlide: 0, slides: ['https://lh3.googleusercontent.com/aida/AP1WRLskZQUocaE3SA1I1LJB8lhSXSH9q3GYufd57TDptnRHFxL5ybIsBz9E1uouvDBMawkuB6A77-txQyjEQsO3C4fKd9M-mpEmT80a5x_6oVUz4xYMcoLQyLo_vcuNOfMzxsp5IFP0Ug9VI0TOcqaRk7M937Q63Pg3jLRzeddljoH_bm336sF6Kihul0E9HUjfph0XGc7pljCyge7FK7-buZtTAhjDxXqsgpkYHT3XrsfwQlOw9GJDNGxBMQ', 'https://lh3.googleusercontent.com/aida/AP1WRLskZQUocaE3SA1I1LJB8lhSXSH9q3GYufd57TDptnRHFxL5ybIsBz9E1uouvDBMawkuB6A77-txQyjEQsO3C4fKd9M-mpEmT80a5x_6oVUz4xYMcoLQyLo_vcuNOfMzxsp5IFP0Ug9VI0TOcqaRk7M937Q63Pg3jLRzeddljoH_bm336sF6Kihul0E9HUjfph0XGc7pljCyge7FK7-buZtTAhjDxXqsgpkYHT3XrsfwQlOw9GJDNGxBMQ', 'https://lh3.googleusercontent.com/aida/AP1WRLtHrLN6k46VEtWJL-lYL9yCt0HkaJkJxFt-yC4LEc5McY70jO46GFUCNcpsmMx0p69XZZAfvelLSYAQ-prhDLm9nkv0Xxcy2pmvQ_7n_A82ETE2BY0HTgMF82-8lJAYu1zKFw_rq8s7zf96JrU2yz9G2XiNScRtTUv2J2RiGyU6A0IMR-MOZNN4_KDge7V1eGdcEbCREHFQ6r3wCgfckO5jyWEKvdjTzifaaUYqqN4c0g9x2bAf3-X_GMc'] }">
 <div class="absolute inset-0 z-0">
@@ -277,7 +284,7 @@
 <span class="material-symbols-outlined">chevron_right</span>
 </button>
 </div>
-<div class="absolute inset-0 z-20 p-8 flex flex-col justify-end pointer-events-none"><h3 class="text-white text-2xl font-bold mb-2 tracking-tight">PATH 31</h3><p class="text-white/70 text-sm leading-relaxed">거리별, 경사별 31개 다양한 경사 경로를 통한 효율적인 퍼팅연습 제공</p></div>
+<div class="absolute inset-0 z-20 p-8 flex flex-col justify-end pointer-events-none"><h3 class="text-white text-3xl lg:text-4xl font-bold tracking-tight mb-2">PATH 31</h3><p class="text-white/70 text-sm leading-relaxed">거리별, 경사별 31개 다양한 경사 경로를 통한 효율적인 퍼팅연습 제공</p></div>
 </div></div><div class="p-0 bg-surface-container-lowest border border-white/5 rounded-2xl overflow-hidden hover:border-primary/50 transition-all duration-500 group relative aspect-[3/4]"><div class="h-full w-full relative" x-data="{ activeSlide: 0, slides: ['https://lh3.googleusercontent.com/aida/AP1WRLvq1EfpPfgZQiHYCcWpmZxtRj7aNO99ZUYV4xQhrfHBHAg1oM2d5hvsrnzMB42kpq5yJxpza01WXRFUmpIweIx7JCS_74XPRzn8PWMJ9n4eKqessJobFzvrgCVSwnv8clKnihwDJAWmH1rtg5gsqaQPJRdUZLrzzaAjqyfXnCh2pktlD9s18EpwNfZm2n96k7fzdrNsgiiyzzPUgGDyBiNV2Y9IB2Qohmh_P09aAXcQq4LYyyVPjZ-XSBs', 'https://lh3.googleusercontent.com/aida/AP1WRLvgMdbNQOg9Ztsaj0lXwqr41DOrVjiBSb8AFHX5pOKPGAZA4bPE1UK0aE8ni8ynTYFSdxBeLz2MiUo4I6WInzsdo7SeNSdigXj4k5jeJmAEMLWWg-qaCmp3_CfT9QCqbgiLLWTtsEC7HHy_pDOiMYPUZ0YHoazA7izUA1V4UZFITDhC6kSIP61tsc8sNPQE9v704KYu2FUcW5-NiOk-iZa3lLgdfQgOAoyfMruP-yclPJowS27BUfs7jW8', 'https://lh3.googleusercontent.com/aida/AP1WRLskZQUocaE3SA1I1LJB8lhSXSH9q3GYufd57TDptnRHFxL5ybIsBz9E1uouvDBMawkuB6A77-txQyjEQsO3C4fKd9M-mpEmT80a5x_6oVUz4xYMcoLQyLo_vcuNOfMzxsp5IFP0Ug9VI0TOcqaRk7M937Q63Pg3jLRzeddljoH_bm336sF6Kihul0E9HUjfph0XGc7pljCyge7FK7-buZtTAhjDxXqsgpkYHT3XrsfwQlOw9GJDNGxBMQ'] }">
 <div class="absolute inset-0 z-0">
 <template :key="index" x-for="(slide, index) in slides">
@@ -294,7 +301,7 @@
 </button>
 </div>
 <div class="absolute inset-0 z-20 p-8 flex flex-col justify-end pointer-events-none">
-<h3 class="text-white text-2xl font-bold mb-2 tracking-tight">그린스피드 조절</h3>
+<h3 class="text-white text-3xl lg:text-4xl font-bold tracking-tight mb-2">그린스피드 조절</h3>
 <p class="text-white/70 text-sm leading-relaxed">지우개봉으로 그린스피드 조절 가능</p>
 </div>
 </div></div><div class="p-0 bg-surface-container-lowest border border-white/5 rounded-2xl overflow-hidden hover:border-primary/50 transition-all duration-500 group relative aspect-[3/4]"><div class="h-full w-full relative" x-data="{ activeSlide: 0, slides: ['https://lh3.googleusercontent.com/aida/AP1WRLuJGlVs2tPnRw324-4BhWMWQGpb_2AmpBbb89LsZ4KzBo-cqB9qNU60QPBr8lG-XZ8mN1sV9pTZoS4GZHll5vblTzDQmm2jpYHgdpplWp97DBEZo7FtQqrufqL8HD2lmA9hvzizuxxm4Eo9RT-P1F0KljUbI-I_ny-V_Va4E6XUjgGhyoOR_TK7PpBEUvs8JqFjFdj9APO5M9hLwv4d1z4UDIH6yi9fampqUSxBMAPHLUN-gQCU2ifXAu8', 'https://lh3.googleusercontent.com/aida/AP1WRLtHrLN6k46VEtWJL-lYL9yCt0HkaJkJxFt-yC4LEc5McY70jO46GFUCNcpsmMx0p69XZZAfvelLSYAQ-prhDLm9nkv0Xxcy2pmvQ_7n_A82ETE2BY0HTgMF82-8lJAYu1zKFw_rq8s7zf96JrU2yz9G2XiNScRtTUv2J2RiGyU6A0IMR-MOZNN4_KDge7V1eGdcEbCREHFQ6r3wCgfckO5jyWEKvdjTzifaaUYqqN4c0g9x2bAf3-X_GMc', 'https://lh3.googleusercontent.com/aida/AP1WRLvgMdbNQOg9Ztsaj0lXwqr41DOrVjiBSb8AFHX5pOKPGAZA4bPE1UK0aE8ni8ynTYFSdxBeLz2MiUo4I6WInzsdo7SeNSdigXj4k5jeJmAEMLWWg-qaCmp3_CfT9QCqbgiLLWTtsEC7HHy_pDOiMYPUZ0YHoazA7izUA1V4UZFITDhC6kSIP61tsc8sNPQE9v704KYu2FUcW5-NiOk-iZa3lLgdfQgOAoyfMruP-yclPJowS27BUfs7jW8'] }">
@@ -312,7 +319,7 @@
 <span class="material-symbols-outlined">chevron_right</span>
 </button>
 </div>
-<div class="absolute inset-0 z-20 p-8 flex flex-col justify-end pointer-events-none"><h3 class="text-white text-2xl font-bold mb-2 tracking-tight">컨시드 거리 홀컵 설계</h3><p class="text-white/70 text-sm leading-relaxed">홀 컵 보다 50cm 이상의 힘으로 타격 시 공 이탈</p></div>
+<div class="absolute inset-0 z-20 p-8 flex flex-col justify-end pointer-events-none"><h3 class="text-white text-3xl lg:text-4xl font-bold tracking-tight mb-2">컨시드 거리 홀컵 설계</h3><p class="text-white/70 text-sm leading-relaxed">홀 컵 보다 50cm 이상의 힘으로 타격 시 공 이탈</p></div>
 </div></div><div class="p-0 bg-surface-container-lowest border border-white/5 rounded-2xl overflow-hidden hover:border-primary/50 transition-all duration-500 group relative aspect-[3/4]"><div class="h-full w-full relative" x-data="{ activeSlide: 0, slides: ['https://lh3.googleusercontent.com/aida/AP1WRLuZlSqOz5F75e8vRH5k5JgOPsIgsKZaVeSzFs5xeJRkOTyh0_F-rwjOtorzqWmLoTVcJr90ol_qcXRagGhHpby7UCMwCtrZTaYE6URu8mIhCNJ5WjjfXZCeYBTLxSgYIz5uihDsLN54PCJDlFNoM2YB-4MfBAYou5F4pKtaLqNTZoC6IDO7f8nn-wLr8s8u5FVWiH3vyIGDGIE2VANMSgpJJX-_4jAuTvtvu3nybe1sPrTDrzhmPtRFP2w', 'https://lh3.googleusercontent.com/aida-public/AB6AXuDgIzT41iemUwln0y171bUZDgqmPgi8b0uYw4-dLYDavmIDrhgZ3HtMB-XcHPldKv6f0FdnOS5OYsXs9uhBa4eYNeUG6QTzhuoWeYTMw5xGAAeQ4dPY9CO1xU1jr_YKiHZbQ0PrI0QbInQHkKEGW1wpxqcE4qhbZD6M0Y6GgkyWv8VE_FpDh0et90-Tn7x0f8vwBidjEiZh0LtZF8YXVIzkQuIwVinMh3BnVR_GR28CdMzsqjN-yO1mpJ2bR98fmZdnhwEwqPyq3-Y'] }">
 <div class="absolute inset-0 z-0">
 <template :key="index" x-for="(slide, index) in slides">
@@ -329,7 +336,7 @@
 </button>
 </div>
 <div class="absolute inset-0 z-20 p-8 flex flex-col justify-end pointer-events-none">
-<h3 class="text-white text-2xl font-bold mb-2 tracking-tight">볼 리턴이 필요 없는 간편함</h3>
+<h3 class="text-white text-3xl lg:text-4xl font-bold tracking-tight mb-2">볼 리턴이 필요 없는 간편함</h3>
 <p class="text-white/70 text-sm leading-relaxed">다양한 경사와 홀컵 구역으로 퍼팅볼 회수없이 왕복하며 연습</p>
 </div>
 </div></div></div>
@@ -337,7 +344,7 @@
 </section>
 <!-- Packaging Section -->
 </main>
-<section class="py-24 bg-[#121318]"><div class="px-8 lg:px-16 max-w-[1280px] mx-auto"><div class="bg-[#1a1b21] border border-white/5 rounded-2xl p-12 grid grid-cols-1 lg:grid-cols-12 gap-16 items-center"><div class="space-y-10 lg:col-span-5"><div class="space-y-4"><span class="text-[#97D302] font-['Geist'] tracking-[0.1em] font-medium uppercase text-[11px] block">PRODUCT PACKAGE</span><h2 class="font-bold text-[#FFFFFF] tracking-[-0.02em] leading-tight text-[45px]">상품 구성</h2></div><div class="space-y-6"><div class="flex items-start gap-4 group"><span class="text-[#97D302] font-bold text-lg">01.</span><div><h4 class="text-white font-bold text-lg">GINOVO 경사 퍼팅매트 본체</h4><p class="text-[#A9A7B1] text-sm mt-1">정밀 설계된 스마트 센서 기반의 프리미엄 퍼팅 매트</p></div></div><div class="flex items-start gap-4 group"><span class="text-[#97D302] font-bold text-lg">02.</span><div><h4 class="text-white font-bold text-lg">지우개봉</h4><p class="text-[#A9A7B1] text-sm mt-1">그린스피드 조절 및 매트 결 관리용 전문 도구</p></div></div><div class="flex items-start gap-4 group"><span class="text-[#97D302] font-bold text-lg">03.</span><div><h4 class="text-white font-bold text-lg">제품 사용 설명서</h4><p class="text-[#A9A7B1] text-sm mt-1">Technical Manual: 상세 기능 및 활용 가이드</p></div></div><div class="flex items-start gap-4 group"><span class="text-[#97D302] font-bold text-lg">04.</span><div><h4 class="text-white font-bold text-lg">전용 프리미엄 보관 케이스</h4><p class="text-[#A9A7B1] text-sm mt-1">이동과 보관이 용이한 고품질 하드 쉘 케이스</p></div></div></div></div><div class="lg:col-span-7"><img alt="JINOVER Product Package" class="w-full h-auto rounded-lg shadow-2xl border border-white/10 object-cover min-h-[500px]" src="https://lh3.googleusercontent.com/aida/AP1WRLv7A2OqtfIlcD4ESdnjoYM7Ucqij8ilmW4hwo6ycL_Y1cOO3mP92l2L15I8HnF5WRMot0qslpDPmO4eAfqyq4QZfwW8w60gNgD6tYswjaUzkAHtf-MNMotjUvst5yQY8vqp5c8H_qS4lm3MUTOZoXExsMcbbAcWh8w-7qUP9O1oTO6Nw_GUhTiwvmWMcIxXs8TrmGpHL2DoRrRh83EOs5Ycut9ruAG8nFxZzcLSn7Vw02egc_OpMpOMRW8"></div></div></div></section><footer class="bg-surface-container-lowest border-t border-white/5 py-12"><div class="max-w-[1280px] mx-auto px-4 md:px-8 lg:px-16"><div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 md:gap-12 mb-8 md:mb-12"><div class="space-y-3 md:space-y-4"><h4 class="font-label text-on-surface uppercase tracking-widest text-xs md:text-sm mb-4">고객센터</h4><div class="space-y-2"><div class="text-2xl md:text-3xl font-bold text-on-surface">062-716-0995</div><div class="font-body text-on-surface-variant text-[10px] md:text-xs leading-relaxed">오전 9:00 - 오후 5:00 | 점심시간 12:00-13:00<br>주말 및 공휴일 휴무</div></div></div><div class="space-y-3 md:space-y-4"><h4 class="font-label text-on-surface uppercase tracking-widest text-xs md:text-sm mb-4">은행 정보</h4><p class="font-body text-on-surface-variant text-[10px] md:text-xs">기업은행 65904714504019 (주)그린토크</p></div><div class="space-y-3 md:space-y-4"><h4 class="font-label text-on-surface uppercase tracking-widest text-xs md:text-sm mb-4">에 대한</h4><nav class="flex flex-col gap-2 text-[10px] md:text-xs space-y-2"><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">회사소개</a><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">이용약관</a><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">개인정보처리방침</a></nav></div></div><div class="border-t border-white/5 mt-8"><div class="flex items-center gap-4 mb-4"><a class="text-on-surface-variant hover:text-white transition-all duration-300 transform hover:scale-110" href="https://www.youtube.com/@ginovo31" target="_blank"><svg class="lucide lucide-youtube opacity-80 hover:opacity-100" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 2-2h15a2 2 0 0 1 2 2 24.12 24.12 0 0 1 0 10 2 2 0 0 1-2 2h-15a2 2 0 0 1-2-2z"></path><path d="m10 15 5-3-5-3z"></path></svg></a><a class="text-on-surface-variant hover:text-white transition-all duration-300 transform hover:scale-110" href="https://www.instagram.com/ginovo31" target="_blank"><svg class="lucide lucide-instagram opacity-80 hover:opacity-100" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><rect height="20" rx="5" ry="5" width="20" x="2" y="2"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg></a></div><div class="flex flex-wrap gap-x-3 md:gap-x-4 gap-y-1 text-[9px] md:text-[10px] font-body text-on-surface-variant opacity-70 mt-3"><span class="">블록명 : 블록명</span><span class="">대표 : 손영국</span><span class="">주소 : 광주광역시 신호구 손재로 236 그린토크</span><span class="">사업자등록번호 : 603-87-02720</span></div><div class="text-[9px] md:text-[10px] font-body text-on-surface-variant mt-3 md:mt-4 opacity-50">(c) 그린토크. 주최: 엔에이치엔커머스(주)</div></div></div></footer>
+<section class="py-24 bg-[#121318]"><div class="px-8 lg:px-16 max-w-[1280px] mx-auto"><div class="bg-[#1a1b21] border border-white/5 rounded-2xl p-12 grid grid-cols-1 lg:grid-cols-12 gap-16 items-center"><div class="space-y-10 lg:col-span-5"><div class="space-y-4"><span class="text-[#97D302] font-['Geist'] tracking-[0.1em] font-medium uppercase text-[11px] block">PRODUCT PACKAGE</span><h2 class="text-[48px] font-extrabold text-[#FFFFFF] tracking-[-0.02em] leading-tight">상품 구성</h2></div><div class="space-y-6"><div class="flex items-start gap-4 group"><span class="text-[#97D302] font-bold text-lg">01.</span><div><h4 class="text-white font-bold text-lg">GINOVO 경사 퍼팅매트 본체</h4><p class="text-[#A9A7B1] text-[13px] md:text-[15px] leading-relaxed font-normal max-w-xl mt-1">정밀 설계된 스마트 센서 기반의 프리미엄 퍼팅 매트</p></div></div><div class="flex items-start gap-4 group"><span class="text-[#97D302] font-bold text-lg">02.</span><div><h4 class="text-white font-bold text-lg">지우개봉</h4><p class="text-[#A9A7B1] text-[13px] md:text-[15px] leading-relaxed font-normal max-w-xl mt-1">그린스피드 조절 및 매트 결 관리용 전문 도구</p></div></div><div class="flex items-start gap-4 group"><span class="text-[#97D302] font-bold text-lg">03.</span><div><h4 class="text-white font-bold text-lg">제품 사용 설명서</h4><p class="text-[#A9A7B1] text-[13px] md:text-[15px] leading-relaxed font-normal max-w-xl mt-1">Technical Manual: 상세 기능 및 활용 가이드</p></div></div><div class="flex items-start gap-4 group"><span class="text-[#97D302] font-bold text-lg">04.</span><div><h4 class="text-white font-bold text-lg">전용 프리미엄 보관 케이스</h4><p class="text-[#A9A7B1] text-[13px] md:text-[15px] leading-relaxed font-normal max-w-xl mt-1">이동과 보관이 용이한 고품질 하드 쉘 케이스</p></div></div></div></div><div class="lg:col-span-7"><img alt="JINOVER Product Package" class="w-full h-auto rounded-lg shadow-2xl border border-white/10 object-cover min-h-[500px]" src="https://lh3.googleusercontent.com/aida/AP1WRLv7A2OqtfIlcD4ESdnjoYM7Ucqij8ilmW4hwo6ycL_Y1cOO3mP92l2L15I8HnF5WRMot0qslpDPmO4eAfqyq4QZfwW8w60gNgD6tYswjaUzkAHtf-MNMotjUvst5yQY8vqp5c8H_qS4lm3MUTOZoXExsMcbbAcWh8w-7qUP9O1oTO6Nw_GUhTiwvmWMcIxXs8TrmGpHL2DoRrRh83EOs5Ycut9ruAG8nFxZzcLSn7Vw02egc_OpMpOMRW8"></div></div></div></section><footer class="bg-surface-container-lowest border-t border-white/5 py-12"><div class="max-w-[1280px] mx-auto px-4 md:px-8 lg:px-16"><div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 md:gap-12 mb-8 md:mb-12"><div class="space-y-3 md:space-y-4"><h4 class="font-label text-on-surface uppercase tracking-widest text-xs md:text-sm mb-4">고객센터</h4><div class="space-y-2"><div class="text-2xl md:text-3xl font-bold text-on-surface">062-716-0995</div><div class="font-body text-on-surface-variant text-[10px] md:text-xs leading-relaxed">오전 9:00 - 오후 5:00 | 점심시간 12:00-13:00<br>주말 및 공휴일 휴무</div></div></div><div class="space-y-3 md:space-y-4"><h4 class="font-label text-on-surface uppercase tracking-widest text-xs md:text-sm mb-4">은행 정보</h4><p class="font-body text-on-surface-variant text-[10px] md:text-xs">기업은행 65904714504019 (주)그린토크</p></div><div class="space-y-3 md:space-y-4"><h4 class="font-label text-on-surface uppercase tracking-widest text-xs md:text-sm mb-4">에 대한</h4><nav class="flex flex-col gap-2 text-[10px] md:text-xs space-y-2"><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">회사소개</a><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">이용약관</a><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">개인정보처리방침</a></nav></div></div><div class="border-t border-white/5 mt-8"><div class="flex items-center gap-4 mb-4"><a class="text-on-surface-variant hover:text-white transition-all duration-300 transform hover:scale-110" href="https://www.youtube.com/@ginovo31" target="_blank"><svg class="lucide lucide-youtube opacity-80 hover:opacity-100" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 2-2h15a2 2 0 0 1 2 2 24.12 24.12 0 0 1 0 10 2 2 0 0 1-2 2h-15a2 2 0 0 1-2-2z"></path><path d="m10 15 5-3-5-3z"></path></svg></a><a class="text-on-surface-variant hover:text-white transition-all duration-300 transform hover:scale-110" href="https://www.instagram.com/ginovo31" target="_blank"><svg class="lucide lucide-instagram opacity-80 hover:opacity-100" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><rect height="20" rx="5" ry="5" width="20" x="2" y="2"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg></a></div><div class="flex flex-wrap gap-x-3 md:gap-x-4 gap-y-1 text-[9px] md:text-[10px] font-body text-on-surface-variant opacity-70 mt-3"><span class="">블록명 : 블록명</span><span class="">대표 : 손영국</span><span class="">주소 : 광주광역시 신호구 손재로 236 그린토크</span><span class="">사업자등록번호 : 603-87-02720</span></div><div class="text-[9px] md:text-[10px] font-body text-on-surface-variant mt-3 md:mt-4 opacity-50">(c) 그린토크. 주최: 엔에이치엔커머스(주)</div></div></div></footer>
 <div aria-hidden="true" data-snapdom-sandbox="true" id="snapdom-sandbox" style="position: absolute; left: -9999px; top: -9999px; width: 0px; height: 0px; overflow: hidden;"></div>
 
 </body></html>
