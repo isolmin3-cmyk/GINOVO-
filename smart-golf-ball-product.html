@@ -130,6 +130,16 @@
         .animate-pulse-tech {
             animation: pulse-tech 2s infinite ease-in-out;
         }
+        @keyframes fade-up {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-up, .fade-up {
+            opacity: 0;
+            animation: fade-up 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+        .delay-100 { animation-delay: 0.15s; }
+        .delay-200 { animation-delay: 0.3s; }
     </style>
 </head>
 <body class="bg-background text-on-background selection:bg-primary/30 selection:text-white font-body-lg">
@@ -210,20 +220,11 @@
 </header>
 <main class="pt-[80px]">
 <!-- 1. Hero Section -->
-<section class="relative h-screen flex items-center overflow-hidden">
-
-<div class="absolute inset-0 bg-black/60"></div>
-<div class="relative z-10 px-8 lg:px-16 max-w-[1280px] w-full mx-auto">
-<div class="max-w-3xl space-y-6 fade-up" style="animation-play-state: running;">
-
-<h1 class="font-extrabold text-[#FFFFFF] tracking-[-0.05em] leading-tight text-[69px]" style="font-family: &quot;Hanken Grotesk&quot;, sans-serif; font-weight: 900; font-size: 72px; letter-spacing: -0.05em; color: rgb(255, 255, 255); line-height: 1.1;">스마트 골프공&nbsp;<span style="letter-spacing: -0.05em;" class="">상품정보</span></h1>
-<p class="text-[#e3e1e9] max-w-xl leading-relaxed text-[17px] text-[13px]">
-                    실시간 데이터 분석과 초정밀 센서가 결합된 세계 최초의 스마트 골프공.&nbsp;</p><div class="">당신의 퍼팅을 데이터로 완성시킵니다.</div><p></p>
-<div class="pt-8 flex flex-col sm:flex-row gap-4">
-
-
-</div>
-</div>
+<section class="relative min-h-[560px] flex items-center justify-center overflow-hidden bg-black">
+<div class="absolute inset-0 bg-black/70"></div>
+<div class="relative z-10 px-8 lg:px-16 max-w-[1280px] w-full mx-auto text-center">
+<h1 class="text-[48px] md:text-[64px] font-black text-[#FFFFFF] tracking-[-0.04em] leading-tight mb-4 animate-fade-up" style="animation-delay: 0.1s;">스마트 골프공 상품정보</h1>
+<p class="text-[18px] text-[#A9A7B1] max-w-2xl mx-auto font-medium tracking-wide animate-fade-up" style="animation-delay: 0.3s;">실시간 데이터 분석과 초정밀 센서가 결합된 세계 최초의 스마트 골프공. 당신의 퍼팅을 데이터로 완성시킵니다.</p>
 </div>
 </section>
 <!-- 2. Premium Package Section -->
@@ -236,8 +237,8 @@
 <div class="space-y-8 fade-up delay-100">
 <div class="space-y-4">
 
-<h2 class="font-bold text-[#FFFFFF] tracking-[-0.02em] leading-tight text-[45px]">프리미엄 패키지 구성</h2>
-<p class="text-[#A9A7B1] leading-relaxed text-[13px]">간편하게 설치하는 구성품으로 어디서나 골프를 즐겨보세요.</p><div class="">모든 구성품은 최상의 퍼포먼스를 위해 정밀하게 설계되었습니다.</div><p></p>
+<h2 class="text-[48px] font-extrabold text-[#FFFFFF] tracking-[-0.02em] leading-tight">프리미엄 패키지 구성</h2>
+<p class="text-[#A9A7B1] text-[13px] md:text-[15px] leading-relaxed font-normal max-w-xl">간편하게 설치하는 구성품으로 어디서나 골프를 즐겨보세요. 모든 구성품은 최상의 퍼포먼스를 위해 정밀하게 설계되었습니다.</p>
 </div>
 <ul class="space-y-4">
 <li class="flex items-center gap-4 text-white font-medium text-[15px]">
@@ -280,7 +281,7 @@
 <div class="px-8 lg:px-16 max-w-[1280px] mx-auto">
 <div class="text-center max-w-3xl mx-auto mb-20 fade-up">
 
-<h2 class="font-bold text-[#FFFFFF] tracking-[-0.02em] mb-6 text-[45px]">스마트 골프공 인증서</h2>
+<h2 class="text-[48px] font-extrabold text-[#FFFFFF] tracking-[-0.02em] leading-tight mb-6">스마트 골프공 인증서</h2>
 </div>
 <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
 <div class="p-8 bg-[#1e1f25] border border-white/5 rounded-lg text-center hover:border-[#97D302]/30 transition-colors aspect-[210/297] flex flex-col justify-center"></div>
