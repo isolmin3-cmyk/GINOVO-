@@ -139,6 +139,17 @@
         }
         .delay-100 { animation-delay: 0.15s; }
         .delay-200 { animation-delay: 0.3s; }
+        .delay-300 { animation-delay: 0.45s; }
+    
+        .reveal-on-scroll {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal-on-scroll.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
 
     </style>
 </head>
@@ -220,133 +231,163 @@
 </header>
 <main class="pt-[80px]">
 <!-- Hero Section -->
-<section class="relative h-[60vh] min-h-[500px] flex items-center justify-center overflow-hidden">
-<div class="absolute inset-0 bg-black/70 z-0"></div>
-
-<div class="relative z-10 text-center px-8 fade-up" style="animation-play-state: running;">
-<h1 class="text-[48px] md:text-[64px] font-black text-[#FFFFFF] tracking-[-0.04em] leading-tight mb-4">Team &amp; Infra</h1>
-<p class="text-[18px] text-[#A9A7B1] max-w-2xl mx-auto font-medium tracking-wide">
-        세계 최고 수준의 전문가들과 최첨단 인프라가 만나는 곳
-      </p>
-</div>
+<section class="relative h-[60vh] min-h-[500px] flex items-center justify-center overflow-hidden bg-black">
+  <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(151,211,2,0.10),transparent_45%)] z-0"></div>
+  <div class="absolute inset-0 bg-black/75 z-0"></div>
+  <div class="relative z-10 text-center px-8 animate-fade-up" style="animation-delay: 0.1s;">
+    <h1 class="text-[48px] md:text-[64px] font-black text-[#FFFFFF] tracking-[-0.04em] leading-tight mb-4">Team &amp; Infra</h1>
+    <p class="text-[18px] text-[#A9A7B1] max-w-2xl mx-auto font-medium tracking-wide">
+      연구, 제조, 품질 관리, 사업화까지 연결되는 그린토크의 실행 인프라
+    </p>
+  </div>
 </section>
+
 <!-- Company Intro Video Section -->
-<section class="py-32 bg-[#121318] border-b border-white/5">
-<div class="px-8 lg:px-16 max-w-[1280px] mx-auto text-center fade-up" style="animation-play-state: running;">
-<span class="text-[#97D302] font-['Geist'] tracking-[0.1em] text-[14px] font-medium uppercase mb-6 block">Company Intro Video</span>
-<h2 class="text-[40px] md:text-[56px] font-extrabold text-[#FFFFFF] tracking-[-0.02em] leading-tight mb-16">회사 소개 영상</h2>
-<div class="relative w-full aspect-video bg-surface-variant rounded-xl overflow-hidden group border border-white/10 hover:border-primary/30 transition-all duration-500 cursor-pointer">
-<div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors z-10 flex items-center justify-center">
-<div class="w-20 h-20 rounded-full bg-primary/90 flex items-center justify-center text-on-primary-fixed transform group-hover:scale-110 transition-transform shadow-[0_0_30px_rgba(151,211,2,0.5)]">
-<span class="material-symbols-outlined text-4xl ml-2">play_arrow</span>
-</div>
-</div>
-<img alt="Video Thumbnail" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDb79fdMRj3PkbKrniTrGIZ7oKxOgGqPKHRVtYrCQ2Bo-J6XwM3n3EU3R272K56LDmtad1k540R-f88sm-f15gSTfk9Gg2H-7bpGo25wuO5OWu8PsUbhwOOYaO1u3hM86UAYENOwMJc1fyAZY3kaT1W4uM2dLoS5BPrgP-_FGZgZ1FMXE9fKzL8EinzjnsNl9wh-6CdfkeymGNjHjeHux-HfkztRw_pIpEmIqnK7XDMwRqbFSE52TgzsCHLzxm2qCTrJj6zyxjWLHw">
-</div>
-</div>
+<section class="py-28 bg-[#121318] border-b border-white/5">
+  <div class="px-8 lg:px-16 max-w-[1280px] mx-auto text-center reveal-on-scroll">
+    <span class="text-[#97D302] font-['Geist'] tracking-[0.1em] text-[14px] font-medium uppercase mb-6 block">Company Intro Video</span>
+    <h2 class="text-[48px] font-extrabold text-[#FFFFFF] tracking-[-0.02em] leading-tight mb-6">회사 소개 영상</h2>
+    <p class="text-[#A9A7B1] text-[13px] md:text-[15px] leading-relaxed font-normal max-w-xl mx-auto mb-14">
+      GINOVO의 제품 철학과 개발 과정을 영상으로 소개합니다.
+    </p>
+    <div class="relative w-full aspect-video bg-surface-variant rounded-xl overflow-hidden group border border-white/10 hover:border-primary/30 transition-all duration-500 cursor-pointer">
+      <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors z-10 flex items-center justify-center">
+        <div class="w-20 h-20 rounded-full bg-primary/90 flex items-center justify-center text-on-primary-fixed transform group-hover:scale-110 transition-transform shadow-[0_0_30px_rgba(151,211,2,0.5)]">
+          <span class="material-symbols-outlined text-4xl ml-2">play_arrow</span>
+        </div>
+      </div>
+      <img alt="Company Intro Video" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDb79fdMRj3PkbKrniTrGIZ7oKxOgGqPKHRVtYrCQ2Bo-J6XwM3n3EU3R272K56LDmtad1k540R-f88sm-f15gSTfk9Gg2H-7bpGo25wuO5OWu8PsUbhwOOYaO1u3hM86UAYENOwMJc1fyAZY3kaT1W4uM2dLoS5BPrgP-_FGZgZ1FMXE9fKzL8EinzjnsNl9wh-6CdfkeymGNjHjeHux-HfkztRw_pIpEmIqnK7XDMwRqbFSE52TgzsCHLzxm2qCTrJj6zyxjWLHw">
+    </div>
+  </div>
 </section>
-<!-- Organization Section -->
-<section class="py-32 bg-[#1a1b21] border-b border-white/5 relative overflow-hidden">
-<div class="px-8 lg:px-16 max-w-[1280px] mx-auto">
-<div class="text-center mb-20 fade-up" style="animation-play-state: running;">
-<span class="text-[#97D302] font-['Geist'] tracking-[0.1em] text-[14px] font-medium uppercase mb-4 block">Organization</span>
-<h2 class="text-[48px] font-extrabold text-[#FFFFFF] tracking-[-0.02em]">조직 구성</h2>
-<p class="text-[#A9A7B1] text-[16px] mt-4">혁신을 주도하는 JINOVER의 핵심 부서</p>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-<div class="glass-card p-8 rounded-xl text-center fade-up group">
-<div class="w-16 h-16 mx-auto rounded-full bg-surface-container border border-white/10 flex items-center justify-center mb-6 group-hover:border-primary/50 transition-colors">
-<span class="material-symbols-outlined text-3xl text-primary">engineering</span>
-</div>
-<h3 class="text-xl font-bold text-white mb-3">R&amp;D Center</h3>
-<p class="text-sm text-on-surface-variant">초정밀 센서 기술 및 데이터 분석 알고리즘 연구 개발</p>
-</div>
-<div class="glass-card p-8 rounded-xl text-center fade-up delay-100 group">
-<div class="w-16 h-16 mx-auto rounded-full bg-surface-container border border-white/10 flex items-center justify-center mb-6 group-hover:border-primary/50 transition-colors">
-<span class="material-symbols-outlined text-3xl text-primary">precision_manufacturing</span>
-</div>
-<h3 class="text-xl font-bold text-white mb-3">Manufacturing</h3>
-<p class="text-sm text-on-surface-variant">고품질 하드웨어 양산 및 무결점 품질 관리 시스템 운영</p>
-</div>
-<div class="glass-card p-8 rounded-xl text-center fade-up delay-200 group">
-<div class="w-16 h-16 mx-auto rounded-full bg-surface-container border border-white/10 flex items-center justify-center mb-6 group-hover:border-primary/50 transition-colors">
-<span class="material-symbols-outlined text-3xl text-primary">design_services</span>
-</div>
-<h3 class="text-xl font-bold text-white mb-3">Design Lab</h3>
-<p class="text-sm text-on-surface-variant">사용자 중심의 제품 디자인 및 직관적인 UX/UI 설계</p>
-</div>
-<div class="glass-card p-8 rounded-xl text-center fade-up delay-300 group">
-<div class="w-16 h-16 mx-auto rounded-full bg-surface-container border border-white/10 flex items-center justify-center mb-6 group-hover:border-primary/50 transition-colors">
-<span class="material-symbols-outlined text-3xl text-primary">public</span>
-</div>
-<h3 class="text-xl font-bold text-white mb-3">Global Business</h3>
-<p class="text-sm text-on-surface-variant">해외 시장 진출 및 글로벌 파트너십 구축 전략 수립</p>
-</div>
-</div>
-</div>
-</section>
-<!-- Factory Infra Section -->
-<section class="py-32 bg-[#121318] border-b border-white/5">
-<div class="px-8 lg:px-16 max-w-[1280px] mx-auto">
-<div class="text-center mb-20 fade-up" style="animation-play-state: running;">
-<span class="text-[#97D302] font-['Geist'] tracking-[0.1em] text-[14px] font-medium uppercase mb-4 block">Factory Infra</span>
-<h2 class="text-[48px] font-extrabold text-[#FFFFFF] tracking-[-0.02em]">공장 인프라</h2>
-<p class="text-[#A9A7B1] text-[16px] mt-4">완벽한 제품을 탄생시키는 최첨단 제조 시설</p>
-</div>
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-<div class="fade-up" style="animation-play-state: running;">
-<div class="w-full rounded-xl overflow-hidden border border-white/10 relative group">
-<img alt="Factory Infra" class="w-full h-[500px] object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida/AP1WRLsCvdebqKzaGolSEvsChrBHUTa62O6sMFEcjhkaCDloY4ssrF--pXWa8egYGopHrO4FS65IZKyxbMOnuopFrUy0h5svA9u2MeDFw_F25_O43I5aDvmTM8CcHHGu_KO013YRcc6RfoVmBYbW0ZfozXPh9z9t766fmvcBeUwzKrYzaJF8nMNpsYSORTr_bxQ177L2dE6AgwpWQ370MJKcrObi9_K6ZFDkmU304aHrAkmlWZQX_DqBdyMuTg">
-<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
-</div>
-</div>
-<div class="space-y-8 fade-up delay-100" style="animation-play-state: running;">
-<h3 class="text-3xl font-bold text-white">초정밀 생산 라인 구축</h3>
-<p class="text-on-surface-variant leading-relaxed text-lg">
-            JINOVER의 생산 인프라는 단순한 제조를 넘어 완벽한 골프 테크놀로지 구현을 위한 핵심 기지입니다. 온도, 습도, 먼지 등 미세한 환경 요인까지 통제되는 클린룸 설비를 갖추어 초정밀 센서 조립의 신뢰성을 극대화합니다.
-        </p>
-<ul class="space-y-4">
-<li class="flex items-start gap-4">
-<span class="material-symbols-outlined text-primary mt-1">check_circle</span>
-<div>
-<strong class="text-white block mb-1">스마트 팩토리 시스템</strong>
-<span class="text-sm text-on-surface-variant">모든 생산 공정을 실시간 모니터링하여 품질 편차 최소화</span>
-</div>
-</li>
-<li class="flex items-start gap-4">
-<span class="material-symbols-outlined text-primary mt-1">check_circle</span>
-<div>
-<strong class="text-white block mb-1">자동화 로봇 설비</strong>
-<span class="text-sm text-on-surface-variant">정밀한 조립과 반복 작업의 일관성을 유지하는 첨단 로보틱스</span>
-</div>
-</li>
-<li class="flex items-start gap-4">
-<span class="material-symbols-outlined text-primary mt-1">check_circle</span>
-<div>
-<strong class="text-white block mb-1">극한 환경 테스트실</strong>
-<span class="text-sm text-on-surface-variant">다양한 필드 환경을 시뮬레이션하여 제품 내구성 검증</span>
-</div>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</section>
-<!-- MOU Section -->
 
+<!-- Infra Summary Section -->
+<section class="py-28 bg-[#1a1b21] border-b border-white/5 relative overflow-hidden">
+  <div class="absolute inset-0 bg-[linear-gradient(120deg,rgba(151,211,2,0.08),transparent_35%)]"></div>
+  <div class="relative px-8 lg:px-16 max-w-[1280px] mx-auto">
+    <div class="text-center mb-20 reveal-on-scroll">
+      <span class="text-[#97D302] font-['Geist'] tracking-[0.1em] text-[14px] font-medium uppercase mb-4 block">Operating System</span>
+      <h2 class="text-[48px] font-extrabold text-[#FFFFFF] tracking-[-0.02em] leading-tight mb-6">팀과 인프라 구성</h2>
+      <p class="text-[#A9A7B1] text-[13px] md:text-[15px] leading-relaxed font-normal max-w-xl mx-auto">
+        그린토크는 제품 기획, 연구 개발, 제조, 품질 검증, 시장 확장까지 하나의 흐름으로 운영합니다.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="glass-card p-8 rounded-xl text-center reveal-on-scroll group">
+        <div class="w-16 h-16 mx-auto rounded-full bg-surface-container border border-white/10 flex items-center justify-center mb-6 group-hover:border-primary/50 transition-colors">
+          <span class="material-symbols-outlined text-3xl text-primary">science</span>
+        </div>
+        <h3 class="text-white text-3xl lg:text-4xl font-bold tracking-tight mb-4">R&amp;D</h3>
+        <p class="text-[#A9A7B1] text-[13px] md:text-[15px] leading-relaxed font-normal max-w-xl mx-auto">퍼팅 데이터, 센서, 매트 구조, 앱 연동 기술을 연구합니다.</p>
+      </div>
+      <div class="glass-card p-8 rounded-xl text-center reveal-on-scroll group" style="transition-delay: 0.08s;">
+        <div class="w-16 h-16 mx-auto rounded-full bg-surface-container border border-white/10 flex items-center justify-center mb-6 group-hover:border-primary/50 transition-colors">
+          <span class="material-symbols-outlined text-3xl text-primary">precision_manufacturing</span>
+        </div>
+        <h3 class="text-white text-3xl lg:text-4xl font-bold tracking-tight mb-4">Manufacturing</h3>
+        <p class="text-[#A9A7B1] text-[13px] md:text-[15px] leading-relaxed font-normal max-w-xl mx-auto">퍼팅매트와 스마트 디바이스의 안정적인 생산 체계를 운영합니다.</p>
+      </div>
+      <div class="glass-card p-8 rounded-xl text-center reveal-on-scroll group" style="transition-delay: 0.16s;">
+        <div class="w-16 h-16 mx-auto rounded-full bg-surface-container border border-white/10 flex items-center justify-center mb-6 group-hover:border-primary/50 transition-colors">
+          <span class="material-symbols-outlined text-3xl text-primary">verified</span>
+        </div>
+        <h3 class="text-white text-3xl lg:text-4xl font-bold tracking-tight mb-4">Quality</h3>
+        <p class="text-[#A9A7B1] text-[13px] md:text-[15px] leading-relaxed font-normal max-w-xl mx-auto">제품 완성도를 높이기 위한 품질 기준과 검수 프로세스를 관리합니다.</p>
+      </div>
+      <div class="glass-card p-8 rounded-xl text-center reveal-on-scroll group" style="transition-delay: 0.24s;">
+        <div class="w-16 h-16 mx-auto rounded-full bg-surface-container border border-white/10 flex items-center justify-center mb-6 group-hover:border-primary/50 transition-colors">
+          <span class="material-symbols-outlined text-3xl text-primary">public</span>
+        </div>
+        <h3 class="text-white text-3xl lg:text-4xl font-bold tracking-tight mb-4">Business</h3>
+        <p class="text-[#A9A7B1] text-[13px] md:text-[15px] leading-relaxed font-normal max-w-xl mx-auto">전시, 유통, 파트너십을 통해 국내외 시장 확장을 추진합니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- R&D and Manufacturing Section -->
+<section class="py-28 bg-[#121318] border-b border-white/5">
+  <div class="px-8 lg:px-16 max-w-[1280px] mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-stretch">
+      <div class="glass-card rounded-xl overflow-hidden reveal-on-scroll">
+        <div class="h-[320px] overflow-hidden bg-surface-container">
+          <img alt="R&D and product engineering" class="w-full h-full object-cover grayscale opacity-80" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxkfqOWRCWRf6raluXGSKT-danLTezmpnTGz4GTMwD6UGlzttfvxwJWAKz2brCiss_yE28FdwelvX1WnlGgq0DhYz5kBRQtV952DypG87zAF7E-GhUKFu8HAIEeYaZqy2kZR8UkR1iI6HpJ6dcdXQPlgrXU7h7c1T7hUkW5YTHRdtKjxbz8en8ENGksr7Shvzf2ijrRDm029ODfKsbtgukS1N13fmSogFgRXR_NE5mdxizvE5NuzobnNhoaBsGCaZGXcxd5x5upxY">
+        </div>
+        <div class="p-8 lg:p-10">
+          <span class="text-[#97D302] font-['Geist'] tracking-[0.2em] text-sm font-bold">01</span>
+          <h3 class="text-white text-3xl lg:text-4xl font-bold tracking-tight mt-5 mb-6">연구 개발 인프라</h3>
+          <p class="text-[#A9A7B1] text-[13px] md:text-[15px] leading-relaxed font-normal max-w-xl">
+            퍼팅의 방향, 거리, 경사 데이터를 제품 구조와 사용자 경험으로 연결하기 위해 센서 기술과 분석 로직을 함께 연구합니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="glass-card rounded-xl overflow-hidden reveal-on-scroll" style="transition-delay: 0.12s;">
+        <div class="h-[320px] overflow-hidden bg-surface-container">
+          <img alt="Manufacturing and quality control" class="w-full h-full object-cover grayscale opacity-80" src="image2.png">
+        </div>
+        <div class="p-8 lg:p-10">
+          <span class="text-[#97D302] font-['Geist'] tracking-[0.2em] text-sm font-bold">02</span>
+          <h3 class="text-white text-3xl lg:text-4xl font-bold tracking-tight mt-5 mb-6">제조 및 품질 관리</h3>
+          <p class="text-[#A9A7B1] text-[13px] md:text-[15px] leading-relaxed font-normal max-w-xl">
+            광주광역시 기반의 제조 시설에서 제품 생산과 검수 과정을 관리하며, 안정적인 품질과 내구성을 확보합니다.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Infrastructure Flow Section -->
+<section class="py-28 bg-[#1a1b21] border-b border-white/5">
+  <div class="px-8 lg:px-16 max-w-[1280px] mx-auto">
+    <div class="text-center mb-20 reveal-on-scroll">
+      <span class="text-[#97D302] font-['Geist'] tracking-[0.1em] text-[14px] font-medium uppercase mb-4 block">Infrastructure Flow</span>
+      <h2 class="text-[48px] font-extrabold text-[#FFFFFF] tracking-[-0.02em] leading-tight mb-6">아이디어에서 제품까지</h2>
+      <p class="text-[#A9A7B1] text-[13px] md:text-[15px] leading-relaxed font-normal max-w-xl mx-auto">
+        그린토크의 팀과 인프라는 하나의 제품이 시장에 도달하는 전 과정을 빠르게 연결합니다.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+      <div class="bg-[#0d0e13] border border-white/10 rounded-xl p-7 reveal-on-scroll">
+        <div class="text-[#97D302] font-['Geist'] tracking-[0.2em] text-sm font-bold mb-6">STEP 01</div>
+        <h3 class="text-white text-3xl lg:text-4xl font-bold tracking-tight mb-4">기획</h3>
+        <p class="text-[#A9A7B1] text-[13px] md:text-[15px] leading-relaxed font-normal">골퍼의 실제 연습 문제를 제품 요구사항으로 정리합니다.</p>
+      </div>
+      <div class="bg-[#0d0e13] border border-white/10 rounded-xl p-7 reveal-on-scroll" style="transition-delay: 0.08s;">
+        <div class="text-[#97D302] font-['Geist'] tracking-[0.2em] text-sm font-bold mb-6">STEP 02</div>
+        <h3 class="text-white text-3xl lg:text-4xl font-bold tracking-tight mb-4">개발</h3>
+        <p class="text-[#A9A7B1] text-[13px] md:text-[15px] leading-relaxed font-normal">센서, 매트, 앱, 데이터 분석 기능을 통합 설계합니다.</p>
+      </div>
+      <div class="bg-[#0d0e13] border border-white/10 rounded-xl p-7 reveal-on-scroll" style="transition-delay: 0.16s;">
+        <div class="text-[#97D302] font-['Geist'] tracking-[0.2em] text-sm font-bold mb-6">STEP 03</div>
+        <h3 class="text-white text-3xl lg:text-4xl font-bold tracking-tight mb-4">제조</h3>
+        <p class="text-[#A9A7B1] text-[13px] md:text-[15px] leading-relaxed font-normal">제품 구조와 부품 조립 품질을 기준에 맞춰 관리합니다.</p>
+      </div>
+      <div class="bg-[#0d0e13] border border-white/10 rounded-xl p-7 reveal-on-scroll" style="transition-delay: 0.24s;">
+        <div class="text-[#97D302] font-['Geist'] tracking-[0.2em] text-sm font-bold mb-6">STEP 04</div>
+        <h3 class="text-white text-3xl lg:text-4xl font-bold tracking-tight mb-4">확장</h3>
+        <p class="text-[#A9A7B1] text-[13px] md:text-[15px] leading-relaxed font-normal">전시와 파트너십을 통해 국내외 고객 접점을 넓힙니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
 </main>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <footer class="bg-surface-container-lowest py-12"><div class="max-w-[1280px] mx-auto px-4 md:px-8 lg:px-16"><div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 md:gap-12 mb-8 md:mb-12"><div class="space-y-3 md:space-y-4"><h4 class="font-label text-on-surface uppercase tracking-widest text-xs md:text-sm mb-4">고객센터</h4><div class="space-y-2"><div class="text-2xl md:text-3xl font-bold text-on-surface">062-716-0995</div><div class="font-body text-on-surface-variant text-[10px] md:text-xs leading-relaxed">오전 9:00 - 오후 5:00 | 점심시간 12:00-13:00<br>주말 및 공휴일 휴무</div></div></div><div class="space-y-3 md:space-y-4"><h4 class="font-label text-on-surface uppercase tracking-widest text-xs md:text-sm mb-4">은행 정보</h4><p class="font-body text-on-surface-variant text-[10px] md:text-xs">기업은행 65904714504019 (주)그린토크</p></div><div class="space-y-3 md:space-y-4"><h4 class="font-label text-on-surface uppercase tracking-widest text-xs md:text-sm mb-4">에 대한</h4><nav class="flex flex-col gap-2 text-[10px] md:text-xs space-y-2"><a class="text-on-surface-variant hover:text-primary transition-colors" href="about.html">회사소개</a><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">이용약관</a><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">개인정보처리방침</a></nav></div></div><div class=" mt-8"><div class="flex items-center gap-4 mb-4"><a class="text-on-surface-variant hover:text-white transition-all duration-300 transform hover:scale-110" href="https://www.youtube.com/@ginovo31" target="_blank"><svg class="lucide lucide-youtube opacity-80 hover:opacity-100" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 2-2h15a2 2 0 0 1 2 2 24.12 24.12 0 0 1 0 10 2 2 0 0 1-2 2h-15a2 2 0 0 1-2-2z"></path><path d="m10 15 5-3-5-3z"></path></svg></a><a class="text-on-surface-variant hover:text-white transition-all duration-300 transform hover:scale-110" href="https://www.instagram.com/ginovo31" target="_blank"><svg class="lucide lucide-instagram opacity-80 hover:opacity-100" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><rect height="20" rx="5" ry="5" width="20" x="2" y="2"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg></a></div><div class="flex flex-wrap gap-x-3 md:gap-x-4 gap-y-1 text-[9px] md:text-[10px] font-body text-on-surface-variant opacity-70 mt-3"><span class="">블록명 : 블록명</span><span class="">대표 : 손영국</span><span class="">주소 : 광주광역시 신호구 손재로 236 그린토크</span><span class="">사업자등록번호 : 603-87-02720</span></div><div class="text-[9px] md:text-[10px] font-body text-on-surface-variant mt-3 md:mt-4 opacity-50">(c) 그린토크. 주최: 엔에이치엔커머스(주)</div></div></div></footer>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const targets = document.querySelectorAll('.reveal-on-scroll');
+    const observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    targets.forEach(function (target) { observer.observe(target); });
+  });
+</script>
 </body></html>
