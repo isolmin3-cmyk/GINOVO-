@@ -264,13 +264,15 @@
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-      <article class="glass-card rounded-xl overflow-hidden reveal-on-scroll">
+      <article class="glass-card rounded-xl overflow-hidden reveal-on-scroll" x-data="{ current: 0, images: ['11.jpg', '8.gif'] }">
         <div class="relative aspect-[4/5] bg-white overflow-hidden flex items-center justify-center">
-          <img src="11.jpg" alt="목표 거리와 그린스피드 세밀 설정 안내" class="w-full h-full object-contain">
-          <button aria-label="이전 화면" class="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/45 text-white flex items-center justify-center backdrop-blur-sm hover:bg-black/60 transition-colors">
+          <template x-for="(image, index) in images" :key="image">
+            <img x-show="current === index" :src="image" alt="퍼팅 연습 설정 화면" class="w-full h-full object-contain" x-transition.opacity>
+          </template>
+          <button aria-label="이전 화면" @click="current = (current - 1 + images.length) % images.length" class="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/45 text-white flex items-center justify-center backdrop-blur-sm hover:bg-black/60 transition-colors">
             <span class="material-symbols-outlined text-[28px]">chevron_left</span>
           </button>
-          <button aria-label="다음 화면" class="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/45 text-white flex items-center justify-center backdrop-blur-sm hover:bg-black/60 transition-colors">
+          <button aria-label="다음 화면" @click="current = (current + 1) % images.length" class="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/45 text-white flex items-center justify-center backdrop-blur-sm hover:bg-black/60 transition-colors">
             <span class="material-symbols-outlined text-[28px]">chevron_right</span>
           </button>
         </div>
