@@ -275,23 +275,25 @@
           </button>
         </div>
         <div class="p-8 feature-card-body">
-          <div class="text-[#97D302] font-['Geist'] tracking-[0.08em] text-sm md:text-base font-bold feature-card-label keep-words">01 목표 거리/그린스피드 세밀하게 설정</div>
+          <div class="text-[#97D302] font-['Geist'] tracking-[0.08em] text-sm md:text-base font-bold feature-card-label keep-words">01</div>
           <h3 class="text-white text-3xl lg:text-4xl font-bold tracking-tight mb-6 keep-words">퍼팅 연습 설정</h3>
           <p class="text-[#A9A7B1] text-[13px] md:text-[15px] leading-relaxed font-normal feature-card-copy">목표 거리와 연습 조건을 설정해 원하는 퍼팅 상황을 반복 훈련할 수 있습니다.</p>
         </div>
       </article>
-      <article class="glass-card rounded-xl overflow-hidden reveal-on-scroll" style="transition-delay: 0.06s;">
+      <article class="glass-card rounded-xl overflow-hidden reveal-on-scroll" style="transition-delay: 0.06s;" x-data="{ current: 0, images: ['distance-analysis-1.png', 'distance-analysis-2.png', 'distance-analysis-3.gif', 'distance-analysis-4.png'] }">
         <div class="relative aspect-[4/5] bg-white overflow-hidden flex items-center justify-center">
-          <img src="11.jpg" alt="목표 거리와 그린스피드 세밀 설정 안내" class="w-full h-full object-contain">
-          <button aria-label="이전 화면" class="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/45 text-white flex items-center justify-center backdrop-blur-sm hover:bg-black/60 transition-colors">
+          <template x-for="(image, index) in images" :key="image">
+            <img x-show="current === index" :src="image" alt="거리 방향 분석 화면" class="w-full h-full object-contain" x-transition.opacity>
+          </template>
+          <button aria-label="이전 화면" @click="current = (current - 1 + images.length) % images.length" class="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/45 text-white flex items-center justify-center backdrop-blur-sm hover:bg-black/60 transition-colors">
             <span class="material-symbols-outlined text-[28px]">chevron_left</span>
           </button>
-          <button aria-label="다음 화면" class="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/45 text-white flex items-center justify-center backdrop-blur-sm hover:bg-black/60 transition-colors">
+          <button aria-label="다음 화면" @click="current = (current + 1) % images.length" class="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/45 text-white flex items-center justify-center backdrop-blur-sm hover:bg-black/60 transition-colors">
             <span class="material-symbols-outlined text-[28px]">chevron_right</span>
           </button>
         </div>
         <div class="p-8 feature-card-body">
-          <div class="text-[#97D302] font-['Geist'] tracking-[0.08em] text-sm md:text-base font-bold feature-card-label keep-words">02 데이터 기반 정밀 피드백</div>
+          <div class="text-[#97D302] font-['Geist'] tracking-[0.08em] text-sm md:text-base font-bold feature-card-label keep-words">02</div>
           <h3 class="text-white text-3xl lg:text-4xl font-bold tracking-tight mb-6 keep-words">거리 · 방향 분석</h3>
           <p class="text-[#A9A7B1] text-[13px] md:text-[15px] leading-relaxed font-normal feature-card-copy">퍼팅 결과를 데이터로 확인해 거리감과 방향성의 변화를 직관적으로 파악할 수 있습니다.</p>
         </div>
@@ -307,8 +309,8 @@
           </button>
         </div>
         <div class="p-8 feature-card-body">
-          <div class="text-[#97D302] font-['Geist'] tracking-[0.08em] text-sm md:text-base font-bold feature-card-label keep-words">03 데이터를 통한 집중연습</div>
-          <h3 class="text-white text-3xl lg:text-4xl font-bold tracking-tight mb-6 keep-words">취약 거리 반복연습</h3>
+          <div class="text-[#97D302] font-['Geist'] tracking-[0.08em] text-sm md:text-base font-bold feature-card-label keep-words">03</div>
+          <h3 class="text-white text-3xl lg:text-4xl font-bold tracking-tight mb-6 keep-words">온라인 / 로컬 대결모드</h3>
           <p class="text-[#A9A7B1] text-[13px] md:text-[15px] leading-relaxed font-normal feature-card-copy">혼자 하는 연습을 넘어 온라인 또는 로컬 대결 방식으로 실전 감각을 높일 수 있습니다.</p>
         </div>
       </article>
@@ -323,8 +325,8 @@
           </button>
         </div>
         <div class="p-8 feature-card-body">
-          <div class="text-[#97D302] font-['Geist'] tracking-[0.08em] text-sm md:text-base font-bold feature-card-label keep-words">04 로컬/온라인 모드</div>
-          <h3 class="text-white text-3xl lg:text-4xl font-bold tracking-tight mb-6 keep-words">퍼팅 대결을 통한 실전연습</h3>
+          <div class="text-[#97D302] font-['Geist'] tracking-[0.08em] text-sm md:text-base font-bold feature-card-label keep-words">04</div>
+          <h3 class="text-white text-3xl lg:text-4xl font-bold tracking-tight mb-6 keep-words">앱 구성</h3>
           <p class="text-[#A9A7B1] text-[13px] md:text-[15px] leading-relaxed font-normal feature-card-copy">연습 기록, 대결 모드, 챌린지 기능을 앱에서 관리해 퍼팅 루틴을 체계적으로 만들 수 있습니다.</p>
         </div>
       </article>
