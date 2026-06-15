@@ -155,6 +155,9 @@
         .delay-200 {
             animation-delay: 0.3s;
         }
+    
+        .reveal-on-scroll { opacity: 0; transform: translateY(40px); transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1); }
+        .reveal-on-scroll.is-visible { opacity: 1; transform: translateY(0); }
     </style>
 </head>
 <body class="bg-background text-on-background selection:bg-primary/30 selection:text-white font-body-lg">
@@ -233,67 +236,113 @@
 </div>
 </nav>
 </header>
-<main class="pt-[80px]"><!-- Hero Section -->
-<section class="relative h-[60vh] min-h-[520px] flex items-center justify-center overflow-hidden">
-<img alt="Smart Golf Ball Cinematic" class="absolute inset-0 w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLtVlv5HZZ6pknUvCyulQzYR79r5N6EO90edOyKOu-MTL4aJYSzm0ZwcT8Vt4LYhwx49U-V4MJAX3IXEl6egrPxozYx--y3ERp8vWCackZlKzbkPs5cd9j6WZQgoOZU_NlVk6gJQr5HdyqGOHCrKKUdRU_evvDbGx1dzTS_STZS8yRDf67U18qWqqf9KBAr5zr0P5wHWivxXxBHW5A4xx6cHbaqI00jYzVzHIQmPfbREJFkA-HrZZGl8Fdk">
-<div class="absolute inset-0 bg-black/60"></div>
-<div class="relative z-10 px-8 lg:px-16 max-w-[1280px] w-full mx-auto text-center">
-<div class="max-w-5xl mx-auto space-y-6">
-
-<h1 class="text-[48px] md:text-[64px] font-black text-[#FFFFFF] tracking-[-0.04em] leading-tight mb-4 animate-fade-up" style="animation-delay: 0.1s;">GINOVO 디자인 어워드</h1>
-<p class="text-[18px] text-[#A9A7B1] max-w-2xl mx-auto font-medium tracking-wide animate-fade-up" style="animation-delay: 0.3s;">당신의 퍼팅을 데이터로 완성하다</p><p></p>
-<div class="pt-8 flex flex-col sm:flex-row gap-4">
-
-
-</div>
-</div>
-</div>
+<main class="pt-[80px]">
+<!-- Hero Section -->
+<section class="relative h-[60vh] min-h-[500px] flex items-center justify-center overflow-hidden bg-black">
+  <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(151,211,2,0.10),transparent_48%)] z-0"></div>
+  <div class="absolute inset-0 bg-black/75 z-0"></div>
+  <div class="relative z-10 text-center px-8 animate-fade-up" style="animation-delay: 0.1s;">
+    <h1 class="text-[48px] md:text-[64px] font-black text-[#FFFFFF] tracking-[-0.04em] leading-tight mb-4">디자인 어워드</h1>
+    <p class="text-[18px] text-[#A9A7B1] max-w-2xl mx-auto font-medium tracking-wide animate-fade-up" style="animation-delay: 0.3s;">
+      제품의 완성도와 사용성을 인정받은 Good Design 선정
+    </p>
+  </div>
 </section>
-<!-- Product Insight Section (New) -->
-<section class="py-32 bg-[#121318] border-b border-white/5">
-<div class="px-8 lg:px-16 max-w-[1280px] mx-auto">
-<div class="text-center max-w-3xl mx-auto mb-16 fade-up" style="animation-play-state: running;">
-<span class="text-[#97D302] font-['Geist'] tracking-[0.1em] font-medium uppercase mb-4 block text-[11px]">Product Insight</span>
-<h2 class="text-[48px] font-extrabold text-[#FFFFFF] tracking-[-0.02em] leading-tight mb-6">경사 퍼팅매트의 모든 것</h2>
-<p class="text-[#A9A7B1] text-[13px] md:text-[15px] leading-relaxed font-normal max-w-xl mx-auto">혁신적인 기술이 어떻게 당신의 퍼포먼스를 향상시키는지 영상으로 확인하세요.</p>
-</div>
-<div class="relative w-full aspect-video bg-[#1e1f25] rounded-2xl overflow-hidden shadow-2xl border border-white/5 fade-up delay-100 group cursor-pointer" style="animation-play-state: running;">
-<div class="absolute inset-0 bg-black/40 flex items-center justify-center group-hover:bg-black/20 transition-all duration-500 z-10">
-<div class="w-20 h-20 bg-[#97D302]/90 rounded-full flex items-center justify-center text-black transform group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-[#97D302]/20">
-<span class="material-symbols-outlined text-4xl ml-2">play_arrow</span>
-</div>
-</div>
-<img alt="스마트 골프공 동영상" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDESlF6eiRnKrZpnQtFfp_Myv3zdI3Fe-P0qrLajnalgQmMXU-fVSImHQV1BJhMhAsRrUu8otFMR2ADCo-MqLBhdwqi5UPO8NzQamYdFMWOVov6pTaGQoRmvxw7gCe2Yy0Bivnqz_ClNSDkWRJY1sjAKHliTL2TnTukG_H_yUULwLBbflLL6CR9WhUElHd0caEPRLg1CtSSIxTH8W-31nXzH7iW985nKTRKwBY_ag29lGiWwhsIW72ryqw8910Ruv-ATjjHn8jICW8" title="스마트 골프공 동영상">
-</div>
-</div>
-</section>
-<!-- Product Intro Section -->
-<section class="py-32 bg-[#121318] border-b border-white/5 overflow-hidden">
-<div class="px-8 lg:px-16 max-w-[1280px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-<div class="fade-up delay-100" style="animation-play-state: running;">
-<img alt="Smart Golf Ball Tech Inside" class="w-full h-auto rounded-lg shadow-2xl border border-white/5" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAG_Hgw-vHN8l3w7aDgftyFaV2eh3RkJCAaZGxijjmMHNDOceaiJhW7psWAy9W48w2qH4-xkYh-vGopu0NHHyk6psuPTu2DsdBjrDJfa09gRpyrs_-VSFL4vTvr0EQJiGXS4x7NfKkJkPLlNJlqj3m8HeklhZ-mpKeMnJ190Ikd0w1POsPDkN5rdMfZUEB0_YP_qno77sfaGxS-mSvMbIS9FI-hGiN32oUT-JbeBtHlU4Eapk186_lJLfpz5WsOSsBfJIiIaXUWuy0">
-</div>
-<div class="space-y-10 fade-up delay-200" style="animation-play-state: running;">
-<div class="space-y-4">
-<span class="text-[#97D302] font-['Geist'] tracking-[0.1em] font-medium uppercase text-[11px]">스마트 센서가 만드는 퍼팅의 혁신</span>
-<h2 class="text-[48px] font-extrabold text-[#FFFFFF] tracking-[-0.02em] leading-tight">퍼팅 실력을 높여주는<div class="">효율적인 경사 퍼팅매트</div></h2>
-<p class="text-[#A9A7B1] text-[13px] md:text-[15px] leading-relaxed font-normal max-w-xl">&nbsp;USGA 그린 경사 구현과 PATH 31 경로 가이드를 적용한 혁신적인 기술력을 바탕으로 정교한 공정을 통해</p><div class="">실제 필드 그린과 가장 유사한 환경을 매트에 적용했습니다.</div><p></p><p></p><p></p><p></p>
-</div>
-</div>
-</div>
-</section>
-<!-- Feature Grid Section -->
-<section class="py-32 bg-[#121318] border-b border-white/5">
-<div class="px-8 lg:px-16 max-w-[1280px] mx-auto">
-<div class="text-center max-w-3xl mx-auto mb-20 fade-up" style="animation-play-state: running;">
 
-<h2 class="text-[48px] font-extrabold text-[#FFFFFF] tracking-[-0.02em] leading-tight mb-6">우수산업디자인상품 인증서</h2>
-<p class="text-[#A9A7B1] text-[13px] md:text-[15px] leading-relaxed font-normal max-w-xl mx-auto">직관적이고 정밀한 데이터 분석을 통해 당신의 퍼팅 약점을 완벽하게 보완합니다.</p>
-</div>
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8"><div class="p-0 bg-surface-container-lowest border border-white/5 rounded-2xl overflow-hidden hover:border-primary/50 transition-all duration-500 group relative aspect-[3/4]"><div x-data="{ activeSlide: 0, slides: ['https://lh3.googleusercontent.com/aida/AP1WRLskZQUocaE3SA1I1LJB8lhSXSH9q3GYufd57TDptnRHFxL5ybIsBz9E1uouvDBMawkuB6A77-txQyjEQsO3C4fKd9M-mpEmT80a5x_6oVUz4xYMcoLQyLo_vcuNOfMzxsp5IFP0Ug9VI0TOcqaRk7M937Q63Pg3jLRzeddljoH_bm336sF6Kihul0E9HUjfph0XGc7pljCyge7FK7-buZtTAhjDxXqsgpkYHT3XrsfwQlOw9GJDNGxBMQ', 'https://lh3.googleusercontent.com/aida/AP1WRLskZQUocaE3SA1I1LJB8lhSXSH9q3GYufd57TDptnRHFxL5ybIsBz9E1uouvDBMawkuB6A77-txQyjEQsO3C4fKd9M-mpEmT80a5x_6oVUz4xYMcoLQyLo_vcuNOfMzxsp5IFP0Ug9VI0TOcqaRk7M937Q63Pg3jLRzeddljoH_bm336sF6Kihul0E9HUjfph0XGc7pljCyge7FK7-buZtTAhjDxXqsgpkYHT3XrsfwQlOw9GJDNGxBMQ', 'https://lh3.googleusercontent.com/aida/AP1WRLtHrLN6k46VEtWJL-lYL9yCt0HkaJkJxFt-yC4LEc5McY70jO46GFUCNcpsmMx0p69XZZAfvelLSYAQ-prhDLm9nkv0Xxcy2pmvQ_7n_A82ETE2BY0HTgMF82-8lJAYu1zKFw_rq8s7zf96JrU2yz9G2XiNScRtTUv2J2RiGyU6A0IMR-MOZNN4_KDge7V1eGdcEbCREHFQ6r3wCgfckO5jyWEKvdjTzifaaUYqqN4c0g9x2bAf3-X_GMc'] }" class="h-full w-full relative"><div class="absolute inset-0 z-0"><template x-for="(slide, index) in slides" :key="index"><img :src="slide" x-show="activeSlide === index" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100"></template><img :src="slide" x-show="activeSlide === index" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" src="https://lh3.googleusercontent.com/aida/AP1WRLskZQUocaE3SA1I1LJB8lhSXSH9q3GYufd57TDptnRHFxL5ybIsBz9E1uouvDBMawkuB6A77-txQyjEQsO3C4fKd9M-mpEmT80a5x_6oVUz4xYMcoLQyLo_vcuNOfMzxsp5IFP0Ug9VI0TOcqaRk7M937Q63Pg3jLRzeddljoH_bm336sF6Kihul0E9HUjfph0XGc7pljCyge7FK7-buZtTAhjDxXqsgpkYHT3XrsfwQlOw9GJDNGxBMQ"><img :src="slide" x-show="activeSlide === index" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" src="https://lh3.googleusercontent.com/aida/AP1WRLskZQUocaE3SA1I1LJB8lhSXSH9q3GYufd57TDptnRHFxL5ybIsBz9E1uouvDBMawkuB6A77-txQyjEQsO3C4fKd9M-mpEmT80a5x_6oVUz4xYMcoLQyLo_vcuNOfMzxsp5IFP0Ug9VI0TOcqaRk7M937Q63Pg3jLRzeddljoH_bm336sF6Kihul0E9HUjfph0XGc7pljCyge7FK7-buZtTAhjDxXqsgpkYHT3XrsfwQlOw9GJDNGxBMQ" style="display: none;"><img :src="slide" x-show="activeSlide === index" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" src="https://lh3.googleusercontent.com/aida/AP1WRLtHrLN6k46VEtWJL-lYL9yCt0HkaJkJxFt-yC4LEc5McY70jO46GFUCNcpsmMx0p69XZZAfvelLSYAQ-prhDLm9nkv0Xxcy2pmvQ_7n_A82ETE2BY0HTgMF82-8lJAYu1zKFw_rq8s7zf96JrU2yz9G2XiNScRtTUv2J2RiGyU6A0IMR-MOZNN4_KDge7V1eGdcEbCREHFQ6r3wCgfckO5jyWEKvdjTzifaaUYqqN4c0g9x2bAf3-X_GMc" style="display: none;"><img :src="slide" x-show="activeSlide === index" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" style="display: none;"><img :src="slide" x-show="activeSlide === index" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" style="display: none;"><img :src="slide" x-show="activeSlide === index" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" style="display: none;"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBaZcnqOHjW40kwx07k4hySAh2fe6vaDeDc3fNXU8XNKrJSlSbGFjhyu84ks9PXJB4KgEENWk8b3a9j1Uo44nVtOjjxbjHeB2kLeJNX0VP-E0sY65cWAhoD1FAjNmx9yEsmtgjyxWNOLYGju8xQHXrHJxh7qIoKqJo9mMSzYJ_C14cGHv65W2DxP238RAuh7SLid2N9pichImfP3jMwPgX7RbTu1VD8cfKmqpkYFlKdDi-Yq-PVvoegzI8nrShlCTE4L6LNrYrAFRU" alt="우수산업디자인상품 선정증" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"></div><div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent z-10"></div><div class="absolute inset-0 z-30 flex items-center justify-between px-4"><button @click="activeSlide = activeSlide === 0 ? slides.length - 1 : activeSlide - 1" class="w-10 h-10 rounded-full bg-black/40 backdrop-blur-md flex items-center justify-center text-primary border border-white/10 hover:bg-primary hover:text-black transition-all"><span class="material-symbols-outlined">chevron_left</span></button><button @click="activeSlide = activeSlide === slides.length - 1 ? 0 : activeSlide + 1" class="w-10 h-10 rounded-full bg-black/40 backdrop-blur-md flex items-center justify-center text-primary border border-white/10 hover:bg-primary hover:text-black transition-all"><span class="material-symbols-outlined">chevron_right</span></button></div><div class="absolute inset-0 z-20 p-8 flex flex-col justify-end pointer-events-none"><h3 class="text-white text-3xl lg:text-4xl font-bold tracking-tight mb-2">우수산업디자인상품 선정증</h3></div></div></div><div class="p-0 bg-surface-container-lowest border border-white/5 rounded-2xl overflow-hidden hover:border-primary/50 transition-all duration-500 group relative aspect-[3/4]"><div x-data="{ activeSlide: 0, slides: ['https://lh3.googleusercontent.com/aida/AP1WRLvq1EfpPfgZQiHYCcWpmZxtRj7aNO99ZUYV4xQhrfHBHAg1oM2d5hvsrnzMB42kpq5yJxpza01WXRFUmpIweIx7JCS_74XPRzn8PWMJ9n4eKqessJobFzvrgCVSwnv8clKnihwDJAWmH1rtg5gsqaQPJRdUZLrzzaAjqyfXnCh2pktlD9s18EpwNfZm2n96k7fzdrNsgiiyzzPUgGDyBiNV2Y9IB2Qohmh_P09aAXcQq4LYyyVPjZ-XSBs', 'https://lh3.googleusercontent.com/aida/AP1WRLvgMdbNQOg9Ztsaj0lXwqr41DOrVjiBSb8AFHX5pOKPGAZA4bPE1UK0aE8ni8ynTYFSdxBeLz2MiUo4I6WInzsdo7SeNSdigXj4k5jeJmAEMLWWg-qaCmp3_CfT9QCqbgiLLWTtsEC7HHy_pDOiMYPUZ0YHoazA7izUA1V4UZFITDhC6kSIP61tsc8sNPQE9v704KYu2FUcW5-NiOk-iZa3lLgdfQgOAoyfMruP-yclPJowS27BUfs7jW8', 'https://lh3.googleusercontent.com/aida/AP1WRLskZQUocaE3SA1I1LJB8lhSXSH9q3GYufd57TDptnRHFxL5ybIsBz9E1uouvDBMawkuB6A77-txQyjEQsO3C4fKd9M-mpEmT80a5x_6oVUz4xYMcoLQyLo_vcuNOfMzxsp5IFP0Ug9VI0TOcqaRk7M937Q63Pg3jLRzeddljoH_bm336sF6Kihul0E9HUjfph0XGc7pljCyge7FK7-buZtTAhjDxXqsgpkYHT3XrsfwQlOw9GJDNGxBMQ'] }" class="h-full w-full relative"><div class="absolute inset-0 z-0"><template x-for="(slide, index) in slides" :key="index"><img :src="slide" x-show="activeSlide === index" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100"></template><img :src="slide" x-show="activeSlide === index" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" src="https://lh3.googleusercontent.com/aida/AP1WRLvq1EfpPfgZQiHYCcWpmZxtRj7aNO99ZUYV4xQhrfHBHAg1oM2d5hvsrnzMB42kpq5yJxpza01WXRFUmpIweIx7JCS_74XPRzn8PWMJ9n4eKqessJobFzvrgCVSwnv8clKnihwDJAWmH1rtg5gsqaQPJRdUZLrzzaAjqyfXnCh2pktlD9s18EpwNfZm2n96k7fzdrNsgiiyzzPUgGDyBiNV2Y9IB2Qohmh_P09aAXcQq4LYyyVPjZ-XSBs"><img :src="slide" x-show="activeSlide === index" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" src="https://lh3.googleusercontent.com/aida/AP1WRLvgMdbNQOg9Ztsaj0lXwqr41DOrVjiBSb8AFHX5pOKPGAZA4bPE1UK0aE8ni8ynTYFSdxBeLz2MiUo4I6WInzsdo7SeNSdigXj4k5jeJmAEMLWWg-qaCmp3_CfT9QCqbgiLLWTtsEC7HHy_pDOiMYPUZ0YHoazA7izUA1V4UZFITDhC6kSIP61tsc8sNPQE9v704KYu2FUcW5-NiOk-iZa3lLgdfQgOAoyfMruP-yclPJowS27BUfs7jW8" style="display: none;"><img :src="slide" x-show="activeSlide === index" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" src="https://lh3.googleusercontent.com/aida/AP1WRLskZQUocaE3SA1I1LJB8lhSXSH9q3GYufd57TDptnRHFxL5ybIsBz9E1uouvDBMawkuB6A77-txQyjEQsO3C4fKd9M-mpEmT80a5x_6oVUz4xYMcoLQyLo_vcuNOfMzxsp5IFP0Ug9VI0TOcqaRk7M937Q63Pg3jLRzeddljoH_bm336sF6Kihul0E9HUjfph0XGc7pljCyge7FK7-buZtTAhjDxXqsgpkYHT3XrsfwQlOw9GJDNGxBMQ" style="display: none;"><img :src="slide" x-show="activeSlide === index" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" style="display: none;"><img :src="slide" x-show="activeSlide === index" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" style="display: none;"><img :src="slide" x-show="activeSlide === index" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" style="display: none;"><img :src="slide" x-show="activeSlide === index" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" style="display: none;"></div><div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent z-10"></div><div class="absolute inset-0 z-30 flex items-center justify-between px-4"><button @click="activeSlide = activeSlide === 0 ? slides.length - 1 : activeSlide - 1" class="w-10 h-10 rounded-full bg-black/40 backdrop-blur-md flex items-center justify-center text-primary border border-white/10 hover:bg-primary hover:text-black transition-all"><span class="material-symbols-outlined">chevron_left</span></button><button @click="activeSlide = activeSlide === slides.length - 1 ? 0 : activeSlide + 1" class="w-10 h-10 rounded-full bg-black/40 backdrop-blur-md flex items-center justify-center text-primary border border-white/10 hover:bg-primary hover:text-black transition-all"><span class="material-symbols-outlined">chevron_right</span></button></div><div class="absolute inset-0 z-20 p-8 flex flex-col justify-end pointer-events-none"><h3 class="text-white text-3xl lg:text-4xl font-bold tracking-tight mb-2">우수산업디자인상품 선정확인서</h3></div></div></div><div class="p-0 bg-surface-container-lowest border border-white/5 rounded-2xl overflow-hidden hover:border-primary/50 transition-all duration-500 group relative aspect-[3/4]"><div x-data="{ activeSlide: 0, slides: ['https://lh3.googleusercontent.com/aida/AP1WRLuJGlVs2tPnRw324-4BhWMWQGpb_2AmpBbb89LsZ4KzBo-cqB9qNU60QPBr8lG-XZ8mN1sV9pTZoS4GZHll5vblTzDQmm2jpYHgdpplWp97DBEZo7FtQqrufqL8HD2lmA9hvzizuxxm4Eo9RT-P1F0KljUbI-I_ny-V_Va4E6XUjgGhyoOR_TK7PpBEUvs8JqFjFdj9APO5M9hLwv4d1z4UDIH6yi9fampqUSxBMAPHLUN-gQCU2ifXAu8', 'https://lh3.googleusercontent.com/aida/AP1WRLtHrLN6k46VEtWJL-lYL9yCt0HkaJkJxFt-yC4LEc5McY70jO46GFUCNcpsmMx0p69XZZAfvelLSYAQ-prhDLm9nkv0Xxcy2pmvQ_7n_A82ETE2BY0HTgMF82-8lJAYu1zKFw_rq8s7zf96JrU2yz9G2XiNScRtTUv2J2RiGyU6A0IMR-MOZNN4_KDge7V1eGdcEbCREHFQ6r3wCgfckO5jyWEKvdjTzifaaUYqqN4c0g9x2bAf3-X_GMc', 'https://lh3.googleusercontent.com/aida/AP1WRLvgMdbNQOg9Ztsaj0lXwqr41DOrVjiBSb8AFHX5pOKPGAZA4bPE1UK0aE8ni8ynTYFSdxBeLz2MiUo4I6WInzsdo7SeNSdigXj4k5jeJmAEMLWWg-qaCmp3_CfT9QCqbgiLLWTtsEC7HHy_pDOiMYPUZ0YHoazA7izUA1V4UZFITDhC6kSIP61tsc8sNPQE9v704KYu2FUcW5-NiOk-iZa3lLgdfQgOAoyfMruP-yclPJowS27BUfs7jW8'] }" class="h-full w-full relative"><div class="absolute inset-0 z-0"><template x-for="(slide, index) in slides" :key="index"><img :src="slide" x-show="activeSlide === index" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100"></template><img :src="slide" x-show="activeSlide === index" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" src="https://lh3.googleusercontent.com/aida/AP1WRLuJGlVs2tPnRw324-4BhWMWQGpb_2AmpBbb89LsZ4KzBo-cqB9qNU60QPBr8lG-XZ8mN1sV9pTZoS4GZHll5vblTzDQmm2jpYHgdpplWp97DBEZo7FtQqrufqL8HD2lmA9hvzizuxxm4Eo9RT-P1F0KljUbI-I_ny-V_Va4E6XUjgGhyoOR_TK7PpBEUvs8JqFjFdj9APO5M9hLwv4d1z4UDIH6yi9fampqUSxBMAPHLUN-gQCU2ifXAu8"><img :src="slide" x-show="activeSlide === index" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" src="https://lh3.googleusercontent.com/aida/AP1WRLtHrLN6k46VEtWJL-lYL9yCt0HkaJkJxFt-yC4LEc5McY70jO46GFUCNcpsmMx0p69XZZAfvelLSYAQ-prhDLm9nkv0Xxcy2pmvQ_7n_A82ETE2BY0HTgMF82-8lJAYu1zKFw_rq8s7zf96JrU2yz9G2XiNScRtTUv2J2RiGyU6A0IMR-MOZNN4_KDge7V1eGdcEbCREHFQ6r3wCgfckO5jyWEKvdjTzifaaUYqqN4c0g9x2bAf3-X_GMc" style="display: none;"><img :src="slide" x-show="activeSlide === index" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" src="https://lh3.googleusercontent.com/aida/AP1WRLvgMdbNQOg9Ztsaj0lXwqr41DOrVjiBSb8AFHX5pOKPGAZA4bPE1UK0aE8ni8ynTYFSdxBeLz2MiUo4I6WInzsdo7SeNSdigXj4k5jeJmAEMLWWg-qaCmp3_CfT9QCqbgiLLWTtsEC7HHy_pDOiMYPUZ0YHoazA7izUA1V4UZFITDhC6kSIP61tsc8sNPQE9v704KYu2FUcW5-NiOk-iZa3lLgdfQgOAoyfMruP-yclPJowS27BUfs7jW8" style="display: none;"><img :src="slide" x-show="activeSlide === index" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" style="display: none;"><img :src="slide" x-show="activeSlide === index" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" style="display: none;"><img :src="slide" x-show="activeSlide === index" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" style="display: none;"><img :src="slide" x-show="activeSlide === index" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" style="display: none;"></div><div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent z-10"></div><div class="absolute inset-0 z-30 flex items-center justify-between px-4"><button @click="activeSlide = activeSlide === 0 ? slides.length - 1 : activeSlide - 1" class="w-10 h-10 rounded-full bg-black/40 backdrop-blur-md flex items-center justify-center text-primary border border-white/10 hover:bg-primary hover:text-black transition-all"><span class="material-symbols-outlined">chevron_left</span></button><button @click="activeSlide = activeSlide === slides.length - 1 ? 0 : activeSlide + 1" class="w-10 h-10 rounded-full bg-black/40 backdrop-blur-md flex items-center justify-center text-primary border border-white/10 hover:bg-primary hover:text-black transition-all"><span class="material-symbols-outlined">chevron_right</span></button></div><div class="absolute inset-0 z-20 p-8 flex flex-col justify-end pointer-events-none"><h3 class="text-white text-3xl lg:text-4xl font-bold tracking-tight mb-2">우수산업디자인상품 출품확인서</h3></div></div></div></div>
-</div>
+<!-- Good Design Main Section -->
+<section class="py-28 bg-[#121318] border-b border-white/5">
+  <div class="px-8 lg:px-16 max-w-[1280px] mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
+      <div class="reveal-on-scroll">
+        <span class="text-[#97D302] font-['Geist'] tracking-[0.1em] text-[14px] font-medium uppercase mb-6 block">Good Design Korea</span>
+        <h2 class="text-[48px] font-extrabold text-[#FFFFFF] tracking-[-0.02em] leading-tight mb-6">우수산업디자인상품 선정</h2>
+        <p class="text-[#A9A7B1] text-[13px] md:text-[15px] leading-relaxed font-normal max-w-xl mb-6">
+          GINOVO는 제품의 기능성과 사용성, 시각적 완성도를 바탕으로 Good Design Korea 우수산업디자인상품에 선정되었습니다.
+        </p>
+        <p class="text-[#A9A7B1] text-[13px] md:text-[15px] leading-relaxed font-normal max-w-xl">
+          퍼팅 연습을 더 정확하고 직관적으로 만들기 위한 구조, 그래픽, 사용자 경험 설계가 제품 디자인의 핵심 가치로 인정받았습니다.
+        </p>
+      </div>
+
+      <div class="reveal-on-scroll" style="transition-delay: 0.12s;">
+        <div class="bg-white rounded-2xl p-10 md:p-14 flex items-center justify-center min-h-[420px] border border-white/10 shadow-[0_0_40px_rgba(151,211,2,0.08)]">
+          <img src="good-design-korea.jpeg" alt="Good Design Korea" class="max-h-[360px] w-auto object-contain">
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
-<!-- Packaging Section -->
+
+<!-- Award Values Section -->
+<section class="py-28 bg-[#1a1b21] border-b border-white/5">
+  <div class="px-8 lg:px-16 max-w-[1280px] mx-auto">
+    <div class="text-center mb-20 reveal-on-scroll">
+      <span class="text-[#97D302] font-['Geist'] tracking-[0.1em] text-[14px] font-medium uppercase mb-4 block">Design Value</span>
+      <h2 class="text-[48px] font-extrabold text-[#FFFFFF] tracking-[-0.02em] leading-tight mb-6">디자인으로 완성한 퍼팅 경험</h2>
+      <p class="text-[#A9A7B1] text-[13px] md:text-[15px] leading-relaxed font-normal max-w-xl mx-auto">
+        GINOVO의 디자인은 보기 좋은 형태를 넘어, 사용자가 더 쉽고 정확하게 연습할 수 있는 경험을 만드는 데 집중합니다.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="glass-card rounded-xl p-8 text-center reveal-on-scroll">
+        <div class="w-16 h-16 mx-auto rounded-full bg-[#97D302]/10 flex items-center justify-center mb-6">
+          <span class="material-symbols-outlined text-[#97D302] text-3xl">straighten</span>
+        </div>
+        <h3 class="text-white text-3xl lg:text-4xl font-bold tracking-tight mb-4">정확성</h3>
+        <p class="text-[#A9A7B1] text-[13px] md:text-[15px] leading-relaxed font-normal mx-auto">경사, 거리, 방향 정보를 직관적으로 읽을 수 있도록 시각 체계를 설계했습니다.</p>
+      </div>
+      <div class="glass-card rounded-xl p-8 text-center reveal-on-scroll" style="transition-delay: 0.08s;">
+        <div class="w-16 h-16 mx-auto rounded-full bg-[#97D302]/10 flex items-center justify-center mb-6">
+          <span class="material-symbols-outlined text-[#97D302] text-3xl">touch_app</span>
+        </div>
+        <h3 class="text-white text-3xl lg:text-4xl font-bold tracking-tight mb-4">사용성</h3>
+        <p class="text-[#A9A7B1] text-[13px] md:text-[15px] leading-relaxed font-normal mx-auto">집에서도 필드에 가까운 연습 루틴을 만들 수 있도록 제품 경험을 단순화했습니다.</p>
+      </div>
+      <div class="glass-card rounded-xl p-8 text-center reveal-on-scroll" style="transition-delay: 0.16s;">
+        <div class="w-16 h-16 mx-auto rounded-full bg-[#97D302]/10 flex items-center justify-center mb-6">
+          <span class="material-symbols-outlined text-[#97D302] text-3xl">verified</span>
+        </div>
+        <h3 class="text-white text-3xl lg:text-4xl font-bold tracking-tight mb-4">신뢰성</h3>
+        <p class="text-[#A9A7B1] text-[13px] md:text-[15px] leading-relaxed font-normal mx-auto">제품의 구조적 완성도와 디자인 품질을 외부 인증으로 확인했습니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Documents Section -->
+<section class="py-28 bg-[#121318]">
+  <div class="px-8 lg:px-16 max-w-[1280px] mx-auto">
+    <div class="text-center mb-16 reveal-on-scroll">
+      <span class="text-[#97D302] font-['Geist'] tracking-[0.1em] text-[14px] font-medium uppercase mb-4 block">Certificates</span>
+      <h2 class="text-[48px] font-extrabold text-[#FFFFFF] tracking-[-0.02em] leading-tight mb-6">공식 증빙 자료</h2>
+      <p class="text-[#A9A7B1] text-[13px] md:text-[15px] leading-relaxed font-normal max-w-xl mx-auto">
+        Good Design 선정증과 확인서를 통해 GINOVO의 디자인 인증 자료를 확인할 수 있습니다.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <a href="good-design-certificate-ko.pdf" target="_blank" class="glass-card rounded-xl p-8 hover:border-[#97D302]/40 transition-all reveal-on-scroll">
+        <div class="text-[#97D302] font-['Geist'] tracking-[0.2em] text-sm font-bold mb-6">01</div>
+        <h3 class="text-white text-3xl lg:text-4xl font-bold tracking-tight mb-4">선정증</h3>
+        <p class="text-[#A9A7B1] text-[13px] md:text-[15px] leading-relaxed font-normal mb-8">우수산업디자인상품 선정증 국문 자료</p>
+        <span class="text-[#97D302] text-sm font-bold tracking-[0.1em]">PDF 보기</span>
+      </a>
+      <a href="good-design-confirm-ko.pdf" target="_blank" class="glass-card rounded-xl p-8 hover:border-[#97D302]/40 transition-all reveal-on-scroll" style="transition-delay: 0.08s;">
+        <div class="text-[#97D302] font-['Geist'] tracking-[0.2em] text-sm font-bold mb-6">02</div>
+        <h3 class="text-white text-3xl lg:text-4xl font-bold tracking-tight mb-4">선정확인서</h3>
+        <p class="text-[#A9A7B1] text-[13px] md:text-[15px] leading-relaxed font-normal mb-8">Good Design 선정 확인 국문 자료</p>
+        <span class="text-[#97D302] text-sm font-bold tracking-[0.1em]">PDF 보기</span>
+      </a>
+      <a href="good-design-entry-ko.pdf" target="_blank" class="glass-card rounded-xl p-8 hover:border-[#97D302]/40 transition-all reveal-on-scroll" style="transition-delay: 0.16s;">
+        <div class="text-[#97D302] font-['Geist'] tracking-[0.2em] text-sm font-bold mb-6">03</div>
+        <h3 class="text-white text-3xl lg:text-4xl font-bold tracking-tight mb-4">출품확인서</h3>
+        <p class="text-[#A9A7B1] text-[13px] md:text-[15px] leading-relaxed font-normal mb-8">Good Design 출품 확인 국문 자료</p>
+        <span class="text-[#97D302] text-sm font-bold tracking-[0.1em]">PDF 보기</span>
+      </a>
+    </div>
+  </div>
+</section>
 </main>
 <section class="py-24 bg-[#121318]"><div class="px-8 lg:px-16 max-w-[1280px] mx-auto"></div></section><footer class="bg-surface-container-lowest border-t border-white/5 py-12">
 <div class="max-w-[1280px] mx-auto px-4 md:px-8 lg:px-16">
@@ -413,4 +462,18 @@
 
 
 
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const targets = document.querySelectorAll('.reveal-on-scroll');
+    const observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    targets.forEach(function (target) { observer.observe(target); });
+  });
+</script>
 </body></html>
