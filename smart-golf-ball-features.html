@@ -298,13 +298,15 @@
           <p class="text-[#A9A7B1] text-[13px] md:text-[15px] leading-relaxed font-normal feature-card-copy">퍼팅 결과를 데이터로 확인해 거리감과 방향성의 변화를 직관적으로 파악할 수 있습니다.</p>
         </div>
       </article>
-      <article class="glass-card rounded-xl overflow-hidden reveal-on-scroll" style="transition-delay: 0.12s;">
+      <article class="glass-card rounded-xl overflow-hidden reveal-on-scroll" style="transition-delay: 0.12s;" x-data="{ current: 0, images: ['challenge-mode-1.png', 'challenge-mode-2.png', 'challenge-mode-3.gif'] }">
         <div class="relative aspect-[4/5] bg-[#0d0e13] overflow-hidden flex items-center justify-center">
-          <img src="feature-challenge-mode.jpg" alt="퍼팅대결을 통한 실전연습" class="w-full h-full object-cover">
-          <button aria-label="이전 화면" class="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/45 text-white flex items-center justify-center backdrop-blur-sm hover:bg-black/60 transition-colors">
+          <template x-for="(image, index) in images" :key="image">
+            <img x-show="current === index" :src="image" alt="온라인 로컬 대결모드 화면" class="w-full h-full object-contain" x-transition.opacity>
+          </template>
+          <button aria-label="이전 화면" @click="current = (current - 1 + images.length) % images.length" class="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/45 text-white flex items-center justify-center backdrop-blur-sm hover:bg-black/60 transition-colors">
             <span class="material-symbols-outlined text-[28px]">chevron_left</span>
           </button>
-          <button aria-label="다음 화면" class="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/45 text-white flex items-center justify-center backdrop-blur-sm hover:bg-black/60 transition-colors">
+          <button aria-label="다음 화면" @click="current = (current + 1) % images.length" class="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/45 text-white flex items-center justify-center backdrop-blur-sm hover:bg-black/60 transition-colors">
             <span class="material-symbols-outlined text-[28px]">chevron_right</span>
           </button>
         </div>
