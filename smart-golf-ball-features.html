@@ -299,7 +299,7 @@
         </div>
       </article>
       <article class="glass-card rounded-xl overflow-hidden reveal-on-scroll" style="transition-delay: 0.12s;" x-data="{ current: 0, images: ['challenge-mode-1.png', 'challenge-mode-2.png', 'challenge-mode-3.gif'] }">
-        <div class="relative aspect-[4/5] bg-[#0d0e13] overflow-hidden flex items-center justify-center">
+        <div class="relative aspect-[4/5] bg-white overflow-hidden flex items-center justify-center">
           <template x-for="(image, index) in images" :key="image">
             <img x-show="current === index" :src="image" alt="온라인 로컬 대결모드 화면" class="w-full h-full object-contain" x-transition.opacity>
           </template>
@@ -316,13 +316,15 @@
           <p class="text-[#A9A7B1] text-[13px] md:text-[15px] leading-relaxed font-normal feature-card-copy">혼자 하는 연습을 넘어 온라인 또는 로컬 대결 방식으로 실전 감각을 높일 수 있습니다.</p>
         </div>
       </article>
-      <article class="glass-card rounded-xl overflow-hidden reveal-on-scroll" style="transition-delay: 0.18s;">
-        <div class="relative aspect-[4/5] bg-[#0d0e13] overflow-hidden flex items-center justify-center">
-          <img src="feature-app-training.jpg" alt="스마트 골프공 앱 훈련 화면" class="w-full h-full object-cover">
-          <button aria-label="이전 화면" class="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/45 text-white flex items-center justify-center backdrop-blur-sm hover:bg-black/60 transition-colors">
+      <article class="glass-card rounded-xl overflow-hidden reveal-on-scroll" style="transition-delay: 0.18s;" x-data="{ current: 0, images: ['app-config-1.gif', 'app-config-2.jpg', 'app-config-3.gif', 'app-config-4.png', 'app-config-5.png'] }">
+        <div class="relative aspect-[4/5] bg-white overflow-hidden flex items-center justify-center">
+          <template x-for="(image, index) in images" :key="image">
+            <img x-show="current === index" :src="image" alt="앱 구성 화면" class="w-full h-full object-contain" x-transition.opacity>
+          </template>
+          <button aria-label="이전 화면" @click="current = (current - 1 + images.length) % images.length" class="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/45 text-white flex items-center justify-center backdrop-blur-sm hover:bg-black/60 transition-colors">
             <span class="material-symbols-outlined text-[28px]">chevron_left</span>
           </button>
-          <button aria-label="다음 화면" class="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/45 text-white flex items-center justify-center backdrop-blur-sm hover:bg-black/60 transition-colors">
+          <button aria-label="다음 화면" @click="current = (current + 1) % images.length" class="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/45 text-white flex items-center justify-center backdrop-blur-sm hover:bg-black/60 transition-colors">
             <span class="material-symbols-outlined text-[28px]">chevron_right</span>
           </button>
         </div>
