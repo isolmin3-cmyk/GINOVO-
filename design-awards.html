@@ -317,29 +317,67 @@
       <span class="text-[#97D302] font-['Geist'] tracking-[0.1em] text-[14px] font-medium uppercase mb-4 block">Certificates</span>
       <h2 class="text-[48px] font-extrabold text-[#FFFFFF] tracking-[-0.02em] leading-tight mb-6">공식 증빙 자료</h2>
       <p class="text-[#A9A7B1] text-[13px] md:text-[15px] leading-relaxed font-normal max-w-xl mx-auto">
-        Good Design 선정증과 확인서를 통해 GINOVO의 디자인 인증 자료를 확인할 수 있습니다.
+        Good Design 선정증과 확인서를 국문과 영문으로 확인할 수 있습니다.
       </p>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-      <a href="good-design-certificate-ko.pdf" target="_blank" class="glass-card rounded-xl p-8 hover:border-[#97D302]/40 transition-all reveal-on-scroll">
-        <div class="text-[#97D302] font-['Geist'] tracking-[0.2em] text-sm font-bold mb-6">01</div>
-        <h3 class="text-white text-3xl lg:text-4xl font-bold tracking-tight mb-4">선정증</h3>
-        <p class="text-[#A9A7B1] text-[13px] md:text-[15px] leading-relaxed font-normal mb-8">우수산업디자인상품 선정증 국문 자료</p>
-        <span class="text-[#97D302] text-sm font-bold tracking-[0.1em]">PDF 보기</span>
-      </a>
-      <a href="good-design-confirm-ko.pdf" target="_blank" class="glass-card rounded-xl p-8 hover:border-[#97D302]/40 transition-all reveal-on-scroll" style="transition-delay: 0.08s;">
-        <div class="text-[#97D302] font-['Geist'] tracking-[0.2em] text-sm font-bold mb-6">02</div>
-        <h3 class="text-white text-3xl lg:text-4xl font-bold tracking-tight mb-4">선정확인서</h3>
-        <p class="text-[#A9A7B1] text-[13px] md:text-[15px] leading-relaxed font-normal mb-8">Good Design 선정 확인 국문 자료</p>
-        <span class="text-[#97D302] text-sm font-bold tracking-[0.1em]">PDF 보기</span>
-      </a>
-      <a href="good-design-entry-ko.pdf" target="_blank" class="glass-card rounded-xl p-8 hover:border-[#97D302]/40 transition-all reveal-on-scroll" style="transition-delay: 0.16s;">
-        <div class="text-[#97D302] font-['Geist'] tracking-[0.2em] text-sm font-bold mb-6">03</div>
-        <h3 class="text-white text-3xl lg:text-4xl font-bold tracking-tight mb-4">출품확인서</h3>
-        <p class="text-[#A9A7B1] text-[13px] md:text-[15px] leading-relaxed font-normal mb-8">Good Design 출품 확인 국문 자료</p>
-        <span class="text-[#97D302] text-sm font-bold tracking-[0.1em]">PDF 보기</span>
-      </a>
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <article class="glass-card rounded-xl overflow-hidden reveal-on-scroll">
+        <div class="p-6">
+          <div class="flex items-center justify-between gap-4 mb-5">
+            <div>
+              <div class="text-[#97D302] font-['Geist'] tracking-[0.2em] text-sm font-bold mb-2">01</div>
+              <h3 class="text-white text-3xl lg:text-4xl font-bold tracking-tight">선정증</h3>
+            </div>
+            <div class="flex rounded-full border border-white/10 overflow-hidden text-xs font-bold">
+              <button class="award-toggle bg-[#97D302] text-black px-4 py-2" data-target="certificate" data-lang="ko">국문</button>
+              <button class="award-toggle text-[#A9A7B1] px-4 py-2" data-target="certificate" data-lang="en">EN</button>
+            </div>
+          </div>
+          <p class="text-[#A9A7B1] text-[13px] md:text-[15px] leading-relaxed font-normal">우수산업디자인상품 선정증</p>
+        </div>
+        <div class="bg-white p-4">
+          <img id="certificate-image" src="good-design-certificate-ko.png" alt="Good Design 선정증 국문" class="w-full aspect-[3/4] object-contain">
+        </div>
+      </article>
+
+      <article class="glass-card rounded-xl overflow-hidden reveal-on-scroll" style="transition-delay: 0.08s;">
+        <div class="p-6">
+          <div class="flex items-center justify-between gap-4 mb-5">
+            <div>
+              <div class="text-[#97D302] font-['Geist'] tracking-[0.2em] text-sm font-bold mb-2">02</div>
+              <h3 class="text-white text-3xl lg:text-4xl font-bold tracking-tight">선정확인서</h3>
+            </div>
+            <div class="flex rounded-full border border-white/10 overflow-hidden text-xs font-bold">
+              <button class="award-toggle bg-[#97D302] text-black px-4 py-2" data-target="confirm" data-lang="ko">국문</button>
+              <button class="award-toggle text-[#A9A7B1] px-4 py-2" data-target="confirm" data-lang="en">EN</button>
+            </div>
+          </div>
+          <p class="text-[#A9A7B1] text-[13px] md:text-[15px] leading-relaxed font-normal">Good Design 선정 확인 자료</p>
+        </div>
+        <div class="bg-white p-4">
+          <img id="confirm-image" src="good-design-confirm-ko.png" alt="Good Design 선정확인서 국문" class="w-full aspect-[3/4] object-contain">
+        </div>
+      </article>
+
+      <article class="glass-card rounded-xl overflow-hidden reveal-on-scroll" style="transition-delay: 0.16s;">
+        <div class="p-6">
+          <div class="flex items-center justify-between gap-4 mb-5">
+            <div>
+              <div class="text-[#97D302] font-['Geist'] tracking-[0.2em] text-sm font-bold mb-2">03</div>
+              <h3 class="text-white text-3xl lg:text-4xl font-bold tracking-tight">출품확인서</h3>
+            </div>
+            <div class="flex rounded-full border border-white/10 overflow-hidden text-xs font-bold">
+              <button class="award-toggle bg-[#97D302] text-black px-4 py-2" data-target="entry" data-lang="ko">국문</button>
+              <button class="award-toggle text-[#A9A7B1] px-4 py-2" data-target="entry" data-lang="en">EN</button>
+            </div>
+          </div>
+          <p class="text-[#A9A7B1] text-[13px] md:text-[15px] leading-relaxed font-normal">Good Design 출품 확인 자료</p>
+        </div>
+        <div class="bg-white p-4">
+          <img id="entry-image" src="good-design-entry-ko.png" alt="Good Design 출품확인서 국문" class="w-full aspect-[3/4] object-contain">
+        </div>
+      </article>
     </div>
   </div>
 </section>
@@ -464,6 +502,40 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
+    const awardImages = {
+      certificate: {
+        ko: { src: 'good-design-certificate-ko.png', alt: 'Good Design 선정증 국문' },
+        en: { src: 'good-design-certificate-en.png', alt: 'Good Design certificate English' }
+      },
+      confirm: {
+        ko: { src: 'good-design-confirm-ko.png', alt: 'Good Design 선정확인서 국문' },
+        en: { src: 'good-design-confirm-en.png', alt: 'Good Design confirmation English' }
+      },
+      entry: {
+        ko: { src: 'good-design-entry-ko.png', alt: 'Good Design 출품확인서 국문' },
+        en: { src: 'good-design-entry-en.png', alt: 'Good Design entry confirmation English' }
+      }
+    };
+
+    document.querySelectorAll('.award-toggle').forEach(function (button) {
+      button.addEventListener('click', function () {
+        const target = button.dataset.target;
+        const lang = button.dataset.lang;
+        const image = document.getElementById(target + '-image');
+        if (!awardImages[target] || !awardImages[target][lang] || !image) return;
+
+        image.src = awardImages[target][lang].src;
+        image.alt = awardImages[target][lang].alt;
+
+        document.querySelectorAll('.award-toggle[data-target="' + target + '"]').forEach(function (item) {
+          item.classList.remove('bg-[#97D302]', 'text-black');
+          item.classList.add('text-[#A9A7B1]');
+        });
+        button.classList.add('bg-[#97D302]', 'text-black');
+        button.classList.remove('text-[#A9A7B1]');
+      });
+    });
+
     const targets = document.querySelectorAll('.reveal-on-scroll');
     const observer = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
