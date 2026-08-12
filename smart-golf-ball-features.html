@@ -268,7 +268,7 @@
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
       <article class="glass-card rounded-xl overflow-hidden reveal-on-scroll" x-data="{ current: 0, images: ['11.jpg', '8.gif'] }">
-        <div class="relative aspect-[4/5] bg-white overflow-hidden flex items-center justify-center">
+        <div class="hidden relative aspect-[4/5] bg-white overflow-hidden items-center justify-center" aria-hidden="true">
           <template x-for="(image, index) in images" :key="image">
             <img x-show="current === index" :src="image" alt="Putting practice settings screen" class="w-full h-full object-contain" x-transition.opacity>
           </template>
@@ -286,7 +286,7 @@
         </div>
       </article>
       <article class="glass-card rounded-xl overflow-hidden reveal-on-scroll" style="transition-delay: 0.06s;" x-data="{ current: 0, images: ['distance-analysis-1.png', 'distance-analysis-2.png', 'distance-analysis-3.gif', 'distance-analysis-4.png'] }">
-        <div class="relative aspect-[4/5] bg-white overflow-hidden flex items-center justify-center">
+        <div class="hidden relative aspect-[4/5] bg-white overflow-hidden items-center justify-center" aria-hidden="true">
           <template x-for="(image, index) in images" :key="image">
             <img x-show="current === index" :src="image" alt="Distance direction analysis screen" class="w-full h-full object-contain" x-transition.opacity>
           </template>
@@ -304,7 +304,7 @@
         </div>
       </article>
       <article class="glass-card rounded-xl overflow-hidden reveal-on-scroll" style="transition-delay: 0.12s;" x-data="{ current: 0, images: ['challenge-mode-1.png', 'challenge-mode-2.png', 'challenge-mode-3.gif'] }">
-        <div class="relative aspect-[4/5] bg-white overflow-hidden flex items-center justify-center">
+        <div class="hidden relative aspect-[4/5] bg-white overflow-hidden items-center justify-center" aria-hidden="true">
           <template x-for="(image, index) in images" :key="image">
             <img x-show="current === index" :src="image" alt="Online local battle mode screen" class="w-full h-full object-contain" x-transition.opacity>
           </template>
@@ -322,7 +322,7 @@
         </div>
       </article>
       <article class="glass-card rounded-xl overflow-hidden reveal-on-scroll" style="transition-delay: 0.18s;" x-data="{ current: 0, images: ['app-config-1.gif', 'app-config-2.jpg', 'app-config-3.gif', 'app-config-4.png', 'app-config-5.png'] }">
-        <div class="relative aspect-[4/5] bg-white overflow-hidden flex items-center justify-center">
+        <div class="hidden relative aspect-[4/5] bg-white overflow-hidden items-center justify-center" aria-hidden="true">
           <template x-for="(image, index) in images" :key="image">
             <img x-show="current === index" :src="image" alt="App configuration screen" class="w-full h-full object-contain" x-transition.opacity>
           </template>
@@ -352,7 +352,7 @@
       <p class="text-[#A9A7B1] text-[13px] md:text-[15px] leading-relaxed font-normal max-w-xl">It identifies the user's weaknesses based on distance, direction, and repetition success rate, and stabilizes the putting feel by repeating the same conditions.</p>
     </div>
     <div class="lg:col-span-7 space-y-5">
-      <div class="rounded-xl overflow-hidden border border-white/5 bg-[#0d0e13] reveal-on-scroll">
+      <div class="hidden rounded-xl overflow-hidden border border-white/5 bg-[#0d0e13] reveal-on-scroll" aria-hidden="true">
         <img src="screen.png" alt="Putting training app screen for each situation" class="w-full aspect-[16/9] object-cover">
       </div>
       <div class="grid grid-cols-1 sm:grid-cols-3 gap-5">
