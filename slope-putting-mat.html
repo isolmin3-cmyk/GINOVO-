@@ -275,7 +275,7 @@
 <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8">
   <div class="bg-surface-container-lowest border border-white/5 rounded-2xl overflow-hidden hover:border-primary/50 transition-all duration-500 group">
     <div class="bg-white aspect-[4/5] overflow-hidden">
-      <img alt="PATH 31 Various sloped paths" class="w-full h-full object-contain" src="slope-path31.png">
+      <img alt="GINOVO PATH 31 slope environments" class="w-full h-full object-contain" src="slope-benefit-01.png">
     </div>
     <div class="p-8">
       <div class="text-[#97D302] font-['Geist'] tracking-[0.2em] text-sm font-bold mb-4">01</div>
@@ -286,7 +286,7 @@
 
   <div class="bg-surface-container-lowest border border-white/5 rounded-2xl overflow-hidden hover:border-primary/50 transition-all duration-500 group">
     <div class="bg-white aspect-[4/5] overflow-hidden">
-      <img alt="Green speed control" class="w-full h-full object-contain" src="slope-green-speed.png">
+      <img alt="Green speed adjustment" class="w-full h-full object-contain" src="slope-benefit-02.png">
     </div>
     <div class="p-8">
       <div class="text-[#97D302] font-['Geist'] tracking-[0.2em] text-sm font-bold mb-4">02</div>
@@ -297,7 +297,7 @@
 
   <div class="bg-surface-container-lowest border border-white/5 rounded-2xl overflow-hidden hover:border-primary/50 transition-all duration-500 group">
     <div class="bg-white aspect-[4/5] overflow-hidden">
-      <img alt="Concede-Distance Hole-Cup Design" class="w-full h-full object-contain" src="slope-concede-hole.png">
+      <img alt="Concede-distance hole-cup design" class="w-full h-full object-contain" src="slope-benefit-03.png">
     </div>
     <div class="p-8">
       <div class="text-[#97D302] font-['Geist'] tracking-[0.2em] text-sm font-bold mb-4">03</div>
@@ -308,7 +308,7 @@
 
   <div class="bg-surface-container-lowest border border-white/5 rounded-2xl overflow-hidden hover:border-primary/50 transition-all duration-500 group">
     <div class="bg-white aspect-[4/5] overflow-hidden">
-      <img alt="Continuous Practice Without Ball Retrieval" class="w-full h-full object-contain" src="slope-ball-return.png">
+      <img alt="Gradient putting mat without ball return" class="w-full h-full object-contain" src="slope-benefit-04.png">
     </div>
     <div class="p-8">
       <div class="text-[#97D302] font-['Geist'] tracking-[0.2em] text-sm font-bold mb-4">04</div>
@@ -322,11 +322,7 @@
 </main>
 <section class="py-24 bg-[#121318]">
   <div class="px-8 lg:px-16 max-w-[1280px] mx-auto">
-    <div class="bg-[#1a1b21] border border-white/5 rounded-2xl p-8 md:p-12 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center" x-data="{ slide: 0, images: [
-      { src: 'slope-package-main.jpg', alt: 'GINOVO Slope Putting Mat Package' },
-      { src: 'slope-package-info.png', alt: 'Ginover Inclined Putting Mat Product Information' },
-      { src: 'slope-package-gift.png', alt: 'Ginover Inclined Putting Mat Packaging Composition' }
-    ] }">
+    <div class="bg-[#1a1b21] border border-white/5 rounded-2xl p-8 md:p-12 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
       <div class="space-y-10 lg:col-span-5">
         <div class="space-y-4">
           <span class="text-[#97D302] font-['Geist'] tracking-[0.1em] font-medium uppercase text-[11px] block">PRODUCT PACKAGE</span>
@@ -365,20 +361,7 @@
       </div>
       <div class="lg:col-span-7">
         <div class="relative overflow-hidden rounded-xl border border-white/10 bg-white shadow-2xl min-h-[520px] flex items-center justify-center">
-          <template x-for="(image, index) in images" :key="image.src">
-            <img x-show="slide === index" x-transition.opacity.duration.300ms :src="image.src" :alt="image.alt" class="w-full h-full max-h-[720px] object-contain">
-          </template>
-          <button type="button" aria-label="Previous image" class="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-black/70 border border-white/15 text-[#97D302] flex items-center justify-center hover:bg-black transition" @click="slide = (slide + images.length - 1) % images.length">
-            <span class="material-symbols-outlined">chevron_left</span>
-          </button>
-          <button type="button" aria-label="Next image" class="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-black/70 border border-white/15 text-[#97D302] flex items-center justify-center hover:bg-black transition" @click="slide = (slide + 1) % images.length">
-            <span class="material-symbols-outlined">chevron_right</span>
-          </button>
-          <div class="absolute bottom-5 left-0 right-0 flex justify-center gap-2">
-            <template x-for="(image, index) in images" :key="index">
-              <button type="button" class="w-2.5 h-2.5 rounded-full transition" :class="slide === index ? 'bg-[#97D302]' : 'bg-white/30'" @click="slide = index" aria-label="select image"></button>
-            </template>
-          </div>
+          <img src="slope-package-main.jpg" alt="GINOVO Slope Putting Mat Package" class="w-full h-full max-h-[720px] object-contain">
         </div>
       </div>
     </div>
