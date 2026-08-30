@@ -268,23 +268,23 @@
 <!-- List Items -->
 <div class="flex flex-col">
 <!-- Item 1 -->
-<button class="notice-item grid grid-cols-[100px_1fr_150px] border-b border-white/10 py-5 text-on-surface hover:bg-white/5 transition-colors items-center text-center group w-full" data-notice="maintenance" type="button">
+<div class="notice-item grid grid-cols-[100px_1fr_150px] border-b border-white/10 py-5 text-on-surface hover:bg-white/5 transition-colors items-center text-center group w-full" data-notice="maintenance">
 <div class="text-white/60 text-sm">5</div>
-<div class="text-left pl-4 font-medium group-hover:text-[#31e6df] transition-colors">Scheduled System Maintenance (2026.06.15)</div>
+<button class="notice-title text-left pl-4 font-medium group-hover:text-[#31e6df] hover:underline underline-offset-4 transition-colors cursor-pointer" data-notice="maintenance" type="button">Scheduled System Maintenance (2026.06.15)</button>
 <div class="text-white/50 text-sm">2026.06.10</div>
-</button>
+</div>
 <!-- Item 2 -->
-<button class="notice-item grid grid-cols-[100px_1fr_150px] border-b border-white/10 py-5 text-on-surface hover:bg-white/5 transition-colors items-center text-center group w-full" data-notice="product" type="button">
+<div class="notice-item grid grid-cols-[100px_1fr_150px] border-b border-white/10 py-5 text-on-surface hover:bg-white/5 transition-colors items-center text-center group w-full" data-notice="product">
 <div class="text-white/60 text-sm">4</div>
-<div class="text-left pl-4 font-medium group-hover:text-[#31e6df] transition-colors">New Product Launch ‘Smart Putting Mat Pro’</div>
+<button class="notice-title text-left pl-4 font-medium group-hover:text-[#31e6df] hover:underline underline-offset-4 transition-colors cursor-pointer" data-notice="product" type="button">New Product Launch ‘Smart Putting Mat Pro’</button>
 <div class="text-white/50 text-sm">2026.05.28</div>
-</button>
+</div>
 <!-- Item 3 -->
-<button class="notice-item grid grid-cols-[100px_1fr_150px] border-b border-white/10 py-5 text-on-surface hover:bg-white/5 transition-colors items-center text-center group w-full" data-notice="support" type="button">
+<div class="notice-item grid grid-cols-[100px_1fr_150px] border-b border-white/10 py-5 text-on-surface hover:bg-white/5 transition-colors items-center text-center group w-full" data-notice="support">
 <div class="text-white/60 text-sm">3</div>
-<div class="text-left pl-4 font-medium group-hover:text-[#31e6df] transition-colors">GINOVO Customer Support Holiday Schedule</div>
+<button class="notice-title text-left pl-4 font-medium group-hover:text-[#31e6df] hover:underline underline-offset-4 transition-colors cursor-pointer" data-notice="support" type="button">GINOVO Customer Support Holiday Schedule</button>
 <div class="text-white/50 text-sm">2026.05.12</div>
-</button>
+</div>
 <!-- Item 4 -->
 
 <!-- Item 5 -->
@@ -394,7 +394,7 @@
     noticeModal.setAttribute('aria-hidden', 'true');
     document.body.style.overflow = '';
   };
-  document.querySelectorAll('.notice-item').forEach((item) => item.addEventListener('click', () => openNotice(item.dataset.notice)));
+  document.querySelectorAll('.notice-title').forEach((title) => title.addEventListener('click', () => openNotice(title.dataset.notice)));
   document.getElementById('notice-modal-close').addEventListener('click', closeNotice);
   noticeModal.addEventListener('click', (event) => { if (event.target === noticeModal) closeNotice(); });
   document.addEventListener('keydown', (event) => { if (event.key === 'Escape') closeNotice(); });
