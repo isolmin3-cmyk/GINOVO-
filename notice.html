@@ -159,8 +159,8 @@
 </style>
 <style id="equal-header-menu-styles">
   @media (min-width: 1024px) {
-    .site-primary-menu { flex: 0 1 auto; justify-content: flex-start; gap: 32px; margin: 0 32px; }
-    .site-primary-menu > div { flex: 0 0 auto; min-width: auto; justify-content: center; text-align: center; }
+    .site-primary-menu { display: grid !important; grid-auto-flow: column; grid-auto-columns: max-content; align-items: center; column-gap: 40px; margin: 0 24px; }
+    .site-primary-menu > div { display: flex; align-items: center; justify-content: center; text-align: center; }
     .site-primary-menu > div > a { white-space: nowrap; font-size: 15px; }
   }
 </style>
