@@ -196,6 +196,13 @@
     .source-home-footer-grid { grid-template-columns: 1fr; }
   }
 </style>
+<style id="equal-header-menu-styles">
+  @media (min-width: 1024px) {
+    .site-primary-menu { flex: 1 1 auto; justify-content: space-between; gap: 0; margin: 0 32px; }
+    .site-primary-menu > div { flex: 1 1 0; min-width: 0; justify-content: center; text-align: center; }
+    .site-primary-menu > div > a { white-space: nowrap; font-size: 15px; }
+  }
+</style>
 </head>
 <body class="bg-background text-on-background selection:bg-primary/30 selection:text-white font-body-lg">
 <header class="bg-surface-container/90 backdrop-blur-xl border-b border-white/5 top-0 z-50 transition-all duration-300 fixed left-0 w-full z-[100]" id="main-header">
@@ -205,7 +212,7 @@
 <img alt="JINOVER" class="h-10 w-auto object-contain" src="logo.png">
 </a>
 </div>
-<div class="hidden lg:flex items-center gap-6 h-full">
+<div class="site-primary-menu hidden lg:flex items-center h-full">
 <div class="h-full flex items-center">
 <a class="font-body-md hover:text-primary transition-all duration-300 py-2 border-b-2 text-on-surface-variant border-transparent" href="index.html">HOME</a>
 </div>
@@ -242,8 +249,7 @@
 <div class="h-full flex items-center">
 <a class="text-on-surface-variant font-body-md hover:text-primary transition-all duration-300 py-2 border-b-2 border-transparent" href="team-infra.html">Team &amp; Infra</a>
 </div>
-<div class="h-full flex items-center">
-</div>
+
 <div class="h-full flex items-center">
 <a class="text-on-surface-variant font-body-md hover:text-primary transition-all duration-300 py-2 border-b-2 border-transparent" href="news.html">News</a>
 </div>
