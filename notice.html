@@ -255,7 +255,7 @@
 <!-- Board Header -->
 <div class="flex items-center justify-between border-b-2 border-white/20 pb-4 mb-4">
 <h2 class="text-2xl font-bold text-white">Notices</h2>
-<button class="bg-[#31e6df] text-[#070c17] font-bold px-8 py-3 hover:brightness-110 active:scale-98 transition-all rounded-[2px] text-sm">
+<button class="bg-[#31e6df] text-[#070c17] font-bold px-8 py-3 hover:brightness-110 active:scale-98 transition-all rounded-[2px] text-sm" id="notice-admin-button" type="button">
           New Post
         </button>
 </div>
@@ -268,19 +268,23 @@
 <!-- List Items -->
 <div class="flex flex-col">
 <!-- Item 1 -->
-<a class="grid grid-cols-[100px_1fr_150px] border-b border-white/10 py-5 text-on-surface hover:bg-white/5 transition-colors items-center text-center group" href="#">
+<button class="notice-item grid grid-cols-[100px_1fr_150px] border-b border-white/10 py-5 text-on-surface hover:bg-white/5 transition-colors items-center text-center group w-full" data-notice="maintenance" type="button">
 <div class="text-white/60 text-sm">5</div>
 <div class="text-left pl-4 font-medium group-hover:text-[#31e6df] transition-colors">Scheduled System Maintenance (2026.06.15)</div>
 <div class="text-white/50 text-sm">2026.06.10</div>
-</a>
+</button>
 <!-- Item 2 -->
-<a class="grid grid-cols-[100px_1fr_150px] border-b border-white/10 py-5 text-on-surface hover:bg-white/5 transition-colors items-center text-center group" href="#">
+<button class="notice-item grid grid-cols-[100px_1fr_150px] border-b border-white/10 py-5 text-on-surface hover:bg-white/5 transition-colors items-center text-center group w-full" data-notice="product" type="button">
 <div class="text-white/60 text-sm">4</div>
 <div class="text-left pl-4 font-medium group-hover:text-[#31e6df] transition-colors">New Product Launch ‘Smart Putting Mat Pro’</div>
 <div class="text-white/50 text-sm">2026.05.28</div>
-</a>
+</button>
 <!-- Item 3 -->
-
+<button class="notice-item grid grid-cols-[100px_1fr_150px] border-b border-white/10 py-5 text-on-surface hover:bg-white/5 transition-colors items-center text-center group w-full" data-notice="support" type="button">
+<div class="text-white/60 text-sm">3</div>
+<div class="text-left pl-4 font-medium group-hover:text-[#31e6df] transition-colors">GINOVO Customer Support Holiday Schedule</div>
+<div class="text-white/50 text-sm">2026.05.12</div>
+</button>
 <!-- Item 4 -->
 
 <!-- Item 5 -->
@@ -304,20 +308,28 @@
 <div class="bg-surface-container p-6 flex justify-center border border-white/5 rounded-[4px]">
 <div class="flex w-full max-w-2xl gap-0">
 <div class="relative w-40 border-r border-white/10">
-<select class="w-full bg-surface border border-white/20 rounded-l-[4px] px-4 py-3 text-white focus:border-[#31e6df] focus:ring-1 focus:ring-[#31e6df] outline-none appearance-none cursor-pointer">
-<option>Title</option>
-<option>Content</option>
-<option>Title + Content</option>
+<select class="w-full bg-surface border border-white/20 rounded-l-[4px] px-4 py-3 text-white focus:border-[#31e6df] focus:ring-1 focus:ring-[#31e6df] outline-none appearance-none cursor-pointer" id="notice-search-type">
+<option value="title">Title</option>
+<option value="content">Content</option>
+<option value="all">Title + Content</option>
 </select>
 <span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-white/50 pointer-events-none">arrow_drop_down</span>
 </div>
-<input class="flex-1 bg-surface border-y border-white/20 px-4 py-3 text-white focus:border-[#31e6df] focus:ring-1 focus:ring-[#31e6df] outline-none" placeholder="" type="text">
-<button class="bg-[#1a1a1a] border-y border-r border-white/20 text-white font-bold px-8 py-3 rounded-r-[4px] hover:bg-white/10 transition-colors">
+<input class="flex-1 bg-surface border-y border-white/20 px-4 py-3 text-white focus:border-[#31e6df] focus:ring-1 focus:ring-[#31e6df] outline-none" id="notice-search-input" placeholder="Search notices" type="search">
+<button class="bg-[#1a1a1a] border-y border-r border-white/20 text-white font-bold px-8 py-3 rounded-r-[4px] hover:bg-white/10 transition-colors" id="notice-search-button" type="button">
             search
           </button>
 </div>
 </div>
 </div>
+</div>
+<div aria-hidden="true" class="fixed inset-0 z-[200] hidden items-center justify-center bg-black/75 px-5" id="notice-modal" role="dialog" aria-modal="true" aria-labelledby="notice-modal-title">
+  <article class="relative w-full max-w-3xl rounded-xl border border-white/15 bg-[#101827] p-8 md:p-12 shadow-2xl">
+    <button aria-label="Close notice" class="absolute right-5 top-5 text-white/60 hover:text-white" id="notice-modal-close" type="button"><span class="material-symbols-outlined">close</span></button>
+    <p class="mb-3 text-sm font-bold tracking-[0.16em] text-[#31e6df]" id="notice-modal-date"></p>
+    <h2 class="mb-6 pr-10 text-3xl font-bold text-white" id="notice-modal-title"></h2>
+    <div class="space-y-4 whitespace-pre-line text-[16px] leading-8 text-white/75" id="notice-modal-content"></div>
+  </article>
 </div>
 <section class="source-home-cta">
   <div class="source-home-cta-copy">
@@ -346,4 +358,57 @@
     </div>
   </div>
 </footer>
+<script>
+  const noticePosts = {
+    maintenance: {
+      title: 'Scheduled System Maintenance (2026.06.15)',
+      date: '2026.06.10',
+      content: 'GINOVO online services will undergo scheduled maintenance on June 15, 2026, from 02:00 to 05:00 KST.\n\nDuring this period, account login and data synchronization may be temporarily unavailable. Stored putting data will remain safe and will synchronize automatically after maintenance.\n\nWe apologize for the inconvenience and appreciate your understanding.'
+    },
+    product: {
+      title: 'New Product Launch ‘Smart Putting Mat Pro’',
+      date: '2026.05.28',
+      content: 'GINOVO is pleased to introduce Smart Putting Mat Pro, designed for more precise slope training and connected practice.\n\nThe new model supports multiple putting paths, improved surface feedback, and seamless integration with the GINOVO smart golf ball experience. Product availability and ordering information will be announced soon.'
+    },
+    support: {
+      title: 'GINOVO Customer Support Holiday Schedule',
+      date: '2026.05.12',
+      content: 'The GINOVO Customer Center will be closed on public holidays and weekends.\n\nRegular support hours are Monday through Friday, 09:00–17:00 KST, with a lunch break from 12:00–13:00. You may submit an inquiry at any time, and our team will respond on the next business day.'
+    }
+  };
+  const noticeModal = document.getElementById('notice-modal');
+  const openNotice = (key) => {
+    const post = noticePosts[key];
+    if (!post) return;
+    document.getElementById('notice-modal-date').textContent = post.date;
+    document.getElementById('notice-modal-title').textContent = post.title;
+    document.getElementById('notice-modal-content').textContent = post.content;
+    noticeModal.classList.remove('hidden');
+    noticeModal.classList.add('flex');
+    noticeModal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  };
+  const closeNotice = () => {
+    noticeModal.classList.add('hidden');
+    noticeModal.classList.remove('flex');
+    noticeModal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  };
+  document.querySelectorAll('.notice-item').forEach((item) => item.addEventListener('click', () => openNotice(item.dataset.notice)));
+  document.getElementById('notice-modal-close').addEventListener('click', closeNotice);
+  noticeModal.addEventListener('click', (event) => { if (event.target === noticeModal) closeNotice(); });
+  document.addEventListener('keydown', (event) => { if (event.key === 'Escape') closeNotice(); });
+  document.getElementById('notice-admin-button').addEventListener('click', () => alert('New notices can be created by an administrator.'));
+  const runNoticeSearch = () => {
+    const query = document.getElementById('notice-search-input').value.trim().toLowerCase();
+    const type = document.getElementById('notice-search-type').value;
+    document.querySelectorAll('.notice-item').forEach((item) => {
+      const post = noticePosts[item.dataset.notice];
+      const target = type === 'title' ? post.title : type === 'content' ? post.content : `${post.title} ${post.content}`;
+      item.classList.toggle('hidden', Boolean(query) && !target.toLowerCase().includes(query));
+    });
+  };
+  document.getElementById('notice-search-button').addEventListener('click', runNoticeSearch);
+  document.getElementById('notice-search-input').addEventListener('keydown', (event) => { if (event.key === 'Enter') runNoticeSearch(); });
+</script>
 </body></html>

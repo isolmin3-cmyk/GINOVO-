@@ -250,42 +250,42 @@
     <p class="text-[18px] text-[#aeb4bf] max-w-2xl mx-auto font-medium tracking-wide animate-fade-up" style="animation-delay: 0.3s;">Please leave inquiries related to products, orders, or services.</p>
   </div>
 </section>
-<form class="space-y-0" onsubmit="event.preventDefault(); alert('The inquiry function will be connected after building the administrator page.');">
+<form class="space-y-0" id="inquiry-form">
 <!-- Form Table Structure -->
 <div class="border-t border-white/20">
 <!-- Category -->
 <div class="grid grid-cols-[180px_1fr] border-b border-white/10">
 <div class="bg-white/5 p-4 flex items-center font-bold text-sm">Category</div>
 <div class="p-3">
-<select class="w-64 bg-surface-container border border-white/20 rounded-[4px] px-3 py-2 text-white focus:border-[#31e6df] focus:ring-1 focus:ring-[#31e6df] outline-none font-body"><option value="" disabled="" selected="" class="">Select</option><option class="">Contact details</option><option class="">Account & Profile</option><option class="">Order/Payment</option><option class="">Delivery</option><option class="">Returns, Refunds, Exchanges & Service</option><option class="">Documents & Receipts</option><option class="">Products & Events</option><option class="">Other</option></select>
+<select class="w-64 bg-surface-container border border-white/20 rounded-[4px] px-3 py-2 text-white focus:border-[#31e6df] focus:ring-1 focus:ring-[#31e6df] outline-none font-body" id="inquiry-category" required><option value="" disabled="" selected="" class="">Select</option><option class="">Contact details</option><option class="">Account & Profile</option><option class="">Order/Payment</option><option class="">Delivery</option><option class="">Returns, Refunds, Exchanges & Service</option><option class="">Documents & Receipts</option><option class="">Products & Events</option><option class="">Other</option></select>
 </div>
 </div>
 <!-- Author -->
 <div class="grid grid-cols-[180px_1fr] border-b border-white/10">
 <div class="bg-white/5 p-4 flex items-center font-bold text-sm">Author</div>
 <div class="p-3">
-<input class="w-full bg-surface-container border border-white/20 rounded-[4px] px-3 py-2 text-white focus:border-[#31e6df] focus:ring-1 focus:ring-[#31e6df] outline-none" type="text">
+<input autocomplete="name" class="w-full bg-surface-container border border-white/20 rounded-[4px] px-3 py-2 text-white focus:border-[#31e6df] focus:ring-1 focus:ring-[#31e6df] outline-none" id="inquiry-author" maxlength="60" required type="text">
 </div>
 </div>
 <!-- Postic -->
 <div class="grid grid-cols-[180px_1fr] border-b border-white/10">
 <div class="bg-white/5 p-4 flex items-center font-bold text-sm">Password</div>
 <div class="p-3">
-<input class="w-full bg-surface-container border border-white/20 rounded-[4px] px-3 py-2 text-white focus:border-[#31e6df] focus:ring-1 focus:ring-[#31e6df] outline-none" type="text">
+<input autocomplete="new-password" class="w-full bg-surface-container border border-white/20 rounded-[4px] px-3 py-2 text-white focus:border-[#31e6df] focus:ring-1 focus:ring-[#31e6df] outline-none" id="inquiry-password" minlength="4" maxlength="30" required type="password">
 </div>
 </div>
 <!-- Title -->
 <div class="grid grid-cols-[180px_1fr] border-b border-white/10">
 <div class="bg-white/5 p-4 flex items-center font-bold text-sm">Title</div>
 <div class="p-3">
-<input class="w-full bg-surface-container border border-white/20 rounded-[4px] px-3 py-2 text-white focus:border-[#31e6df] focus:ring-1 focus:ring-[#31e6df] outline-none" type="text">
+<input class="w-full bg-surface-container border border-white/20 rounded-[4px] px-3 py-2 text-white focus:border-[#31e6df] focus:ring-1 focus:ring-[#31e6df] outline-none" id="inquiry-title" maxlength="120" required type="text">
 </div>
 </div>
 </div>
 <!-- Content Area -->
 <div class="py-6">
 <p class="text-sm text-white/60 mb-2">This inquiry will be submitted as a private, password-protected post.</p>
-<textarea class="w-full h-[400px] bg-surface-container border border-white/20 rounded-[4px] p-4 text-white focus:border-[#31e6df] focus:ring-1 focus:ring-[#31e6df] outline-none resize-none" placeholder=""></textarea>
+<textarea class="w-full h-[400px] bg-surface-container border border-white/20 rounded-[4px] p-4 text-white focus:border-[#31e6df] focus:ring-1 focus:ring-[#31e6df] outline-none resize-none" id="inquiry-content" maxlength="3000" minlength="10" placeholder="Please describe your inquiry in at least 10 characters." required></textarea>
 </div>
 <!-- Attachment -->
 <div class="grid grid-cols-[180px_1fr] border-y border-white/10">
@@ -321,7 +321,7 @@
 <h3 class="font-bold text-white">Consent to Personal Information Collection</h3>
 <div class="w-full h-32 bg-surface-container border border-white/10 p-4 overflow-y-auto text-xs text-white/60 leading-relaxed">When a non-member submits an inquiry, we collect the following information to process the request and provide a response.<br class="">- Collection items: name, password, nickname, mobile phone number, email, IP<br class="">- Purpose of collection/use: Receiving posts and replying with results<br class="">- Period of use: Until the purpose of collection and use of personal information is achieved<br class=""><br class="">In principle, after the purpose of collecting and using personal information has been achieved, the information is destroyed without delay.<br class="">However, if there is a need to preserve personal information in accordance with the provisions of relevant laws and regulations, personal information may be stored for a certain period of time.<br class="">All other matters comply with 000 Co., Ltd.'s personal information processing policy.</div>
 <div class="flex items-center gap-2">
-<input class="rounded border-white/20 bg-surface-container text-[#31e6df] focus:ring-[#31e6df]" id="privacy-agree" type="checkbox">
+<input class="rounded border-white/20 bg-surface-container text-[#31e6df] focus:ring-[#31e6df]" id="privacy-agree" required type="checkbox">
 <label class="text-sm text-white/80" for="privacy-agree">Consent to collection and use of personal information for membership registration <a class="underline" href="#">See all ></a></label>
 </div>
 </div>
@@ -359,4 +359,52 @@
     </div>
   </div>
 </footer>
+<div aria-hidden="true" class="fixed inset-0 z-[220] hidden items-center justify-center bg-black/75 px-5" id="inquiry-success" role="dialog" aria-modal="true" aria-labelledby="inquiry-success-title">
+  <div class="w-full max-w-lg rounded-xl border border-[#31e6df]/35 bg-[#101827] p-9 text-center shadow-2xl">
+    <div class="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-full bg-[#31e6df]/15 text-[#31e6df]"><span class="material-symbols-outlined text-4xl">check_circle</span></div>
+    <h2 class="mb-3 text-3xl font-bold text-white" id="inquiry-success-title">Inquiry Submitted</h2>
+    <p class="mb-2 text-white/70">Your inquiry has been successfully registered.</p>
+    <p class="mb-7 text-sm text-white/55">Reference number: <strong class="text-[#31e6df]" id="inquiry-reference"></strong></p>
+    <button class="rounded bg-[#31e6df] px-8 py-3 font-bold text-[#070c17] hover:brightness-110" id="inquiry-success-close" type="button">Confirm</button>
+  </div>
+</div>
+<div aria-live="polite" class="pointer-events-none fixed right-6 top-24 z-[230] translate-x-[140%] rounded-lg border border-[#31e6df]/30 bg-[#101827] px-6 py-4 text-white shadow-2xl transition-transform duration-300" id="inquiry-toast">Inquiry registered successfully.</div>
+<script>
+  const inquiryForm = document.getElementById('inquiry-form');
+  const inquirySuccess = document.getElementById('inquiry-success');
+  const inquiryToast = document.getElementById('inquiry-toast');
+  const closeInquirySuccess = () => {
+    inquirySuccess.classList.add('hidden');
+    inquirySuccess.classList.remove('flex');
+    inquirySuccess.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  };
+  inquiryForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    if (!inquiryForm.reportValidity()) return;
+    const reference = `GIN-${new Date().toISOString().slice(0, 10).replaceAll('-', '')}-${Math.random().toString(36).slice(2, 7).toUpperCase()}`;
+    const record = {
+      reference,
+      category: document.getElementById('inquiry-category').value,
+      author: document.getElementById('inquiry-author').value.trim(),
+      title: document.getElementById('inquiry-title').value.trim(),
+      content: document.getElementById('inquiry-content').value.trim(),
+      submittedAt: new Date().toISOString()
+    };
+    const existing = JSON.parse(localStorage.getItem('ginovo-inquiries') || '[]');
+    existing.unshift(record);
+    localStorage.setItem('ginovo-inquiries', JSON.stringify(existing.slice(0, 20)));
+    document.getElementById('inquiry-reference').textContent = reference;
+    inquirySuccess.classList.remove('hidden');
+    inquirySuccess.classList.add('flex');
+    inquirySuccess.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    inquiryToast.classList.remove('translate-x-[140%]');
+    setTimeout(() => inquiryToast.classList.add('translate-x-[140%]'), 3000);
+    inquiryForm.reset();
+  });
+  document.getElementById('inquiry-success-close').addEventListener('click', closeInquirySuccess);
+  inquirySuccess.addEventListener('click', (event) => { if (event.target === inquirySuccess) closeInquirySuccess(); });
+  document.addEventListener('keydown', (event) => { if (event.key === 'Escape') closeInquirySuccess(); });
+</script>
 </body></html>
