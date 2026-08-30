@@ -255,93 +255,13 @@
   </div>
 </section>
 
-<!-- Core Function Summary -->
-<section class="py-32 bg-[#121318] border-b border-white/5">
-  <div class="px-8 lg:px-16 max-w-[1280px] mx-auto">
-    <div class="text-center max-w-5xl mx-auto mb-20 reveal-on-scroll">
-      <span class="text-[#97D302] font-['Geist'] tracking-[0.1em] text-[14px] font-medium uppercase mb-4 block">Smart Training System</span>
-      <h2 class="text-[48px] font-extrabold text-[#FFFFFF] tracking-[-0.02em] leading-tight mb-6 keep-words">Turn Practice into Actionable Data</h2>
-      <p class="text-[#A9A7B1] text-[13px] md:text-[15px] leading-relaxed font-normal section-copy-wide mx-auto">The smart golf ball connects putting distance, direction, and repetition records to the app, helping users easily check and train their putting patterns.</p>
-    </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-      <article class="glass-card rounded-xl overflow-hidden reveal-on-scroll" x-data="{ current: 0, images: ['11.jpg', '8.gif'] }">
-        <div class="hidden relative aspect-[4/5] bg-white overflow-hidden items-center justify-center" aria-hidden="true">
-          <template x-for="(image, index) in images" :key="image">
-            <img x-show="current === index" :src="image" alt="Putting practice settings screen" class="w-full h-full object-contain" x-transition.opacity>
-          </template>
-          <button aria-label="Previous screen" @click="current = (current - 1 + images.length) % images.length" class="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/45 text-white flex items-center justify-center backdrop-blur-sm hover:bg-black/60 transition-colors">
-            <span class="material-symbols-outlined text-[28px]">chevron_left</span>
-          </button>
-          <button aria-label="Next screen" @click="current = (current + 1) % images.length" class="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/45 text-white flex items-center justify-center backdrop-blur-sm hover:bg-black/60 transition-colors">
-            <span class="material-symbols-outlined text-[28px]">chevron_right</span>
-          </button>
-        </div>
-        <div class="p-8 feature-card-body">
-          <div class="text-[#97D302] font-['Geist'] tracking-[0.08em] text-sm md:text-base font-bold feature-card-label keep-words">01</div>
-          <h3 class="text-white text-3xl lg:text-4xl font-bold tracking-tight mb-6 keep-words">Putting practice settings</h3>
-          <p class="text-[#A9A7B1] text-[13px] md:text-[15px] leading-relaxed font-normal feature-card-copy">You can repeatedly train the putting situation you want by setting the target distance and practice conditions.</p>
-        </div>
-      </article>
-      <article class="glass-card rounded-xl overflow-hidden reveal-on-scroll" style="transition-delay: 0.06s;" x-data="{ current: 0, images: ['distance-analysis-1.png', 'distance-analysis-2.png', 'distance-analysis-3.gif', 'distance-analysis-4.png'] }">
-        <div class="hidden relative aspect-[4/5] bg-white overflow-hidden items-center justify-center" aria-hidden="true">
-          <template x-for="(image, index) in images" :key="image">
-            <img x-show="current === index" :src="image" alt="Distance direction analysis screen" class="w-full h-full object-contain" x-transition.opacity>
-          </template>
-          <button aria-label="Previous screen" @click="current = (current - 1 + images.length) % images.length" class="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/45 text-white flex items-center justify-center backdrop-blur-sm hover:bg-black/60 transition-colors">
-            <span class="material-symbols-outlined text-[28px]">chevron_left</span>
-          </button>
-          <button aria-label="Next screen" @click="current = (current + 1) % images.length" class="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/45 text-white flex items-center justify-center backdrop-blur-sm hover:bg-black/60 transition-colors">
-            <span class="material-symbols-outlined text-[28px]">chevron_right</span>
-          </button>
-        </div>
-        <div class="p-8 feature-card-body">
-          <div class="text-[#97D302] font-['Geist'] tracking-[0.08em] text-sm md:text-base font-bold feature-card-label keep-words">02</div>
-          <h3 class="text-white text-3xl lg:text-4xl font-bold tracking-tight mb-6 keep-words">Distance/direction analysis</h3>
-          <p class="text-[#A9A7B1] text-[13px] md:text-[15px] leading-relaxed font-normal feature-card-copy">By checking the putting results as data, you can intuitively understand changes in distance and direction.</p>
-        </div>
-      </article>
-      <article class="glass-card rounded-xl overflow-hidden reveal-on-scroll" style="transition-delay: 0.12s;" x-data="{ current: 0, images: ['challenge-mode-1.png', 'challenge-mode-2.png', 'challenge-mode-3.gif'] }">
-        <div class="hidden relative aspect-[4/5] bg-white overflow-hidden items-center justify-center" aria-hidden="true">
-          <template x-for="(image, index) in images" :key="image">
-            <img x-show="current === index" :src="image" alt="Online local battle mode screen" class="w-full h-full object-contain" x-transition.opacity>
-          </template>
-          <button aria-label="Previous screen" @click="current = (current - 1 + images.length) % images.length" class="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/45 text-white flex items-center justify-center backdrop-blur-sm hover:bg-black/60 transition-colors">
-            <span class="material-symbols-outlined text-[28px]">chevron_left</span>
-          </button>
-          <button aria-label="Next screen" @click="current = (current + 1) % images.length" class="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/45 text-white flex items-center justify-center backdrop-blur-sm hover:bg-black/60 transition-colors">
-            <span class="material-symbols-outlined text-[28px]">chevron_right</span>
-          </button>
-        </div>
-        <div class="p-8 feature-card-body">
-          <div class="text-[#97D302] font-['Geist'] tracking-[0.08em] text-sm md:text-base font-bold feature-card-label keep-words">03</div>
-          <h3 class="text-white text-3xl lg:text-4xl font-bold tracking-tight mb-6 keep-words">Vulnerable distance repetition practice</h3>
-          <p class="text-[#A9A7B1] text-[13px] md:text-[15px] leading-relaxed font-normal feature-card-copy">With data statistics stored in real time, you can focus on practicing your vulnerable distances.</p>
-        </div>
-      </article>
-      <article class="glass-card rounded-xl overflow-hidden reveal-on-scroll" style="transition-delay: 0.18s;" x-data="{ current: 0, images: ['app-config-1.gif', 'app-config-2.jpg', 'app-config-3.gif', 'app-config-4.png', 'app-config-5.png'] }">
-        <div class="hidden relative aspect-[4/5] bg-white overflow-hidden items-center justify-center" aria-hidden="true">
-          <template x-for="(image, index) in images" :key="image">
-            <img x-show="current === index" :src="image" alt="App configuration screen" class="w-full h-full object-contain" x-transition.opacity>
-          </template>
-          <button aria-label="Previous screen" @click="current = (current - 1 + images.length) % images.length" class="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/45 text-white flex items-center justify-center backdrop-blur-sm hover:bg-black/60 transition-colors">
-            <span class="material-symbols-outlined text-[28px]">chevron_left</span>
-          </button>
-          <button aria-label="Next screen" @click="current = (current + 1) % images.length" class="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/45 text-white flex items-center justify-center backdrop-blur-sm hover:bg-black/60 transition-colors">
-            <span class="material-symbols-outlined text-[28px]">chevron_right</span>
-          </button>
-        </div>
-        <div class="p-8 feature-card-body">
-          <div class="text-[#97D302] font-['Geist'] tracking-[0.08em] text-sm md:text-base font-bold feature-card-label keep-words">04</div>
-          <h3 class="text-white text-3xl lg:text-4xl font-bold tracking-tight mb-6 keep-words">Practical practice through putting competitions</h3>
-          <p class="text-[#A9A7B1] text-[13px] md:text-[15px] leading-relaxed font-normal feature-card-copy">Beyond practicing alone, you can improve your competitive focus by competing online or locally.</p>
-        </div>
-      </article>
-    </div>
+<!-- Smart Training System Infographic -->
+<section class="py-20 bg-[#0b101a] border-b border-white/5">
+  <div class="px-4 md:px-8 max-w-[1440px] mx-auto">
+    <img src="smartball-key-features-en.jpg" alt="Complete smart golf setup for focused putting practice" class="w-full rounded-2xl border border-white/10 shadow-2xl">
   </div>
 </section>
 
-<section class="py-20 bg-[#0b101a] border-b border-white/5"><div class="px-4 md:px-8 max-w-[1440px] mx-auto"><img src="smartball-key-features-en.jpg" alt="Complete smart golf setup for focused putting practice" class="w-full rounded-2xl border border-white/10 shadow-2xl"></div></section>
 <!-- Practice Mode Section -->
 <section class="py-32 bg-[#121318] border-b border-white/5">
   <div class="px-8 lg:px-16 max-w-[1280px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
