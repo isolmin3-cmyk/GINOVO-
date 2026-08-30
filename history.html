@@ -11,41 +11,41 @@
         theme: {
           extend: {
             "colors": {
-                    "outline": "#8f909d",
+                    "outline": "#aeb4bf",
                     "on-primary-container": "#00164e",
                     "industrial-gray": "#94A3B8",
-                    "surface-variant": "#34343a",
+                    "surface-variant": "#162133",
                     "on-tertiary": "#2f3131",
-                    "on-surface-variant": "#c5c5d3",
+                    "on-surface-variant": "#aeb4bf",
                     "on-secondary-fixed": "#131b2e",
                     "inverse-primary": "#4059aa",
-                    "background": "#121318",
+                    "background": "#070c17",
                     "error": "#ffb4ab",
                     "tertiary-fixed": "#e2e2e2",
-                    "surface-container-lowest": "#0d0e13",
-                    "primary-container": "#97d302",
+                    "surface-container-lowest": "#070c17",
+                    "primary-container": "#31e6df",
                     "on-secondary-fixed-variant": "#3f465c",
-                    "inverse-surface": "#e3e1e9",
+                    "inverse-surface": "#ffffff",
                     "inverse-on-surface": "#2f3036",
-                    "surface-tint": "#97d302",
-                    "on-surface": "#e3e1e9",
-                    "surface-container-highest": "#34343a",
-                    "surface-container": "#1e1f25",
+                    "surface-tint": "#31e6df",
+                    "on-surface": "#ffffff",
+                    "surface-container-highest": "#162133",
+                    "surface-container": "#101827",
                     "on-error-container": "#ffdad6",
-                    "outline-variant": "#444651",
+                    "outline-variant": "rgba(255,255,255,0.11)",
                     "tertiary": "#c6c6c7",
-                    "surface-container-high": "#292a2f",
+                    "surface-container-high": "#162133",
                     "on-tertiary-fixed": "#1a1c1c",
-                    "primary": "#97d302",
-                    "success-cyan": "#0EA5E9",
-                    "on-background": "#e3e1e9",
+                    "primary": "#31e6df",
+                    "success-cyan": "#268cff",
+                    "on-background": "#ffffff",
                     "on-primary-fixed-variant": "#364e00",
-                    "primary-fixed-dim": "#9cd911",
+                    "primary-fixed-dim": "#31e6df",
                     "error-container": "#93000a",
                     "on-secondary-container": "#adb4ce",
                     "secondary-fixed": "#dae2fd",
-                    "secondary": "#bec6e0",
-                    "on-primary": "#131f00",
+                    "secondary": "#268cff",
+                    "on-primary": "#070c17",
                     "surface-bright": "#38393f",
                     "secondary-fixed-dim": "#bec6e0",
                     "on-error": "#690005",
@@ -53,12 +53,12 @@
                     "on-secondary": "#283044",
                     "tertiary-fixed-dim": "#c6c6c7",
                     "tertiary-container": "#3e4041",
-                    "surface-container-low": "#1a1b21",
-                    "surface-dim": "#121318",
-                    "surface": "#121318",
+                    "surface-container-low": "#101827",
+                    "surface-dim": "#070c17",
+                    "surface": "#101827",
                     "on-primary-fixed": "#131f00",
                     "pitch-black": "#000000",
-                    "primary-fixed": "#b7f638",
+                    "primary-fixed": "#31e6df",
                     "on-tertiary-container": "#abacac",
                     "secondary-container": "#3f465c",
                     "charcoal": "#1a1a1a"
@@ -98,27 +98,27 @@
     </script>
 <style>
         body {
-            background-color: #121318;
-            color: #e3e1e9;
+            background-color: #070c17;
+            color: #ffffff;
             font-family: 'Hanken Grotesk', sans-serif;
         }
         .glass-card {
-            background: rgba(30, 31, 37, 0.7);
+            background: rgba(16, 24, 39, 0.7);
             backdrop-filter: blur(12px);
             border: 1px solid rgba(255, 255, 255, 0.05);
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
         }
         .glass-card:hover {
-            border: 1px solid rgba(151, 211, 2, 0.3);
-            box-shadow: 0 0 25px rgba(151, 211, 2, 0.15);
+            border: 1px solid rgba(49, 230, 223, 0.3);
+            box-shadow: 0 0 25px rgba(49, 230, 223, 0.15);
         }
         .primary-glow {
-            box-shadow: 0 0 15px rgba(151, 211, 2, 0.3);
+            box-shadow: 0 0 15px rgba(49, 230, 223, 0.3);
             transition: all 0.5s ease;
         }
         .primary-glow:hover {
-            box-shadow: 0 0 30px rgba(151, 211, 2, 0.5);
+            box-shadow: 0 0 30px rgba(49, 230, 223, 0.5);
             transform: scale(1.02);
         }
         @keyframes pulse-tech {
@@ -173,8 +173,8 @@
             border: 1px solid transparent;
         }
         .tech-card:hover {
-            border-color: rgba(151, 211, 2, 0.4);
-            box-shadow: 0 0 30px rgba(151, 211, 2, 0.15);
+            border-color: rgba(49, 230, 223, 0.4);
+            box-shadow: 0 0 30px rgba(49, 230, 223, 0.15);
             transform: translateY(-4px);
         }
 
@@ -184,8 +184,8 @@
         }
         .award-card:hover {
             transform: scale(1.03);
-            border-color: rgba(151, 211, 2, 0.8);
-            box-shadow: 0 0 20px rgba(151, 211, 2, 0.2);
+            border-color: rgba(49, 230, 223, 0.8);
+            box-shadow: 0 0 20px rgba(49, 230, 223, 0.2);
         }
 
         @media (prefers-reduced-motion: reduce) {
@@ -275,20 +275,20 @@
 </div>
 </nav>
 </header>
-<main class="pt-[80px] bg-[#070b17]">
+<main class="pt-[80px] bg-[#070c17]">
   <section class="min-h-[340px] flex items-center border-b border-white/5">
     <div class="px-8 lg:px-16 max-w-[1280px] mx-auto w-full text-center">
-      <p class="text-[#35e6df] tracking-[.18em] text-sm font-bold uppercase">History</p>
+      <p class="text-[#31e6df] tracking-[.18em] text-sm font-bold uppercase">History</p>
       <h1 class="text-white text-5xl md:text-6xl font-black mt-4">Green Talk History</h1>
     </div>
   </section>
-  <section class="py-24 md:py-32 bg-[#070b17]">
+  <section class="py-24 md:py-32 bg-[#070c17]">
     <div class="px-6 md:px-8 max-w-[1280px] mx-auto">
-      <div class="relative before:absolute before:top-0 before:bottom-0 before:left-[7px] md:before:left-1/2 before:w-px before:bg-[#35e6df]/45">
-        <article class="relative md:w-1/2 md:ml-auto pl-10 md:pl-16 pb-20 md:pb-24 before:absolute before:left-0 md:before:-left-[11px] before:top-2 before:w-[22px] before:h-[22px] before:rounded-full before:bg-[#35e6df] before:ring-[10px] before:ring-[#35e6df]/15">
-          <p class="text-[#35e6df] text-2xl md:text-3xl font-black">2026~present</p>
+      <div class="relative before:absolute before:top-0 before:bottom-0 before:left-[7px] md:before:left-1/2 before:w-px before:bg-[#31e6df]/45">
+        <article class="relative md:w-1/2 md:ml-auto pl-10 md:pl-16 pb-20 md:pb-24 before:absolute before:left-0 md:before:-left-[11px] before:top-2 before:w-[22px] before:h-[22px] before:rounded-full before:bg-[#31e6df] before:ring-[10px] before:ring-[#31e6df]/15">
+          <p class="text-[#31e6df] text-2xl md:text-3xl font-black">2026~present</p>
           <h2 class="text-white text-2xl md:text-3xl font-bold mt-4">Phase 4. Global expansion and product advancement</h2>
-          <ul class="text-[#A9A7B1] mt-7 space-y-3 text-base md:text-lg leading-relaxed">
+          <ul class="text-[#aeb4bf] mt-7 space-y-3 text-base md:text-lg leading-relaxed">
             <li>· 26.01 TIPS (R&amp;D General) 2nd year</li>
             <li>· 26.01 Obtained Japanese PSE certification for charger battery</li>
             <li>· 26.01~05 Acquired domestic and foreign standard certification for GINOVO Smart Golf Ball GSB-V2 and wireless charger [KC / CE / FCC]</li>
@@ -300,29 +300,29 @@
             <li>· 26.08 GINOVO GSB-V2 launched</li>
           </ul>
         </article>
-        <article class="relative md:w-1/2 pl-10 md:pl-0 md:pr-16 pb-20 md:pb-24 md:text-right before:absolute before:left-0 md:before:auto md:before:-right-[11px] before:top-2 before:w-[22px] before:h-[22px] before:rounded-full before:bg-[#35e6df] before:ring-[10px] before:ring-[#35e6df]/15">
-          <p class="text-[#35e6df] text-2xl md:text-3xl font-black">2025</p>
+        <article class="relative md:w-1/2 pl-10 md:pl-0 md:pr-16 pb-20 md:pb-24 md:text-right before:absolute before:left-0 md:before:auto md:before:-right-[11px] before:top-2 before:w-[22px] before:h-[22px] before:rounded-full before:bg-[#31e6df] before:ring-[10px] before:ring-[#31e6df]/15">
+          <p class="text-[#31e6df] text-2xl md:text-3xl font-black">2025</p>
           <h2 class="text-white text-2xl md:text-3xl font-bold mt-4">Phase 3. Global certification and leap forward</h2>
-          <ul class="text-[#A9A7B1] mt-7 space-y-3 text-base md:text-lg leading-relaxed">
+          <ul class="text-[#aeb4bf] mt-7 space-y-3 text-base md:text-lg leading-relaxed">
             <li class="flex justify-end gap-2"><span>25.04~06 Smart golf ball simultaneously acquired CE and FCC overseas certification</span><span aria-hidden="true">·</span></li>
             <li class="flex justify-end gap-2"><span>25.05 GINOVO Smart Golf Ball &amp; Long Fit Mat officially launched</span><span aria-hidden="true">·</span></li>
             <li class="flex justify-end gap-2"><span>25.06 Startup leap package project selection</span><span aria-hidden="true">·</span></li>
             <li class="flex justify-end gap-2"><span>25.07 TIPS (General R&amp;D)</span><span aria-hidden="true">·</span></li>
           </ul>
         </article>
-        <article class="relative md:w-1/2 md:ml-auto pl-10 md:pl-16 pb-20 md:pb-24 before:absolute before:left-0 md:before:-left-[11px] before:top-2 before:w-[22px] before:h-[22px] before:rounded-full before:bg-[#35e6df] before:ring-[10px] before:ring-[#35e6df]/15">
-          <p class="text-[#35e6df] text-2xl md:text-3xl font-black">2024</p>
+        <article class="relative md:w-1/2 md:ml-auto pl-10 md:pl-16 pb-20 md:pb-24 before:absolute before:left-0 md:before:-left-[11px] before:top-2 before:w-[22px] before:h-[22px] before:rounded-full before:bg-[#31e6df] before:ring-[10px] before:ring-[#31e6df]/15">
+          <p class="text-[#31e6df] text-2xl md:text-3xl font-black">2024</p>
           <h2 class="text-white text-2xl md:text-3xl font-bold mt-4">Phase 2. Lineup completion and market entry</h2>
-          <ul class="text-[#A9A7B1] mt-7 space-y-3 text-base md:text-lg leading-relaxed">
+          <ul class="text-[#aeb4bf] mt-7 space-y-3 text-base md:text-lg leading-relaxed">
             <li>· 23.11 GINOVO inclined putting mat launched</li>
             <li>· 24.04 Initial startup package project selection</li>
             <li>· 24.05 Approval of smart manufacturing support strengthening project (advancement of mass production infrastructure)</li>
           </ul>
         </article>
-        <article class="relative md:w-1/2 pl-10 md:pl-0 md:pr-16 md:text-right before:absolute before:left-0 md:before:auto md:before:-right-[11px] before:top-2 before:w-[22px] before:h-[22px] before:rounded-full before:bg-[#35e6df] before:ring-[10px] before:ring-[#35e6df]/15">
-          <p class="text-[#35e6df] text-2xl md:text-3xl font-black">2022.08~2023</p>
+        <article class="relative md:w-1/2 pl-10 md:pl-0 md:pr-16 md:text-right before:absolute before:left-0 md:before:auto md:before:-right-[11px] before:top-2 before:w-[22px] before:h-[22px] before:rounded-full before:bg-[#31e6df] before:ring-[10px] before:ring-[#31e6df]/15">
+          <p class="text-[#31e6df] text-2xl md:text-3xl font-black">2022.08~2023</p>
           <h2 class="text-white text-2xl md:text-3xl font-bold mt-4">Phase 1. R&amp;D and foundation construction</h2>
-          <ul class="text-[#A9A7B1] mt-7 space-y-3 text-base md:text-lg leading-relaxed">
+          <ul class="text-[#aeb4bf] mt-7 space-y-3 text-base md:text-lg leading-relaxed">
             <li class="flex justify-end gap-2"><span>22.08 Establishment of Green Talk Co., Ltd.</span><span aria-hidden="true">·</span></li>
             <li class="flex justify-end gap-2"><span>23.02 Establishment of a corporate research center and approval as a venture business</span><span aria-hidden="true">·</span></li>
             <li class="flex justify-end gap-2"><span>23.05 Regional specialized R&amp;D and smart home parts industry project approved (technology verification)</span><span aria-hidden="true">·</span></li>

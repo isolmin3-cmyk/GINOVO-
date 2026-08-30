@@ -11,41 +11,41 @@
         theme: {
           extend: {
             "colors": {
-                    "outline": "#8f909d",
+                    "outline": "#aeb4bf",
                     "on-primary-container": "#00164e",
                     "industrial-gray": "#94A3B8",
-                    "surface-variant": "#34343a",
+                    "surface-variant": "#162133",
                     "on-tertiary": "#2f3131",
-                    "on-surface-variant": "#c5c5d3",
+                    "on-surface-variant": "#aeb4bf",
                     "on-secondary-fixed": "#131b2e",
                     "inverse-primary": "#4059aa",
-                    "background": "#121318",
+                    "background": "#070c17",
                     "error": "#ffb4ab",
                     "tertiary-fixed": "#e2e2e2",
-                    "surface-container-lowest": "#0d0e13",
-                    "primary-container": "#97d302",
+                    "surface-container-lowest": "#070c17",
+                    "primary-container": "#31e6df",
                     "on-secondary-fixed-variant": "#3f465c",
-                    "inverse-surface": "#e3e1e9",
+                    "inverse-surface": "#ffffff",
                     "inverse-on-surface": "#2f3036",
-                    "surface-tint": "#97d302",
-                    "on-surface": "#e3e1e9",
-                    "surface-container-highest": "#34343a",
-                    "surface-container": "#1e1f25",
+                    "surface-tint": "#31e6df",
+                    "on-surface": "#ffffff",
+                    "surface-container-highest": "#162133",
+                    "surface-container": "#101827",
                     "on-error-container": "#ffdad6",
-                    "outline-variant": "#444651",
+                    "outline-variant": "rgba(255,255,255,0.11)",
                     "tertiary": "#c6c6c7",
-                    "surface-container-high": "#292a2f",
+                    "surface-container-high": "#162133",
                     "on-tertiary-fixed": "#1a1c1c",
-                    "primary": "#97d302",
-                    "success-cyan": "#0EA5E9",
-                    "on-background": "#e3e1e9",
+                    "primary": "#31e6df",
+                    "success-cyan": "#268cff",
+                    "on-background": "#ffffff",
                     "on-primary-fixed-variant": "#364e00",
-                    "primary-fixed-dim": "#9cd911",
+                    "primary-fixed-dim": "#31e6df",
                     "error-container": "#93000a",
                     "on-secondary-container": "#adb4ce",
                     "secondary-fixed": "#dae2fd",
-                    "secondary": "#bec6e0",
-                    "on-primary": "#131f00",
+                    "secondary": "#268cff",
+                    "on-primary": "#070c17",
                     "surface-bright": "#38393f",
                     "secondary-fixed-dim": "#bec6e0",
                     "on-error": "#690005",
@@ -53,12 +53,12 @@
                     "on-secondary": "#283044",
                     "tertiary-fixed-dim": "#c6c6c7",
                     "tertiary-container": "#3e4041",
-                    "surface-container-low": "#1a1b21",
-                    "surface-dim": "#121318",
-                    "surface": "#121318",
+                    "surface-container-low": "#101827",
+                    "surface-dim": "#070c17",
+                    "surface": "#101827",
                     "on-primary-fixed": "#131f00",
                     "pitch-black": "#000000",
-                    "primary-fixed": "#b7f638",
+                    "primary-fixed": "#31e6df",
                     "on-tertiary-container": "#abacac",
                     "secondary-container": "#3f465c",
                     "charcoal": "#1a1a1a"
@@ -98,27 +98,27 @@
     </script>
 <style>
         body {
-            background-color: #121318;
-            color: #e3e1e9;
+            background-color: #070c17;
+            color: #ffffff;
             font-family: 'Hanken Grotesk', sans-serif;
         }
         .glass-card {
-            background: rgba(30, 31, 37, 0.7);
+            background: rgba(16, 24, 39, 0.7);
             backdrop-filter: blur(12px);
             border: 1px solid rgba(255, 255, 255, 0.05);
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
         }
         .glass-card:hover {
-            border: 1px solid rgba(151, 211, 2, 0.3);
-            box-shadow: 0 0 25px rgba(151, 211, 2, 0.15);
+            border: 1px solid rgba(49, 230, 223, 0.3);
+            box-shadow: 0 0 25px rgba(49, 230, 223, 0.15);
         }
         .primary-glow {
-            box-shadow: 0 0 15px rgba(151, 211, 2, 0.3);
+            box-shadow: 0 0 15px rgba(49, 230, 223, 0.3);
             transition: all 0.5s ease;
         }
         .primary-glow:hover {
-            box-shadow: 0 0 30px rgba(151, 211, 2, 0.5);
+            box-shadow: 0 0 30px rgba(49, 230, 223, 0.5);
             transform: scale(1.02);
         }
         @keyframes pulse-tech {
@@ -173,8 +173,8 @@
             border: 1px solid transparent;
         }
         .tech-card:hover {
-            border-color: rgba(151, 211, 2, 0.4);
-            box-shadow: 0 0 30px rgba(151, 211, 2, 0.15);
+            border-color: rgba(49, 230, 223, 0.4);
+            box-shadow: 0 0 30px rgba(49, 230, 223, 0.15);
             transform: translateY(-4px);
         }
 
@@ -184,8 +184,8 @@
         }
         .award-card:hover {
             transform: scale(1.03);
-            border-color: rgba(151, 211, 2, 0.8);
-            box-shadow: 0 0 20px rgba(151, 211, 2, 0.2);
+            border-color: rgba(49, 230, 223, 0.8);
+            box-shadow: 0 0 20px rgba(49, 230, 223, 0.2);
         }
 
         @media (prefers-reduced-motion: reduce) {
@@ -280,41 +280,41 @@
 <section class="relative min-h-[560px] flex items-center justify-center overflow-hidden bg-black">
 <div class="absolute inset-0 bg-black/70"></div>
 <div class="relative z-10 px-8 lg:px-16 max-w-[1280px] w-full mx-auto text-center">
-<span class="text-[#97D302] font-['Geist'] tracking-[0.2em] text-sm font-bold uppercase mb-6 block animate-fade-up" style="animation-delay: 0.05s;">NEWS</span>
+<span class="text-[#31e6df] font-['Geist'] tracking-[0.2em] text-sm font-bold uppercase mb-6 block animate-fade-up" style="animation-delay: 0.05s;">NEWS</span>
 <h1 class="text-[48px] md:text-[64px] font-black text-[#FFFFFF] tracking-[-0.04em] leading-tight mb-4 animate-fade-up" style="animation-delay: 0.1s;">GINOVO News</h1>
-<p class="text-[18px] text-[#A9A7B1] max-w-2xl mx-auto font-medium tracking-wide animate-fade-up" style="animation-delay: 0.3s;">Check out press releases, brand news, and official channels all in one place.</p>
+<p class="text-[18px] text-[#aeb4bf] max-w-2xl mx-auto font-medium tracking-wide animate-fade-up" style="animation-delay: 0.3s;">Check out press releases, brand news, and official channels all in one place.</p>
 </div>
 </section>
 
-<section class="py-32 bg-[#121318] border-b border-white/5"><div class="px-8 lg:px-16 max-w-[1280px] mx-auto"><div class="text-center max-w-3xl mx-auto mb-16 fade-up"><span class="text-[#97D302] tracking-[0.12em] text-sm uppercase">Global Highlights</span><h2 class="text-[48px] font-extrabold text-white mt-4 mb-4">Green Talk Overseas Exhibitions</h2></div><div class="grid grid-cols-1 md:grid-cols-3 gap-7 mb-24"><article class="glass-card rounded-xl overflow-hidden"><img src="exhibition-british.png" alt="British Golf Show" class="w-full aspect-[4/3] object-cover"><div class="p-6"><p class="text-[#97D302] text-xs">2026.05 · UK</p><h3 class="text-white text-2xl font-bold mt-2">British Golf Show</h3><p class="text-[#A9A7B1] mt-3">GINOVO’s putting-analysis technology meets golfers in the European market.</p></div></article><article class="glass-card rounded-xl overflow-hidden"><img src="exhibition-pga.jpg" alt="PGA Show 2026" class="w-full aspect-[4/3] object-cover"><div class="p-6"><p class="text-[#97D302] text-xs">2026.01 · Orlando</p><h3 class="text-white text-2xl font-bold mt-2">PGA SHOW 2026</h3><p class="text-[#A9A7B1] mt-3">Our next-generation smart putting solution was unveiled at the world’s largest golf-industry exhibition.</p></div></article><article class="glass-card rounded-xl overflow-hidden"><img src="exhibition-ces.jpg" alt="CES 2025" class="w-full aspect-[4/3] object-cover"><div class="p-6"><p class="text-[#97D302] text-xs">2025.01 · Las Vegas</p><h3 class="text-white text-2xl font-bold mt-2">CES 2025</h3><p class="text-[#A9A7B1] mt-3">Smart golf-ball sensing technology was demonstrated to visitors from around the world.</p></div></article></div><div class="text-center max-w-3xl mx-auto mb-16 fade-up">
-<span class="text-[#97D302] font-['Geist'] tracking-[0.1em] text-[14px] font-medium uppercase mb-6 block">Official Channels</span>
+<section class="py-32 bg-[#070c17] border-b border-white/5"><div class="px-8 lg:px-16 max-w-[1280px] mx-auto"><div class="text-center max-w-3xl mx-auto mb-16 fade-up"><span class="text-[#31e6df] tracking-[0.12em] text-sm uppercase">Global Highlights</span><h2 class="text-[48px] font-extrabold text-white mt-4 mb-4">Green Talk Overseas Exhibitions</h2></div><div class="grid grid-cols-1 md:grid-cols-3 gap-7 mb-24"><article class="glass-card rounded-xl overflow-hidden"><img src="exhibition-british.png" alt="British Golf Show" class="w-full aspect-[4/3] object-cover"><div class="p-6"><p class="text-[#31e6df] text-xs">2026.05 · UK</p><h3 class="text-white text-2xl font-bold mt-2">British Golf Show</h3><p class="text-[#aeb4bf] mt-3">GINOVO’s putting-analysis technology meets golfers in the European market.</p></div></article><article class="glass-card rounded-xl overflow-hidden"><img src="exhibition-pga.jpg" alt="PGA Show 2026" class="w-full aspect-[4/3] object-cover"><div class="p-6"><p class="text-[#31e6df] text-xs">2026.01 · Orlando</p><h3 class="text-white text-2xl font-bold mt-2">PGA SHOW 2026</h3><p class="text-[#aeb4bf] mt-3">Our next-generation smart putting solution was unveiled at the world’s largest golf-industry exhibition.</p></div></article><article class="glass-card rounded-xl overflow-hidden"><img src="exhibition-ces.jpg" alt="CES 2025" class="w-full aspect-[4/3] object-cover"><div class="p-6"><p class="text-[#31e6df] text-xs">2025.01 · Las Vegas</p><h3 class="text-white text-2xl font-bold mt-2">CES 2025</h3><p class="text-[#aeb4bf] mt-3">Smart golf-ball sensing technology was demonstrated to visitors from around the world.</p></div></article></div><div class="text-center max-w-3xl mx-auto mb-16 fade-up">
+<span class="text-[#31e6df] font-['Geist'] tracking-[0.1em] text-[14px] font-medium uppercase mb-6 block">Official Channels</span>
 <h2 class="text-[48px] font-extrabold text-[#FFFFFF] tracking-[-0.02em] leading-tight mb-6">Official Channels</h2>
-<p class="text-[#A9A7B1] text-[13px] md:text-[15px] leading-relaxed font-normal mx-auto max-w-xl">Visit our official channels for products, videos, and exhibition updates.</p>
+<p class="text-[#aeb4bf] text-[13px] md:text-[15px] leading-relaxed font-normal mx-auto max-w-xl">Visit our official channels for products, videos, and exhibition updates.</p>
 </div>
 
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
 <a class="glass-card rounded-xl p-8 fade-up group block hover:-translate-y-1 transition-all duration-300" href="shop.html" rel="noopener noreferrer">
-<div class="w-14 h-14 rounded-lg bg-[#97D302]/10 flex items-center justify-center mb-8 group-hover:bg-[#97D302]/20 transition-colors"><span class="material-symbols-outlined text-[#97D302] text-3xl">shopping_bag</span></div>
-<h3 class="text-white text-3xl lg:text-4xl font-bold tracking-tight mb-4 group-hover:text-[#97D302] transition-colors">Smart Store</h3>
-<p class="text-[#A9A7B1] text-[13px] md:text-[15px] leading-relaxed font-normal">Go to the GINOVO product purchase page.</p>
+<div class="w-14 h-14 rounded-lg bg-[#31e6df]/10 flex items-center justify-center mb-8 group-hover:bg-[#31e6df]/20 transition-colors"><span class="material-symbols-outlined text-[#31e6df] text-3xl">shopping_bag</span></div>
+<h3 class="text-white text-3xl lg:text-4xl font-bold tracking-tight mb-4 group-hover:text-[#31e6df] transition-colors">Smart Store</h3>
+<p class="text-[#aeb4bf] text-[13px] md:text-[15px] leading-relaxed font-normal">Go to the GINOVO product purchase page.</p>
 </a>
 
 <a class="glass-card rounded-xl p-8 fade-up delay-100 group block hover:-translate-y-1 transition-all duration-300" href="https://www.youtube.com/@ginovo31" target="_blank" rel="noopener noreferrer">
-<div class="w-14 h-14 rounded-lg bg-[#97D302]/10 flex items-center justify-center mb-8 group-hover:bg-[#97D302]/20 transition-colors"><span class="material-symbols-outlined text-[#97D302] text-3xl">play_circle</span></div>
-<h3 class="text-white text-3xl lg:text-4xl font-bold tracking-tight mb-4 group-hover:text-[#97D302] transition-colors">YouTube</h3>
-<p class="text-[#A9A7B1] text-[13px] md:text-[15px] leading-relaxed font-normal">Check out brand videos and product content.</p>
+<div class="w-14 h-14 rounded-lg bg-[#31e6df]/10 flex items-center justify-center mb-8 group-hover:bg-[#31e6df]/20 transition-colors"><span class="material-symbols-outlined text-[#31e6df] text-3xl">play_circle</span></div>
+<h3 class="text-white text-3xl lg:text-4xl font-bold tracking-tight mb-4 group-hover:text-[#31e6df] transition-colors">YouTube</h3>
+<p class="text-[#aeb4bf] text-[13px] md:text-[15px] leading-relaxed font-normal">Check out brand videos and product content.</p>
 </a>
 
 <a class="glass-card rounded-xl p-8 fade-up delay-200 group block hover:-translate-y-1 transition-all duration-300" href="https://www.instagram.com/ginovo31" target="_blank" rel="noopener noreferrer">
-<div class="w-14 h-14 rounded-lg bg-[#97D302]/10 flex items-center justify-center mb-8 group-hover:bg-[#97D302]/20 transition-colors"><span class="material-symbols-outlined text-[#97D302] text-3xl">photo_camera</span></div>
-<h3 class="text-white text-3xl lg:text-4xl font-bold tracking-tight mb-4 group-hover:text-[#97D302] transition-colors">Instagram</h3>
-<p class="text-[#A9A7B1] text-[13px] md:text-[15px] leading-relaxed font-normal">Check out the latest images and news from GINOVO.</p>
+<div class="w-14 h-14 rounded-lg bg-[#31e6df]/10 flex items-center justify-center mb-8 group-hover:bg-[#31e6df]/20 transition-colors"><span class="material-symbols-outlined text-[#31e6df] text-3xl">photo_camera</span></div>
+<h3 class="text-white text-3xl lg:text-4xl font-bold tracking-tight mb-4 group-hover:text-[#31e6df] transition-colors">Instagram</h3>
+<p class="text-[#aeb4bf] text-[13px] md:text-[15px] leading-relaxed font-normal">Check out the latest images and news from GINOVO.</p>
 </a>
 
 <a class="glass-card rounded-xl p-8 fade-up delay-300 group block hover:-translate-y-1 transition-all duration-300" href="https://smartstore.naver.com/ginovo/shoppingstory/detail?id=5000957550&amp;page=1" target="_blank" rel="noopener noreferrer">
-<div class="w-14 h-14 rounded-lg bg-[#97D302]/10 flex items-center justify-center mb-8 group-hover:bg-[#97D302]/20 transition-colors"><span class="material-symbols-outlined text-[#97D302] text-3xl">storefront</span></div>
-<h3 class="text-white text-3xl lg:text-4xl font-bold tracking-tight mb-4 group-hover:text-[#97D302] transition-colors">GDR Exhibition</h3>
-<p class="text-[#A9A7B1] text-[13px] md:text-[15px] leading-relaxed font-normal">Check out the GINOVO x GDR exhibition news.</p>
+<div class="w-14 h-14 rounded-lg bg-[#31e6df]/10 flex items-center justify-center mb-8 group-hover:bg-[#31e6df]/20 transition-colors"><span class="material-symbols-outlined text-[#31e6df] text-3xl">storefront</span></div>
+<h3 class="text-white text-3xl lg:text-4xl font-bold tracking-tight mb-4 group-hover:text-[#31e6df] transition-colors">GDR Exhibition</h3>
+<p class="text-[#aeb4bf] text-[13px] md:text-[15px] leading-relaxed font-normal">Check out the GINOVO x GDR exhibition news.</p>
 </a>
 </div>
 </div>
